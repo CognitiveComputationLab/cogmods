@@ -1,0 +1,16 @@
+These files are benchmarks for the predictions of the implemented models.
+
+atmosphere_khemlani2012.csv:
+    Khemlani & Johnson-Laird (2012), Table 7 (p.24 f.)
+
+matching_wetherick1995.csv:
+    Wetherick & Gilhooly (1995), Table 1 (p.172), augmented with figures and premise order.
+
+phm_chater1999.csv
+    Chater & Oaksford (1999), Table C1 (p.247 f.), a response is considered a prediction iff its probabilitiy is > 1.22 (p_err) + both conclusions are taken
+
+psycop_rips1994.csv
+    Rips (1994), Table 7.6 (p.263 ff.), a response is considered a prediction iff its probability is different from the apparent default value (A: 5.0, E: 5.0, I: 15.0, O: 15.0). Additionally, since the conclusion order in the table is fixed to "CA", the other conclusion order "AC" is added by adding the predictions from the syllogism which has the premises swapped (This is legitimate since the order of premises does not influence the prediction)
+
+mentalmodels.csv
+    Predictions of the lisp program available at http://mentalmodels.princeton.edu/programs/Syllog-Public.lisp (see also Bucciarelli & Johnson-Laird (1999) and Khemlani & Johnson-Laird (2012)). All intermediate conclusions are considered predictions.
