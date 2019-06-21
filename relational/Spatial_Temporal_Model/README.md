@@ -8,6 +8,11 @@ Both models implement a cognitive domain of the Mental Model Theory invented by 
 solve temporal and spatial deduction problems. A detailed description of the functionality of the two
 models can be found at the [website of the Cognitive Computation chair](https://www.cognitive-computation.uni-freiburg.de/student-projects-and-theses/documents/2018-project-bachelor-breu-mertesdorf.pdf).
 
+## Prerequisites
+
+The code works with python 3.7.  
+Used Libraries: copy, unittest, numpy, matplotlib 
+
 
 ## Quickstart
 
