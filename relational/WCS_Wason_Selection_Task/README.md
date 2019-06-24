@@ -1,20 +1,20 @@
 # Weak Completion Semantics Model for the Wason Selection Task
 
-The WCSWason model can solve instances of the Wason Selection Task using the Weak Completion Semantics. The Wason Selection Task is a problem demonstrating the systematic deviations of human reasoning from classical logic and was formulated in a variety of different cases - the abstract, social and deontic case. In every problem formulation, subjects have to turn cards (in the abstract case: "D", "K", "3", "7") to verify a given rule (implication, in the abstract case: 3 <-- D). Common patterns of cards which are turned, comprise the following: "D", "D, 3", "D, 3, 7", "D, 7". Depending on the case, some patterns are more often selected than others - in the abstract case, most people tend to only turn the cards "D" or "D" and "3", in the deontic case however, many people are able to derive the logically correct solution.
+The WCSWason model can solve instances of the Wason Selection Task using the Weak Completion Semantics. The Wason Selection Task is a problem demonstrating the systematic deviations of human reasoning from classical logic and was formulated in a variety of different cases - the abstract, social and deontic case. In every problem formulation, subjects have to turn cards (in the abstract case: "D", "K", "3", "7") to verify a given rule (implication, in the abstract case: 3 <-- D). Common patterns of cards which are turned, comprise the following: "D", "D, 3", "D, 3, 7" and "D, 7" (also referred to as the four canonical cases). Depending on the case, some patterns are more often selected than others - in the abstract case, most people tend to only turn the cards "D" or "D" and "3", in the deontic case however, many people are able to derive the logically correct solution.
 
 The WCSWason model attempts to model these different cases with two suggested principles - abduction and contraposition, by assigning them different probabilities to be activated for the three case types. For more detailed information on the model and the background, see the paper [Breu, Ind, Mertesdorf, Ragni (2019) The Weak Completion Semantics Can Model Inferences of Individual Human Reasoners](https://link.springer.com/chapter/10.1007/978-3-030-19570-0_33).
 
 
 ## Prerequisites
 
-The code works with python 3.7.
+The code works with python 3.7.  
 Used libraries: numpy, random, scipy.optimize
 
 
 ## Quickstart
 
 1) To simulate one run with manually specified probabilities for the additional principles:
-    - Create a model and set the principle_probabilities (f.i. model.principle_probabilities = \[0.5, 0.5\])
+    - Create a model and set the principle probabilities (f.i. model.principle_probabilities = \[0.5, 0.5\])
     - Simulate one run by calling the function "compute_one_trial()"
 
 2) To see how every pattern of the four canonical cases is derived:
