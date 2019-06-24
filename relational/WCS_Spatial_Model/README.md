@@ -26,8 +26,8 @@ Used Libraries: ccobra, itertools
    - Create an instance of the model
    - To print the problem solving process, set the model parameter "print_output" to True
    - To enable or disable the variation phase, set the model parameter "perform_variation" accordingly to True or False.
-   - Create a problem consistiting of multiple premises and a query, encoded als lists of strings
-   - Call the function:"compute_problem(problem_premises, query)" to start the problem computation.
+   - Create a problem consisting of multiple premises and a query, encoded als lists of strings
+   - Call the function: "compute_problem(problem_premises, query)" to start the problem computation.
 
 
 ## Example calls 
