@@ -7,13 +7,13 @@ The WCSWason model attempts to model these different cases with two suggested pr
 
 ## Prerequisites
 
-The code works with python 3.7
+The code works with python 3.7.
 Used libraries: numpy, random, scipy.optimize
 
 
 ## Quickstart
 
-1) To try out one run with manually specified probabilities for the additional principles:
+1) To simulate one run with manually specified probabilities for the additional principles:
     - Create a model and set the principle_probabilities (f.i. model.principle_probabilities = \[0.5, 0.5\])
     - Simulate one run by calling the function "compute_one_trial()"
 
@@ -34,7 +34,7 @@ The problem solving process can be printed by enabling the model parameter "prin
 
 ## Example calls
 
-1) Simulate one run of the wason selection task with the selected probabilities of 0.7 (abduction) and 0.4 (additional rule - contraposition) and print the problem solving process.
+1) Simulate one run of the Wason Selection Task with the selected probabilities of 0.7 (abduction) and 0.4 (additional rule - contraposition) and print the problem solving process.
 ```
 >>> model = WCSWason()
 >>> model.print_output = True
