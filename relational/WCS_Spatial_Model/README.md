@@ -5,7 +5,7 @@ This model implements the Weak Completion Semantics approach to solve spatial re
   2. model inspection phase (searching for the query-relation in the preferred model and verifying whether it holds)
   3. model variation phase (construction of alternative models of the problem premises)
 
-The model was origially implemented in Prolog and comprised only the first two phases. The rules 1-11 for the construction of the preferred mental modell are taken from the according paper [Dietz, Hölldobler, Höps: A Computational Logic Approach to Human Spatial Reasoning (2015).](http://www.wv.inf.tu-dresden.de/Publications/2015/report-15-02.pdf) Their model is here extended to the third phase (variation phase).
+The model was origially implemented in Prolog and comprised only the first two phases. The rules 1-11 for the construction of the preferred mental model are taken from the according paper [Dietz, Hölldobler, Höps: A Computational Logic Approach to Human Spatial Reasoning (2015).](http://www.wv.inf.tu-dresden.de/Publications/2015/report-15-02.pdf) Their model is here extended to the third phase (variation phase).
 
 Note: This model is restricted to left- and right-relations. To be able to solve two-dimensional spatial reasoning tasks, the model needs to be extended to all four cardinal directions.
 
