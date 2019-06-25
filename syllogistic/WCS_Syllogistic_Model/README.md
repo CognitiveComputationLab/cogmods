@@ -7,12 +7,12 @@ This model implements the Weak Completion Semantics approach to solve syllogisti
 - [Costa, Dietz, Hölldobler, Ragni (2017). A Computational Logic Approach to Human Syllogistic Reasoning](https://pdfs.semanticscholar.org/b51c/c0b9d6e37ee78d8bd3587bcc1bc5412df51f.pdf)
 - [Dietz, Hoelldobler, Moerbitz (2017). The Syllogistic Reasoning Task: Reasoning Principles and Heuristic Strategies in Modeling Human Clusters](https://link.springer.com/chapter/10.1007/978-3-030-00801-7_10)
 
-Altogether, the model uses 6 basic and 4 advanced reasoning princples to encode and solve syllogistic reasoning tasks (for further information, the princples are explained in detail in the according papers). The 6 basic principles are used for every subject and task, whereas the advanced principles are only activated if they can predict the subject´s answers (usage of the adapt-function of CCOBRA-models). For every subject, an array of counters keeps track of the most successfull principle combinations to predict the answers of the current subject. For every new task, the principle combination which has been the most successfull so far, is selected, in order to adapt the model to the current subject.
+Altogether, the model uses 6 basic and 4 advanced reasoning princples to encode and solve syllogistic reasoning tasks (for further information, the princples are explained in detail in the according papers). The 6 basic principles are used for every subject and task, whereas the advanced principles are only activated if they can predict the subject´s answers (usage of the adapt-function of CCOBRA-models). For every subject, an array of counters keeps track of the most successfull principle combinations to predict the answers of the current subject. For every new task, the principle combination which has been the most successfull so far, is selected for calculating a prediction, in order to adapt the model to the current subject.
 
 
 ## Prerequisites
 
-The code works with python 3.7.
+The code works with python 3.7. 
 Used libraries: ccobra, random, operator, pandas
 
 
