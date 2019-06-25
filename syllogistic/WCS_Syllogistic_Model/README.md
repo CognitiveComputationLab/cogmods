@@ -2,7 +2,7 @@
 
 This model implements the Weak Completion Semantics approach to solve syllogistic reasoning tasks. The background and concepts of the implementation are based on the following papers:
 - [E.A. Dietz (2017). From Logic Programming to Human Reasoning: How to be Artificially Human (Dissertation, Chapter 7)](https://run.unl.pt/bitstream/10362/31248/1/Saldanha_2017.pdf)
-- [Costa, Dietz, Hölldobler, Ragni (2016). Syllogistic Reasoning under the Weak Completion Semantics] (https://www.researchgate.net/profile/Steffen_Hoelldobler/publication/305800319_Two-Valued_Logic_is_Not_Sufficient_to_Model_Human_Reasoning_but_Three-Valued_Logic_is_A_Formal_Analysis/links/57d297e808ae601b39a3fa3a/Two-Valued-Logic-is-Not-Sufficient-to-Model-Human-Reasoning-but-Three-Valued-Logic-is-A-Formal-Analysis.pdf)
+- [Costa, Dietz, Hölldobler, Ragni (2016). Syllogistic Reasoning under the Weak Completion Semantics](https://www.researchgate.net/profile/Steffen_Hoelldobler/publication/305800319_Two-Valued_Logic_is_Not_Sufficient_to_Model_Human_Reasoning_but_Three-Valued_Logic_is_A_Formal_Analysis/links/57d297e808ae601b39a3fa3a/Two-Valued-Logic-is-Not-Sufficient-to-Model-Human-Reasoning-but-Three-Valued-Logic-is-A-Formal-Analysis.pdf)
 - [Costa, Dietz, Hoelldobler (2017). Monadic Reasoning using Weak Completion Semantics](http://ysip2.computational-logic.org/ceur/YSIP2/paper9.pdf)
 - [Costa, Dietz, Hölldobler, Ragni (2017). A Computational Logic Approach to Human Syllogistic Reasoning](https://pdfs.semanticscholar.org/b51c/c0b9d6e37ee78d8bd3587bcc1bc5412df51f.pdf)
 - [Dietz, Hoelldobler, Moerbitz (2017). The Syllogistic Reasoning Task: Reasoning Principles and Heuristic Strategies in Modeling Human Clusters](https://link.springer.com/chapter/10.1007/978-3-030-00801-7_10)
