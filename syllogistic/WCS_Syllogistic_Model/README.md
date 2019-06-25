@@ -12,25 +12,25 @@ Altogether, the model uses 6 basic and 4 advanced reasoning princples to encode 
 
 ## Prerequisites
 
-The code works with python 3.7. 
+The code works with python 3.7.  
 Used libraries: ccobra, random, operator, pandas
 
 
 ## Quickstart
 
 1) To run the model in the CCOBRA framework and compare it with other models:
-- Create a json-file for the benchmark (see CCOBRA documentation)
-- Insert this model and all other models to be tested in the benchmark-file
-- Run the benchmark (python runner.py ..\path\to\benchmark\name_of_benchmark.json). 
+   - Create a json-file for the benchmark (see CCOBRA documentation)
+   - Insert this model and all other models to be tested in the benchmark-file
+   - Run the benchmark (python runner.py ..\path\to\benchmark\name_of_benchmark.json). 
 
 2) To calculate and save the solutions to the 64 syllogisms for one specified principle combination (f. i. \[0, 0, 0, 0, 1\]), run the following function. The results of the computation are saved as a csv file in the folder, in which this python file is located.
-- compute_one_trial(\[0, 0, 0, 0, 1\], "csv_table_name")
+   - compute_one_trial(\[0, 0, 0, 0, 1\], "csv_table_name")
 
 3) To calculate the solutions to the 64 syllogisms for all possible principle combinations (32 in total), run the following function (this needs to be done before using the WCS-model in a CCOBRA benchmark, so that the answers can be looked up in the csv-file).
-- compute_all_variations()
+   - compute_all_variations()
 
 4) To see what the WCS model is calculating in detail for one given problem and principle combination, enable the model parameter "print_output" and call the following function:
-- compute_problem_from_scratch(syllogistic_problem, principle_combination)
+   - compute_problem_from_scratch(syllogistic_problem, principle_combination)
 
 
 ## Example calls
@@ -45,15 +45,15 @@ Used libraries: ccobra, random, operator, pandas
 
 ## Statistics for the prediction-accuracy of the principle combinations
 
-The two statistics-csv-files contain some information on the potential prediction accuracy of the wcs model with regards to the principle combinations
+The two statistics-csv-files contain some information on the potential prediction accuracy of this model with regards to the principle combinations
 (one file for the training-set (Ragni2016) and one for the test-set (Veser2018)). 
 
 The collected statistics comprise the following:
 
 - id: id of the subject
-- theoretical_best: the number of syllogisms that can be potentially predicted by the wcs-model for the according subject
-- max: the number of syllogisms that can be predicted by the best principle combination for the according sujbect (one fix combination). 
-- min: the number of syllogisms that can be predicted by the worst principle combination for the according subject
+- theoretical_best: the number of responses to syllogistic problems that can be potentially predicted by the wcs-model for the according subject
+- max: the number of responses to syllogistic problems that can be predicted by the best principle combination for the according sujbect (one fix combination). 
+- min: the number of responses to syllogistic problems that can be predicted by the worst principle combination for the according subject
 - span_max_min: max - min
 - span_best_max: theoretical_best - max
 
