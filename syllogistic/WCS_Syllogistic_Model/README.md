@@ -52,7 +52,7 @@ The collected statistics comprise the following:
 
 - id: id of the subject
 - theoretical_best: the number of responses to syllogistic problems that can be potentially predicted by the wcs-model for the according subject
-- max: the number of responses to syllogistic problems that can be predicted by the best principle combination for the according sujbect (one fix combination). 
+- max: the number of responses to syllogistic problems that can be predicted by the best principle combination for the according subject (one fix combination). 
 - min: the number of responses to syllogistic problems that can be predicted by the worst principle combination for the according subject
 - span_max_min: max - min
 - span_best_max: theoretical_best - max
