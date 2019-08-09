@@ -1,5 +1,4 @@
 import os
-import random
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
@@ -7,8 +6,7 @@ from modular_models.models.basic_models.interface import SyllogisticReasoningMod
 
 
 class GeneralizedAtmosphere(SyllogisticReasoningModel):
-    """ Predictive version of the Atmospheric model based on Woodworth & Sells (1935). Predicts the mood
-    of the conclusion according to the theory + conclusion order is 50/50
+    """ Generalized version of the Atmospheric model with variable dominance relations.
     """
 
     def __init__(self):
@@ -16,11 +14,9 @@ class GeneralizedAtmosphere(SyllogisticReasoningModel):
 
         self.params["dominant_quality"] = ["neg"]
         self.params["dominant_quantifier"] = ["some"]
-        self.params["conclusion_order"] = 0.5
 
         self.param_grid["dominant_quality"] = ["neg", "pos"]
         self.param_grid["dominant_quantifier"] = ["some", "all"]
-        self.param_grid["conclusion_order"] = [0.0, 1/6, 2/6, 0.5, 4/6, 5/6, 1.0]
 
     def heuristic_abstract_atmosphere(self, syllogism):
         m2qual = {"A": "pos", "I": "pos", "E": "neg", "O": "neg"}
@@ -34,7 +30,4 @@ class GeneralizedAtmosphere(SyllogisticReasoningModel):
 
     def predict(self, syllogism):
         concl_mood = self.heuristic_abstract_atmosphere(syllogism)[0][0]
-        concl_order = "ca"
-        if random.random() < self.params["conclusion_order"]:
-            concl_order = "ac"
-        return [concl_mood + concl_order]
+        return [concl_mood + ac for ac in ["ac", "ca"]]

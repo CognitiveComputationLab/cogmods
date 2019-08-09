@@ -16,6 +16,8 @@ class IllicitConversion(SyllogisticReasoningModel):
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
+
+        # Use blackbox logically correct reasoning as deduction mechanism
         self.reasoning_model = LogicallyValidLookup()
 
         self.params["reverse_first_premise"] = 0.6

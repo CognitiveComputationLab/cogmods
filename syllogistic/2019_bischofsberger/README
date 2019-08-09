@@ -1,30 +1,24 @@
-(unfinished)
-
 Works with python 3.7
 
 
 Directories:
 
-data/ --- experimental syllogistic data
-plots/ --- empty directories for various plots to show model performance in detail (filled by analyse_models.py)
-prediction_goals/ --- benchmarks for predictions of rebuilt models (used by verify_predictions.py)
-
-modular_models/models/basic_models/ --- rebuilt syllogistic reasoning models with a common, simple and specialized interface.
-modular_models/models/ccobra_models/ --- CCobra versions of basic models + tree model
-modular_models/util/ --- utility functions
+modular_models/models/basic_models/ --- syllogistic reasoning models with a simple specialized interface.
+modular_models/models/ccobra_models/ --- CCobra versions of basic models + composite model. All models in this folder can be used for evaluation by CCobra.
+modular_models/util/ --- Several utility functions.
 
 
 Example calls:
 
-1. Verify predictions of rebuilt models:
->>> python verify_predictions.py
-VerbalModels should have one wrong prediction.
-
-2. Fill plots/ directory to break down the models' performances in more detail (might take a while).
->>> python analyse_models.py
-
-3. Basic models prediction
+1. Basic model prediction
 >>> from modular_models.models.basic_models import Atmosphere
 >>> m = Atmosphere()
 >>> m.predict("OA1")
-['Oac']  # or ['Oca']
+['Oac', 'Oca']
+
+2. CCobra model prediction
+>>> from modular_models.models.ccobra_models import CCobraAtmosphere
+>>> from modular_models.util import sylutil
+>>> m = CCobraAtmosphere()
+>>> m.predict(sylutil.syllogism_to_item("OA1"))
+['Some not', 'x', 'z']  # or ['Some not', 'z', 'x']

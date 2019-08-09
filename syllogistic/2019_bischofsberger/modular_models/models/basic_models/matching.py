@@ -1,5 +1,4 @@
 import os
-import random
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
@@ -12,8 +11,6 @@ class Matching(SyllogisticReasoningModel):
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
-        self.params["conclusion_order"] = 0.6
-        self.param_grid["conclusion_order"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
 
     f = {"AA": ["Aac", "Aca"],
          "AE": ["Eac", "Eca"], "EA": ["Eac", "Eca"],
@@ -31,8 +28,4 @@ class Matching(SyllogisticReasoningModel):
         return Matching.f[syllogism[:2]]
 
     def predict(self, syllogism):
-        concl_mood = random.choice(self.heuristic_matching(syllogism))[0]
-        concl_order = "ca"
-        if random.random() < self.params["conclusion_order"]:
-            concl_order = "ac"
-        return [concl_mood + concl_order]
+        return self.heuristic_matching(syllogism)

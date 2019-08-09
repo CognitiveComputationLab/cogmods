@@ -1,12 +1,13 @@
 # coding=utf-8
 
-import ccobra
 import os
 import random
 import sys
-from anytree import AnyNode, LevelOrderIter
 from collections import namedtuple
 from enum import Enum
+
+import ccobra
+from anytree import AnyNode, LevelOrderIter
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
 from modular_models.util import sylutil
@@ -23,7 +24,9 @@ class PSYCOP(SyllogisticReasoningModel):
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
-        self.is_stochastic = False
+
+        # Prospensity to guess instead of replying NVC if no conclusion is found
+        self.params["guess"] = 0.0
 
         # Whether or not existential implicatures are added to the forward propositions
         self.params["premise_implicatures_existential"] = True
@@ -43,6 +46,8 @@ class PSYCOP(SyllogisticReasoningModel):
         self.params["rule_bw_conjunctive_syllogism"] = True
         self.params["rule_bw_if_elimination"] = True
         self.params["rule_bw_not_introduction"] = True
+
+        self.param_grid["guess"] = [0.0, 1.0]
 
         self.param_grid["premise_implicatures_existential"] = [True, False]
         self.param_grid["premise_implicatures_grice"] = [True, False]
@@ -146,7 +151,6 @@ class PSYCOP(SyllogisticReasoningModel):
 
     def encode_premises(self, syllogism, ex_implicatures=True, grice_implicatures=False):
         """ Encode premises as propositions, possibly adding implicatures """
-
         to = sylutil.term_order(syllogism[2])
         premises = []
         pr = []
@@ -569,7 +573,7 @@ class PSYCOP(SyllogisticReasoningModel):
             if set(fw_propositions) == set(fw_propositions + new_propositions):
                 # exhausted all possibilities: no more rules apply.
                 break
-            fw_propositions = list(set(fw_propositions + new_propositions))
+            fw_propositions = sylutil.uniquify_keep_order(fw_propositions + new_propositions)
 
         return self.remove_duplicates(fw_propositions)
 
@@ -632,31 +636,79 @@ class PSYCOP(SyllogisticReasoningModel):
             subformulas.extend(self.extract_atomic_subformulas(p))
         return subformulas
 
+    def heuristic(self, syllogism):
+        return {"AA": "A",
+                "AI": "I",
+                "AE": "E",
+                "AO": "O",
+                "EI": "E",
+                "EE": "E",
+                "EO": "E",
+                "II": "I",
+                "IO": "O",
+                "OO": "O",
+                }[''.join(sorted(syllogism[:2]))]
+
+    def conclusions_positive_checks(self, syllogism):
+        premises = self.encode_premises(syllogism,
+                                        ex_implicatures=self.params["premise_implicatures_existential"],
+                                        grice_implicatures=self.params["premise_implicatures_grice"])
+
+        # 1. Try to get conclusions by applying forward rules
+        fw_propositions = self.run_forward_rules(premises)
+        fw_conclusions = []
+        for prop in fw_propositions:
+            for c in ccobra.syllogistic.RESPONSES:
+                conclusion = self.encode_proposition(c, hat=False)
+                if self.proposition_to_string(conclusion) == self.proposition_to_string(prop):
+                    fw_conclusions.append(c)
+
+        checked_conclusions = []
+        for concl in ccobra.syllogistic.RESPONSES:
+            tc_enc = self.encode_proposition(concl, hat=False)
+
+            self.subformulas = self.extract_all_atomic_subformulas(premises + [tc_enc])
+            success = self.run_backward_rules(fw_propositions, tc_enc)
+            if success:
+                checked_conclusions.append(concl)
+
+        checked_conclusions = checked_conclusions if len(checked_conclusions) != 0 else ["NVC"]
+        return checked_conclusions
+
     def predict(self, syllogism):
         premises = self.encode_premises(syllogism,
                                         ex_implicatures=self.params["premise_implicatures_existential"],
                                         grice_implicatures=self.params["premise_implicatures_grice"])
-        fw_propositions = self.run_forward_rules(premises)
         conclusions = []
-        for c in ccobra.syllogistic.RESPONSES:
-            if c == "NVC":
-                continue
-            conclusion = self.encode_proposition(c, hat=False)
-            self.subformulas = self.extract_all_atomic_subformulas(premises + [conclusion])
-            success = self.run_backward_rules(fw_propositions, conclusion)
-            if success:
-                if self.params["conclusion_implicatures"]:
-                    c_impl = sylutil.add_implicatures([c], True, True)[1]
-                    conclusion_impl = self.encode_proposition(c_impl, hat=False)
-                    self.subformulas = self.extract_all_atomic_subformulas(
-                        premises + [conclusion_impl])
-                    success_impl = self.run_backward_rules(fw_propositions, conclusion_impl)
-                    if success_impl:
-                        conclusions.append(c)
-                else:
-                    conclusions.append(c)
 
-        if not conclusions:
-            return ["NVC"]
-        else:
-            return conclusions
+        # 1. Try to get conclusions by applying forward rules
+        fw_propositions = self.run_forward_rules(premises)
+        fw_conclusions = []
+        for prop in fw_propositions:
+            for c in ccobra.syllogistic.RESPONSES:
+                conclusion = self.encode_proposition(c, hat=False)
+                if self.proposition_to_string(conclusion) == self.proposition_to_string(prop):
+                    fw_conclusions.append(c)
+        if len(fw_conclusions) != 0:
+            return fw_conclusions
+
+        ac = "ac" if random.random() < 0.5 else "ca"
+        tentative_conclusion = self.heuristic(syllogism) + ac
+        tc_enc = self.encode_proposition(tentative_conclusion, hat=False)
+
+        self.subformulas = self.extract_all_atomic_subformulas(premises + [tc_enc])
+        success = self.run_backward_rules(fw_propositions, tc_enc)
+        if success:
+            if self.params["conclusion_implicatures"]:
+                c_impl = sylutil.add_implicatures([tentative_conclusion], True, True)[1]
+                conclusion_impl = self.encode_proposition(c_impl, hat=False)
+                self.subformulas = self.extract_all_atomic_subformulas(premises + [conclusion_impl])
+                success_impl = self.run_backward_rules(fw_propositions, conclusion_impl)
+                if success_impl:
+                    return [tentative_conclusion]
+            else:
+                return [tentative_conclusion]
+
+        if random.random() < self.params["guess"]:
+            return ["Aac", "Aca", "Iac", "Ica", "Eac", "Eca", "Oac", "Oca"]
+        return ["NVC"]

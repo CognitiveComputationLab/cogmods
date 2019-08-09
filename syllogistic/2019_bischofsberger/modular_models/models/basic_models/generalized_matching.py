@@ -1,6 +1,5 @@
 import itertools
 import os
-import random
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
@@ -11,15 +10,41 @@ class GeneralizedMatching(SyllogisticReasoningModel):
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
         self.params["total_order"] = [["E", "O", "I", "A"], ["=", "=", ">"]]
-        self.params["conclusion_order"] = 0.6
 
         relations = [["="]*3, [">"]*3, ["=", "=", ">"], ["=", ">", "="], [">", "=", "="],
                                         ["=", ">", ">"], [">", "=", ">"], [">", ">", "="]]
         moods = list(itertools.permutations(["A", "E", "I", "O"]))
         self.param_grid["total_order"] = list([(tuple(x), tuple(y)) for x, y in itertools.product(moods, relations)])
-        self.param_grid["conclusion_order"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
 
     def heuristic_generalized_matching(self, syllogism):
+        """
+        >>> m = GeneralizedMatching()
+        >>> m.params["total_order"] = [["E", "O", "I", "A"], ["=", "=", ">"]]  # E = O = I > A
+        >>> m.heuristic_generalized_matching("AA1")
+        ['A']
+        >>> m.heuristic_generalized_matching("AI1")
+        ['I']
+        >>> m.heuristic_generalized_matching("OE4")
+        ['E', 'O']
+
+        >>> m.params["total_order"] = [["A", "I", "E", "O"], ["=", ">", ">"]]  # A = I > E > O
+        >>> m.heuristic_generalized_matching("OA4")
+        ['A']
+        >>> m.heuristic_generalized_matching("EI2")
+        ['I']
+        >>> m.heuristic_generalized_matching("AI3")
+        ['A', 'I']
+
+        >>> m.params["total_order"] = [["A", "E", "I", "O"], ["=", "=", "="]]  # A = I > E > O
+        >>> m.heuristic_generalized_matching("OA4")
+        ['A', 'O']
+        >>> m.heuristic_generalized_matching("EI1")
+        ['E', 'I']
+        >>> m.heuristic_generalized_matching("EA3")
+        ['A', 'E']
+        >>> m.heuristic_generalized_matching("AO2")
+        ['A', 'O']
+        """
         moods = self.params["total_order"][0]
         relations = self.params["total_order"][1]
 
@@ -44,8 +69,5 @@ class GeneralizedMatching(SyllogisticReasoningModel):
         return res_moods
 
     def predict(self, syllogism):
-        concl_mood = random.choice(self.heuristic_generalized_matching(syllogism))
-        concl_order = "ca"
-        if random.random() < self.params["conclusion_order"]:
-            concl_order = "ac"
-        return [concl_mood + concl_order]
+        concl_moods = self.heuristic_generalized_matching(syllogism)
+        return [mood + ac for ac in ["ac", "ca"] for mood in concl_moods]

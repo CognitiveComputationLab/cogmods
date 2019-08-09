@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
 from modular_models.util import sylutil
 from modular_models.models.basic_models.interface import SyllogisticReasoningModel
@@ -44,8 +43,8 @@ class LogicallyValidLookup(SyllogisticReasoningModel):
     """ Randomly predicts one of the logically valid conclusions to a syllogism under the following
     assumptions:
         - Existential assumption: Axy implies Ixy, Exy implies Oxy
-        - A stronger conclusion is NOT preferred over its weaker implication (e.g. Aac vs. Iac)
         - No conlusion order is preferred in case of logical symmetry (e.g. Iac vs. Ica)
+        - A stronger conclusion is preferred over its weaker implication (e.g. Aac vs. Iac)
     """
 
     # Logical validity truth table with existential assumption. See e.g. Khemlani (2012) or

@@ -1,4 +1,3 @@
-import ccobra
 import copy
 import os
 import random
@@ -10,12 +9,12 @@ from modular_models.util import sylutil
 
 
 class MentalModels(SyllogisticReasoningModel):
-    """ Mentals models theory after Bucciarelli & Johnson-Laird 1999 """
+    """ Mentals models theory after Bucciarelli & Johnson-Laird 1999. """
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
         self.params["falsify"] = 0.6
-        self.param_grid["falsify"] = [0.0, 0.2, 0.4, 0.6, 0.8]
+        self.param_grid["falsify"] = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
     def encode(self, syllogism):
         """ Returns initial MM representation of a syllogism + list of exhausted terms
@@ -68,7 +67,7 @@ class MentalModels(SyllogisticReasoningModel):
         >>> mm.encode("IA3")
         ([['a', 'b', 'c'], ['a'], ['b', 'c']], ['c'])
         >>> mm.encode("IA4")
-        ([['a', 'b', 'c'], ['a'], ['b', 'c']], ['b'])
+        ([['a', 'b', 'c'], ['b', 'c'], ['a']], ['b'])
         >>> mm.encode("IE1")
         ([['a', 'b', '-c'], ['a'], ['b', '-c'], ['c'], ['c']], ['b', 'c'])
         >>> mm.encode("II1")
@@ -90,10 +89,10 @@ class MentalModels(SyllogisticReasoningModel):
         subj_1, pred_1 = to[1]
 
         if syllogism[0] == "A":
-            mm.extend((["a", "b"], ["a", "b"]))
+            mm.extend(([subj_0, pred_0], [subj_0, pred_0]))
             exhausted.add(subj_0)
         if syllogism[0] == "I":
-            mm.extend((["a", "b"], ["a"], ["b"]))
+            mm.extend(([subj_0, pred_0], [subj_0], [pred_0]))
         if syllogism[0] == "E":
             mm.extend(([subj_0, "-" + pred_0], [subj_0, "-" + pred_0], [pred_0], [pred_0]))
             exhausted.update((subj_0, pred_0))
@@ -351,11 +350,15 @@ class MentalModels(SyllogisticReasoningModel):
         current_model = initial_model
         while random.random() < self.params["falsify"]:
             conclusions = self.conclude(current_model, exhausted)
+
+            # Falsify first conclusion
             new_model = self.falsify(current_model, exhausted, conclusions[0])
             if self.models_equal(new_model, current_model):
+                # No counterexample found - falsify second conclusion
                 new_model = self.falsify(current_model, exhausted, conclusions[1])
                 if self.models_equal(new_model, current_model):
+                    # No counterexample found - stop searching
                     break
+            # Counterexample found - replace old model
             current_model = new_model
-
         return conclusions

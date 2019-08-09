@@ -1,7 +1,10 @@
-import ccobra.syllogistic
-import ccobra
 import os
-import json
+import sys
+
+import ccobra
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../..")))
+from modular_models.models.basic_models.verbal_models import VerbalModels
 
 
 # ---- GENERIC SYLLOGISMS FOR CCOBRA ---- #
@@ -79,29 +82,6 @@ GENERIC_CHOICES = "All/x/z|All/z/x|Some/x/z|Some/z/x|Some not/x/z|Some not/z/x|N
 GENERIC_ITEMS = [ccobra.Item(0, "syllogistic", task, "single-choice", GENERIC_CHOICES) for task in GENERIC_TASKS]
 
 
-# ---- Decorator for storing and retrieving function results to file ---- #
-
-# https://stackoverflow.com/questions/16463582/memoize-to-disk-python-persistent-memoization
-# makes no difference between different function parameters!
-def persistent_memoize(file_name):
-
-    def decorator(original_func):
-
-        def new_func(param):
-            try:
-                cache = json.load(open(file_name, 'r'))
-            except (IOError, ValueError):
-                cache = {}
-
-            if cache == {}:
-                cache = original_func(param)
-                json.dump(cache, open(file_name, 'w'))
-            return cache
-
-        return new_func
-
-    return decorator
-
 # ---- SYLLOGISTIC FUNCTIONS ---- #
 
 def add_implicatures(conclusions, existential=True, gricean=True):
@@ -137,6 +117,7 @@ def term_order(figure):
     >>> term_order("1")
     ['ab', 'bc']
     """
+
     if figure == "1":
         return ["ab", "bc"]
     if figure == "2":
@@ -145,6 +126,59 @@ def term_order(figure):
         return ["ab", "cb"]
     if figure == "4":
         return ["ba", "bc"]
+
+
+def premises_to_syllogism(premises):
+    """
+    >>> premises_to_syllogism(["Aab", "Ebc"])
+    'AE1'
+    """
+
+    figure = {"abbc": "1", "bacb": "2", "abcb": "3", "babc": "4"}[premises[0][1:] + premises[1][1:]]
+    return premises[0][0] + premises[1][0] + figure
+
+
+def syllogism_to_premises(syllogism):
+    """
+    >>> syllogism_to_premises("AA1")
+    ['Aab', 'Abc']
+    """
+    return [syllogism[i] + term_order(syllogism[2])[i] for i in [0, 1]]
+
+
+def syllogism_to_item(syllogism):
+    """
+    >>> syllogism_to_item("AA1").task
+    [['All', 'x', 'y'], ['All', 'y', 'z']]
+    >>> syllogism_to_item("EO4").task
+    [['No', 'y', 'x'], ['Some not', 'y', 'z']]
+    >>> syllogism_to_item("II2").task
+    [['Some', 'y', 'x'], ['Some', 'z', 'y']]
+    """
+
+    q1 = {"A": "All", "I": "Some", "E": "No", "O": "Some not"}[syllogism[0]]
+    q2 = {"A": "All", "I": "Some", "E": "No", "O": "Some not"}[syllogism[1]]
+    to = {"1": ["x;y", "y;z"], "2": ["y;x", "z;y"], "3": ["x;y", "z;y"], "4": ["y;x", "y;z"]}[syllogism[2]]
+
+    # task = e.g. "All;x;y/All;y;z",
+    task = q1 + ";" + to[0] + "/" + q2 + ";" + to[1]
+    return ccobra.Item(0, "syllogistic", task, "single-choice", GENERIC_CHOICES)
+
+
+def encode_proposition(prop, item):
+    """
+    >>> encode_proposition(["All", "x", "y"], GENERIC_ITEMS[0])
+    'Aab'
+    """
+    quantor = {"All": "A", "Some": "I", "No": "E", "Some not": "O"}[prop[0]]
+    middle_term = list(set(item.task[0][1:]).intersection(item.task[1][1:]))[0]
+    a_term = list(set(item.task[0][1:]) - set(middle_term))[0]
+
+    i = prop[1:].index(middle_term)
+    end_term = "a" if a_term in prop else "c"
+
+    pr_enc = quantor + "b" + end_term if i == 0 else quantor + end_term + "b"
+    return pr_enc
 
 
 # ---- GENERAL FUNCTIONS ---- #
@@ -156,6 +190,14 @@ def uniquify_keep_order(l):
     ['a', 'b', 'r', 'c', 'd']
     """
     return [l[i] for i in range(len(l)) if l.index(l[i]) == i]
+
+
+t_mm = -1
+def get_time():
+    """ Get "timestamp" via counter """
+    global t_mm
+    t_mm += 1
+    return t_mm
 
 
 # ---- DATA WRANGLING FUNCTIONS ---- #
@@ -205,3 +247,41 @@ def persubjectify(dataframe):
         response = [row["response"].split(";")]
         dataset[subject_id].append({"item": item, "response": response})
     return dataset
+
+
+# ---- CONVERSION BETWEEN VERBAL MODELS AND MENTAL MODELS ---- #
+
+def vm_to_mm(verbal_model):
+    """ Convert VM to MM. Time information will be lost.
+
+    >>> a = VerbalModels.Prop(name="a", neg=False, identifying=False, t=123)
+    >>> non_b = VerbalModels.Prop(name="b", neg=True, identifying=False, t=456)
+    >>> vm = [VerbalModels.Individual(props=[a], t=789), VerbalModels.Individual(props=[a, non_b], t=159)]
+    >>> vm_to_mm(vm)
+    [['a'], ['a', '-b']]
+    """
+
+    mental_model = []
+    for i, ind in enumerate(verbal_model):
+        mental_model.append([])
+        for p in ind.props:
+            p_str = "-"+p.name if p.neg else p.name
+            mental_model[i].append(p_str)
+    return [sorted(row, key=lambda e: e[-1]) for row in mental_model]
+
+
+def mm_to_vm(mental_model):
+    """ Convert MM to VM.
+
+    >>> mm_to_vm([['a', 'b'], ['a']])
+    [[a(-1), b(-1)](-1), [a(-1)](-1)]
+    """
+
+    verbal_model = []
+    for row in mental_model:
+        props = []
+        for p in row:
+            neg = True if p[0] == "-" else False
+            props.append(VerbalModels.Prop(name=p[-1], neg=neg, identifying=False, t=-1))
+        verbal_model.append(VerbalModels.Individual(props=props, t=-1))
+    return verbal_model
