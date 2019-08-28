@@ -1,8 +1,9 @@
-import ccobra
+import copy
+import json
 import os
 import sys
-import json
-import copy
+
+import ccobra
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
 from modular_models.models.basic_models import PSYCOP
@@ -80,7 +81,10 @@ class CCobraPSYCOP(CCobraWrapper, ccobra.CCobraModel):
             parameters_before = copy.deepcopy(self.model.params)
             predictions = {syllogism: [] for syllogism in ccobra.syllogistic.SYLLOGISMS}
             for syllogism in ccobra.syllogistic.SYLLOGISMS:
+                print(syllogism)
+                i = 0
                 for param_configuration in self.configurations:
+                    i += 1
                     self.model.set_params(param_configuration)
                     conclusions = self.predict_deterministic(syllogism)
                     y = []

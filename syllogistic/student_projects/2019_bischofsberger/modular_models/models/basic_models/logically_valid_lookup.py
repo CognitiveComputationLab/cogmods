@@ -199,7 +199,7 @@ class LogicallyValidLookup(SyllogisticReasoningModel):
         new_syllogisms = syllogism_combinations(syllogism, additional_premises)
         conclusions = set()
         for syl in [syllogism] + new_syllogisms:
-            conclusions.update(self.f_val_ex_stronger_prefered[syl])
+            conclusions.update(self.f_val_ex[syl])
         if "NVC" in conclusions and len(conclusions) != 1:
             conclusions.remove("NVC")
         return list(conclusions)

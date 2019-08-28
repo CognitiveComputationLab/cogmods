@@ -15,12 +15,7 @@ from modular_models.models.basic_models.interface import SyllogisticReasoningMod
 
 
 class PSYCOP(SyllogisticReasoningModel):
-    """ PSYCOP model according to Rips 1994.
-
-    Unlike the original model, this implementation has no parameters and only generates conclusions.
-    It generates exactly those conclusions that (according to the table in Rips1994 p. 263) are
-    predicted by his original model with a probability different from (= higher than) the apparent
-    standard values (0.05 for A and E, 0.15 for I and O)."""
+    """ PSYCOP model according to Rips (1994). """
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
@@ -649,10 +644,13 @@ class PSYCOP(SyllogisticReasoningModel):
                 "OO": "O",
                 }[''.join(sorted(syllogism[:2]))]
 
-    def conclusions_positive_checks(self, syllogism):
+    def conclusions_positive_checks(self, syllogism, additional_premises=[]):
         premises = self.encode_premises(syllogism,
                                         ex_implicatures=self.params["premise_implicatures_existential"],
                                         grice_implicatures=self.params["premise_implicatures_grice"])
+
+        for p in additional_premises:
+            premises.append(self.encode_proposition(p, True))
 
         # 1. Try to get conclusions by applying forward rules
         fw_propositions = self.run_forward_rules(premises)
@@ -663,7 +661,7 @@ class PSYCOP(SyllogisticReasoningModel):
                 if self.proposition_to_string(conclusion) == self.proposition_to_string(prop):
                     fw_conclusions.append(c)
 
-        checked_conclusions = []
+        checked_conclusions = fw_conclusions
         for concl in ccobra.syllogistic.RESPONSES:
             tc_enc = self.encode_proposition(concl, hat=False)
 
@@ -679,7 +677,6 @@ class PSYCOP(SyllogisticReasoningModel):
         premises = self.encode_premises(syllogism,
                                         ex_implicatures=self.params["premise_implicatures_existential"],
                                         grice_implicatures=self.params["premise_implicatures_grice"])
-        conclusions = []
 
         # 1. Try to get conclusions by applying forward rules
         fw_propositions = self.run_forward_rules(premises)

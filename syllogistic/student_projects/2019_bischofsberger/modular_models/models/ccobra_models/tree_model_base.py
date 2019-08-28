@@ -8,7 +8,6 @@ import sys
 from enum import Enum
 
 import ccobra
-import numpy as np
 from anytree import AnyNode, search, RenderTree
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
@@ -17,12 +16,13 @@ from modular_models.models.basic_models import GeneralizedMatching, PHM, VerbalM
 from modular_models.models.ccobra_models.interface import CCobraWrapper
 
 # State machine from which to build trees/plans.
-OpType = Enum("OpType", "PREENCODE, HEURISTIC, ENCODE, ENCODE_PREMISES, CONCLUDE, REENCODE, RESPOND, FALSIFY, ENTAIL, NONE, XYZ")
+OpType = Enum("OpType", "PREENCODE, HEURISTIC, ENCODE, ENCODE_PREMISES, HEURISTIC_PREMISES, CONCLUDE, REENCODE, RESPOND, FALSIFY, ENTAIL, NONE, XYZ")
 State = Enum("State", "Item, Premises, MR, Response")
 OPTYPE_TO_STATES = {OpType.PREENCODE: (State.Item, State.Premises),
                     OpType.HEURISTIC: (State.Item, State.MR),
                     OpType.ENCODE: (State.Item, State.MR),
                     OpType.ENCODE_PREMISES: (State.Premises, State.MR),
+                    OpType.HEURISTIC_PREMISES: (State.Premises, State.MR),
                     OpType.RESPOND: (State.MR, State.Response),
                     OpType.CONCLUDE: (State.MR, State.MR),
                     OpType.REENCODE: (State.MR, State.MR),
@@ -75,8 +75,17 @@ class Operation:
                 return False
 
         if self.fnc.__name__ == "phm_p_entailment":
-            if current_node.vars["num_entails"] > 0 or current_node.content[1] is None:
+            if current_node.vars["num_weakens"] > 0 or current_node.content[1] is None:
                 return False
+
+        if self.fnc.__name__ == "mreasoner_falsify_all_with_model":
+            if current_node.vars["num_mfawm"] > 0 or current_node.content[1] is None or current_node.content[0] is None:
+                return False
+
+        if "falsify" in self.fnc.__name__ or "psycop" in self.fnc.__name__:
+            if current_node.vars["num_falsifies_general"] > 0:
+                return False
+
         if self.fnc.__name__ == "phm_reply":
             if current_node.vars["num_phm_replies"] > 0 or current_node.content[1] is None:
                 return False
@@ -84,7 +93,7 @@ class Operation:
         if self.fnc.__name__ == "mreasoner_falsify" or self.fnc.__name__ == "mreasoner_falsify_with_model":
             if self.fnc.__name__ == "mreasoner_falsify_with_model" and current_node.content[0] is None:
                 return False
-            if current_node.content[1] is None:# or self.args[0] >= len(current_node.content[1]):
+            if current_node.content[1] is None:
                 return False
             if current_node.vars["mreasoner_last_falsify"] is None:
                 if self.args[0] > 0:
@@ -92,7 +101,7 @@ class Operation:
             elif current_node.vars["mreasoner_last_falsify"] != self.args[0] - 1:
                 return False
         if self.fnc.__name__ == "weaken_conclusion":
-            if current_node.content[1] is None or current_node.vars["num_weakens"] > 0:# or self.args[0] >= len(current_node.content[1]) or current_node.content[1][self.args[0]][0] not in ["A", "E"]:
+            if current_node.content[1] is None or current_node.vars["num_weakens"] > 0:
                 return False
 
         if self.optype == OpType.FALSIFY:
@@ -126,6 +135,7 @@ class Operations:
                          "ic_predict": "IC",
                          "heuristic_matching": "Matching",
                          "ic_reverse_premise": "IC",
+                         "phm_heuristic_min_premises": "PHM",
                          "phm_heuristic_min": "PHM",
                          "phm_p_entailment": "PHM",
                          "phm_reply": "PHM",
@@ -134,6 +144,7 @@ class Operations:
                          "mm_encode_vmstyle": "MM",
                          "mm_conclude": "MM",
                          "mm_falsify": "MM",
+                         "mm_falsify_all": "MM",
                          "mm_encode_flex": "MM",
                          "vm_conclude": "VM",
                          "vm_encode": "VM",
@@ -142,10 +153,13 @@ class Operations:
                          "vm_reencode": "VM",
                          "mreasoner_encode_flex": "MReasoner",
                          "mreasoner_falsify": "MReasoner",
+                         "mreasoner_falsify_all": "MReasoner",
                          "mreasoner_heuristic": "MReasoner",
                          "mreasoner_encode_vmstyle": "MReasoner",
                          "mreasoner_encode": "MReasoner",
+                         "mreasoner_encode_premises": "MReasoner",
                          "mreasoner_falsify_with_model": "MReasoner",
+                         "mreasoner_falsify_all_with_model": "MReasoner",
                          "weaken_conclusion": "MReasoner",
                          }
 
@@ -358,6 +372,114 @@ class Operations:
         concl_mood = self.phm.model.f_min_heuristic[syl[:2]]
         return self.phm.model.attachment(concl_mood, syl)
 
+    def phm_heuristic_min_premises(self, premises):
+        """
+        >>> ops = Operations()
+        >>> m = PHM()
+        >>> ic = IllicitConversion()
+        >>> ops = Operations()
+        >>> for item in sylutil.GENERIC_ITEMS:
+        ...     syl = ccobra.syllogistic.encode_task(item.task)
+        ...     prems = sylutil.syllogism_to_premises(syl)
+        ...     print(syl, ops.phm_heuristic_min_premises(prems) == m.attachment(m.f_min_heuristic[syl[:2]], syl))
+        AA1 True
+        AA2 True
+        AA3 True
+        AA4 True
+        AI1 True
+        AI2 True
+        AI3 True
+        AI4 True
+        AE1 True
+        AE2 True
+        AE3 True
+        AE4 True
+        AO1 True
+        AO2 True
+        AO3 True
+        AO4 True
+        IA1 True
+        IA2 True
+        IA3 True
+        IA4 True
+        II1 True
+        II2 True
+        II3 True
+        II4 True
+        IE1 True
+        IE2 True
+        IE3 True
+        IE4 True
+        IO1 True
+        IO2 True
+        IO3 True
+        IO4 True
+        EA1 True
+        EA2 True
+        EA3 True
+        EA4 True
+        EI1 True
+        EI2 True
+        EI3 True
+        EI4 True
+        EE1 True
+        EE2 True
+        EE3 True
+        EE4 True
+        EO1 True
+        EO2 True
+        EO3 True
+        EO4 True
+        OA1 True
+        OA2 True
+        OA3 True
+        OA4 True
+        OI1 True
+        OI2 True
+        OI3 True
+        OI4 True
+        OE1 True
+        OE2 True
+        OE3 True
+        OE4 True
+        OO1 True
+        OO2 True
+        OO3 True
+        OO4 True
+        >>> ops.phm_heuristic_min_premises(["Aab", "Ibc"])
+        ['Iac']
+        >>> ops.phm_heuristic_min_premises(["Aab", "Ibc", "Icb"])
+        ['Ica']
+        """
+        # generalized min heuristic
+        mood = None
+        for p in premises:
+            if p[0] == "A" and mood not in ["E", "I", "O"]:
+                mood = "A"
+            elif p[0] == "I" and mood not in ["E", "O"]:
+                mood = "I"
+            elif p[0] == "E" and mood != "O":
+                mood = "E"
+            elif p[0] == "O":
+                mood = "O"
+
+        # generalized attachment heuristic
+        phrases = [(self.phm.model.mood_to_phrase[prem[0]], prem[1]) for prem in premises]
+        candidates = [(self.phm.model.mood_to_phrase[mood], subj) for subj in ["a", "c"]]
+        candidates = [c for c in candidates if c in phrases]
+
+        if len(candidates) == 1:
+            return [mood + candidates[0][1] + ("a" if candidates[0][1] == "c" else "c")]
+        else:
+            # Criterion: Use the end term of the max premise. Does not apply if premises have equal mood.
+            max_info = max([self.phm.model.informativeness[prem[0]] for prem in premises])
+            max_premises = [p for p in premises if self.phm.model.informativeness[p[0]] == max_info]
+            end_terms = list(set([mp.replace("b", "")[1] for mp in max_premises]))
+            if len(end_terms) > 1:
+                return [mood + "ac", mood + "ca"]
+            else:
+                return [mood + end_terms[0] + "ac".replace(end_terms[0], "")]
+
     def phm_p_entailment(self, mr):
         """
         >>> ops = Operations()
@@ -385,7 +507,9 @@ class Operations:
     ### 5. PSYCOP ###
     def psycop_check(self, mr):
         conclusions = mr[1]
-        return [c for c in conclusions if c in self.psycop.model.conclusions_positive_checks(self.current_syllogism)]
+        checked_conclusions = [c for c in conclusions if
+                               c in self.psycop.model.conclusions_positive_checks(self.current_syllogism)]
+        return checked_conclusions if len(checked_conclusions) != 0 else ["NVC"]
 
     ### 6. Mental Models ###
     def mm_encode_vmstyle(self, item):
@@ -632,24 +756,24 @@ class Operations:
         OO3 True
         OO4 True
         """
-        premises = premises[:2]
 
-    #    syllogism = ccobra.syllogistic.Syllogism(item).encoded_task
         mm = []
         exhausted = []
-    #    to = sylutil.term_order(syllogism[2])
-    #    subj_0, pred_0 = to[0]
         subj_0, pred_0 = premises[0][1], premises[0][2]
-    #    subj_1, pred_1 = to[1]
+
+        first_premises = [p for p in premises if "a" in p]
+        if len(first_premises) == 2:
+            reverse = True
+        else:
+            reverse = False
+
 
         t0 = sylutil.get_time()
-        t1 = sylutil.get_time()
 
-        s0 = VerbalModels.Prop(name=subj_0, neg=False, identifying=False, t=t0)
+        s0 = VerbalModels.Prop(name=subj_0, neg=False, identifying=True, t=t0)
         p0 = VerbalModels.Prop(name=pred_0, neg=False, identifying=False, t=t0)
         non_p0 = VerbalModels.Prop(name=pred_0, neg=True, identifying=False, t=t0)
-    #    s1 = VerbalModels.Prop(name=subj_1, neg=False, identifying=False, t=t0)
-    #    p1 = VerbalModels.Prop(name=pred_1, neg=False, identifying=False, t=t0)
+        non_s0 = VerbalModels.Prop(name=subj_0, neg=True, identifying=False, t=t0)
 
         ### First premise ###
         if premises[0][0] == "A":
@@ -657,6 +781,8 @@ class Operations:
                        VerbalModels.Individual(props=[s0, p0], t=t0)])
             if s0 not in exhausted:
                exhausted.append(s0)
+            if reverse:
+                exhausted.append(p0)
         if premises[0][0] == "I":
             mm.extend((VerbalModels.Individual(props=[s0, p0], t=t0),
                        VerbalModels.Individual(props=[s0], t=t0),
@@ -671,44 +797,50 @@ class Operations:
             if p0 not in exhausted:
                 exhausted.append(p0)
         if premises[0][0] == "O":
-            mm.extend([VerbalModels.Individual(props=[s0, non_p0], t=t0),
-                       VerbalModels.Individual(props=[s0, non_p0], t=t0),
-                       VerbalModels.Individual(props=[p0], t=t0),
-                       VerbalModels.Individual(props=[p0], t=t0)])
+            if not reverse:
+                mm.extend([VerbalModels.Individual(props=[s0, non_p0], t=t0),
+                           VerbalModels.Individual(props=[s0, non_p0], t=t0),
+                           VerbalModels.Individual(props=[p0], t=t0),
+                           VerbalModels.Individual(props=[p0], t=t0)])
+            if reverse:
+                mm.extend([VerbalModels.Individual(props=[s0, non_p0], t=t0),
+                           VerbalModels.Individual(props=[s0, non_p0], t=t0),
+                           VerbalModels.Individual(props=[non_s0, p0], t=t0),
+                           VerbalModels.Individual(props=[non_s0, p0], t=t0)])
 
-        for n, prem in enumerate(premises[1:]):
+        second_premises = [p for p in premises if "c" in p]
+        for n, prem in enumerate(second_premises):
             tn = sylutil.get_time()
             subj_n, pred_n = prem[1], prem[2]
             end_term_n = subj_n if subj_n != "b" else pred_n
-            sn = VerbalModels.Prop(name=subj_n, neg=False, identifying=False, t=t0)
-            pn = VerbalModels.Prop(name=pred_n, neg=False, identifying=False, t=t0)
-    #        non_pn = VerbalModels.Prop(name=pred_0, neg=True, identifying=False, t=t0)
+            sn = VerbalModels.Prop(name=subj_n, neg=False, identifying=True, t=tn)
+            pn = VerbalModels.Prop(name=pred_n, neg=False, identifying=False, t=tn)
 
             ### Second premise ###
-            prop_b = VerbalModels.Prop(name="b", neg=False, identifying=False, t=t0)
+            prop_b = VerbalModels.Prop(name="b", neg=False, identifying=False, t=tn)
             i_b = [i for i, row in enumerate(mm) if row.contains(prop_b)]
 
             prop_et = VerbalModels.Prop(name=end_term_n, neg=False, identifying=False, t=tn)
             prop_non_et = VerbalModels.Prop(name=end_term_n, neg=True, identifying=False, t=tn)
             ind_et = VerbalModels.Individual(props=[prop_et], t=tn)
 
-    #        prop_c = VerbalModels.Prop(name="c", neg=False, identifying=False, t=t1)
-    #        prop_non_c = VerbalModels.Prop(name="c", neg=True, identifying=False, t=t1)
-    #        ind_c = VerbalModels.Individual(props=[prop_c], t=t1)
             prop_non_b = VerbalModels.Prop(name="b", neg=True, identifying=False, t=tn)
 
             if prem[0] == "A":
                 for i in i_b:
-                    mm[i].props.append(prop_et)
+                    if not mm[i].contains(prop_et):
+                        mm[i].props.append(prop_et)
                 if sn not in exhausted:
                     exhausted.append(sn)
             if prem[0] == "I":
-                mm[i_b[0]].props.append(prop_et)
+                if not mm[i_b[0]].contains(prop_et):
+                    mm[i_b[0]].props.append(prop_et)
                 mm.append(ind_et)
             if prem[0] == "E" or prem[0] == "O":
                 if sn == prop_b:
                     for i in i_b:
-                        mm[i].props.append(prop_non_et)
+                        if not mm[i].contains(prop_non_et):
+                            mm[i].props.append(prop_non_et)
                     mm.extend((ind_et, ind_et))
                 else:
                     mm.extend([VerbalModels.Individual(props=[prop_non_b, prop_et], t=tn),
@@ -729,6 +861,22 @@ class Operations:
     def mm_conclude(self, mr, exclude_weaker=True):
         verbal_model, exhausted = mr[0]
         return sorted(list(set(self.mm.model.conclude(sylutil.vm_to_mm(verbal_model), exhausted, exclude_weaker))))
+
+    def mm_falsify_all(self, mr):
+        verbal_model, exhausted = mr[0]
+        conclusions = mr[1]
+        conclusions = [c for c in conclusions if c != "NVC"]
+
+        current_vm = verbal_model
+        proved_conclusions = []
+        for c in conclusions:
+            new_mental_model = self.mm.model.falsify(sylutil.vm_to_mm(verbal_model), [e.name for e in exhausted], c)
+            new_verbal_model = sylutil.mm_to_vm(new_mental_model)
+            if self.mm.model.models_equal(new_mental_model, sylutil.vm_to_mm(current_vm)):
+                proved_conclusions.append(c)
+                current_vm = new_verbal_model
+
+        return ((verbal_model, exhausted), ["NVC"] if len(proved_conclusions) == 0 else proved_conclusions)
 
     def mm_falsify(self, mr, i=0):
         verbal_model, exhausted = mr[0]
@@ -762,11 +910,28 @@ class Operations:
         return new_model, exhausted
 
     def vm_encode_premises(self, premises):
+        """
+        >>> ops = Operations()
+        >>> ops.vm_encode_premises(["Aab", "Aba", "Abc", "Acb"])
+        ([[a'(0), b'(0), c'(2)](0)], [a(0), b(0), c(0)])
+        >>> ops.vm_encode_premises(["Aab", "Aba"])
+        ([[a'(4), b'(4)](4)], [a(0), b(0)])
+        """
         verbal_model = []
+        exhausted = []
         for premise in premises:
             verbal_model = self.vm.model.extend_vm(verbal_model, premise, reencoding=False)
+            subj = VerbalModels.Prop(name=premise[1], neg=False, identifying=False, t=0)
+            obj = VerbalModels.Prop(name=premise[2], neg=False, identifying=False, t=0)
+            if premise[0] == "A":
+                if subj not in exhausted:
+                    exhausted.append(subj)
+            elif premise[0] == "E":
+                if subj not in exhausted:
+                    exhausted.append(subj)
+                if obj not in exhausted:
+                    exhausted.append(obj)
 
-        exhausted = self.mm_encode_premises_vmstyle(premises)[1]
         return verbal_model, exhausted
 
     def vm_encode_flex(self, mr):
@@ -788,28 +953,207 @@ class Operations:
         params_before = copy.deepcopy(self.vm.model.get_params())
 
         if p10 is not None:
-            self.vm.model.params["p10"] = p10 #b
-            self.vm.model.params["p11"] = p11 #b
-            self.vm.model.params["p12"] = p12 #b
-            self.vm.model.params["p13"] = p13 #c
+            self.vm.model.params["p10"] = p10
+            self.vm.model.params["p11"] = p11
+            self.vm.model.params["p12"] = p12
+            self.vm.model.params["p13"] = p13
 
         new_model, new_conclusions = self.vm.model.reencode(syllogism, verbal_model, conclusions)
 
-        new_model = verbal_model if any([row.contains(VerbalModels.Prop(name="a", neg=False)) and row.contains(VerbalModels.Prop(name="a", neg=True))
-                                         or row.contains(VerbalModels.Prop(name="b", neg=False)) and row.contains(VerbalModels.Prop(name="b", neg=True))
-                                         or row.contains(VerbalModels.Prop(name="c", neg=False)) and row.contains(VerbalModels.Prop(name="c", neg=True))
-                                         for row in new_model]) else new_model
-
         self.vm.model.set_params(params_before)
-        return (verbal_model, exhausted), new_conclusions#(new_model, exhausted), new_conclusions
+        return (new_model, exhausted), new_conclusions
 
     ### 8. MReasoner ###
     def mreasoner_heuristic(self, item):
         syl = ccobra.syllogistic.Syllogism(item).encoded_task
         return self.mreasoner.model.heuristic(syl)
 
-    def mreasoner_encode(self, item, size, deviation):
+    def mreasoner_encode_premises(self, premises, size, deviation):
+        """
+        >>> mr = MReasoner()
+        >>> ops = Operations()
+        >>> all_premises = []
+        >>> for m1 in ["A", "I", "E", "O"]:
+        ...    for t1 in ["a", "b", "c"]:
+        ...        for t2 in ["a", "b", "c"]:
+        ...            if t1 != t2 and ("b" in t1 or "b" in t2):
+        ...                all_premises.append(m1 + t1 + t2)
+        >>> all_true = True
+        >>> for p1 in [p for p in all_premises if "a" in p]:
+        ...     for p2 in [p for p in all_premises if "c" in p]:
+        ...         p3 = p1[0] + p1[2] + p1[1]
+        ...         p4 = p2[0] + p2[2]+ p2[1]
+        ...         model, exh = ops.mreasoner_encode_premises([p1, p2, p3, p4], 4, 0.0)
+        ...         holds = [mr.check_if_holds(sylutil.vm_to_mm(model), p) for p in [p1, p2, p3, p4]]
+        ...         if not all(holds):
+        ...             all_true = False
+        >>> print(all_true)
+        True
+        """
+
+        t0 = sylutil.get_time()
+        t1 = sylutil.get_time()
+
+        mm = []
+
+        first_premises = [p for p in premises if "a" in p]
+
+        (subj0, pred0) = premises[0][1], premises[0][2]
+
+        s0 = VerbalModels.Prop(name=subj0, neg=False, identifying=False, t=t0)
+        non_s0 = VerbalModels.Prop(name=subj0, neg=True, identifying=False, t=t0)
+        p0 = VerbalModels.Prop(name=pred0, neg=False, identifying=False, t=t0)
+        non_p0 = VerbalModels.Prop(name=pred0, neg=True, identifying=False, t=t0)
+        prop_b = VerbalModels.Prop(name="b", neg=False, identifying=False, t=t0)
+
         exhausted = []
+        if premises[0][0] in ["A", "E"]:
+            exhausted.append(s0)
+            if premises[0][0] == "E":
+                exhausted.append(p0)
+        if len(first_premises) == 2 and premises[0][0] == "A":
+            exhausted.append(p0)
+
+        xy = VerbalModels.Individual(props=[s0, p0], t=t0)
+        xnony = VerbalModels.Individual(props=[s0, non_p0], t=t0)
+        nonxy = VerbalModels.Individual(props=[non_s0, p0], t=t0)
+        nonxnony = VerbalModels.Individual(props=[non_s0, non_p0], t=t0)
+
+        if len(premises) >= 3 and len([p for p in premises if "a" in p]) >= 2:
+            reverse = True
+        else:
+            reverse = False
+
+        ### Encode first premise ###
+        # individuals that must be present in the model of the 1st premise
+        if not reverse:
+            required_inds = {"A": [xy], "I": [xy], "E": [xnony, nonxy], "O": [xnony]}[premises[0][0]]
+        if reverse:
+            required_inds = {"A": [xy], "I": [xy], "E": [xnony, nonxy], "O": [xnony, nonxy]}[premises[0][0]]
+
+
+        appendix = []
+
+        def draw_individual(mood, subj, pred, complete, reverse=False):
+            s0 = VerbalModels.Prop(name=subj, neg=False, identifying=True, t=t0)
+            non_s0 = VerbalModels.Prop(name=subj, neg=True, identifying=False, t=t0)
+            p0 = VerbalModels.Prop(name=pred, neg=False, identifying=False, t=t0)
+            non_p0 = VerbalModels.Prop(name=pred, neg=True, identifying=False, t=t0)
+
+            x = VerbalModels.Individual(props=[s0], t=t0)
+            y = VerbalModels.Individual(props=[p0], t=t0)
+            xy = VerbalModels.Individual(props=[s0, p0], t=t0)
+            xnony = VerbalModels.Individual(props=[s0, non_p0], t=t0)
+            nonxy = VerbalModels.Individual(props=[non_s0, p0], t=t0)
+            nonxnony = VerbalModels.Individual(props=[non_s0, non_p0], t=t0)
+
+            if mood == "A":
+                if complete:
+                    # All A are B -> possible inds: [a b], [-a b], [-a -b], impossible ind: [a -b]
+                    if not reverse:
+                        return random.choice([xy, nonxy, nonxnony])
+                    if reverse: # Al B are A - impossible also: -a b
+                        return random.choice([xy, nonxnony])
+                return xy
+            elif mood == "I":
+                if complete:
+                    # Some A are B -> possible inds: [a b], [-a b], [a, -b], [-a -b]
+                    return random.choice([xy, nonxy, xnony, nonxnony])
+                return random.choice([xy, x])
+            elif mood == "E":
+                if complete:
+                    # No A are B -> possible inds: [-a b], [a, -b], [-a -b], impossible ind: [a b]
+                    return random.choice([nonxy, xnony, nonxnony])
+                return random.choice([nonxy, xnony])
+            elif mood == "O":
+                if complete:
+                    # Some A are not B -> possible inds: [a b], [-a b], [a, -b], [-a -b]
+                    if not reverse:
+                        return random.choice([xy, nonxy, xnony, nonxnony])
+                    if reverse:
+                        return random.choice([xy, nonxy, xnony, nonxnony])
+                if not reverse:
+                    # preferred inds: [a b], [a -b], [b], excluding [-a b]
+                    return random.choice([xy, xnony, y])
+                if reverse:
+                    return random.choice([xy, nonxy, xnony, nonxnony])
+
+        # O needs an additional requirement to make sure "b" is present (otherwise e.g. [a -b] [-a -b] would be allowed)
+        while not all([any([ind.props == i.props for i in appendix]) for ind in required_inds]) or \
+                premises[0][0] == "O" and not any([ind.contains(prop_b) for ind in appendix]):
+            appendix = []
+            for i in range(size):
+                yyy = draw_individual(premises[0][0], subj0, pred0, random.random() < deviation, reverse)
+                appendix.append(yyy)
+        mm.extend(appendix)
+
+        second_premises = [p for p in premises if "c" in p]
+
+        ### Encode second premise ###
+        prop_non_b = VerbalModels.Prop(name="b", neg=True, identifying=False, t=t1)
+        i_b = [i for i, ind in enumerate(mm) if ind.contains(prop_b)]
+
+        prop_c = VerbalModels.Prop(name="c", neg=False, identifying=False, t=t1)
+        prop_non_c = VerbalModels.Prop(name="c", neg=True, identifying=False, t=t1)
+        ind_c = VerbalModels.Individual(props=[prop_c], t=t1)
+
+        for prem in second_premises:
+            subj1 = prem[1]
+            pred1 = prem[2]
+            s1 = VerbalModels.Prop(name=subj1, neg=False, identifying=True, t=t0)
+            p1 = VerbalModels.Prop(name=subj1, neg=False, identifying=False, t=t0)
+            non_p1 = VerbalModels.Prop(name=subj1, neg=False, identifying=False, t=t0)
+
+            # Usually "Abc or "Acb"
+            if prem[0] == "A":
+                for i in i_b:
+                    if not mm[i].contains(prop_c):
+                        mm[i].props.append(prop_c)
+                if s1 not in exhausted:
+                    exhausted.append(s1)
+            # Usually "Ibc or "Icb"
+            elif prem[0] == "I":
+                if subj1 == "b":
+                    for n, i in enumerate(i_b):
+                        if not mm[i].contains(prop_c): # OK?
+                            mm[i].props.append(prop_c)
+                        if n == 1:
+                            break
+                elif subj1 == "c":
+                    if not mm[i_b[0]].contains(prop_c):
+                        mm[i_b[0]].props.append(prop_c)
+                    mm.append(ind_c)
+            elif prem[0] == "E":
+                if subj1 == "b":
+                    for i in i_b:
+                        if not mm[i].contains(prop_non_c):
+                            mm[i].props.append(prop_non_c)
+                    mm.append(ind_c)
+                elif subj1 == "c":
+                    mm.extend([VerbalModels.Individual(props=[prop_non_b, prop_c], t=t1),
+                               VerbalModels.Individual(props=[prop_non_b, prop_c], t=t1),
+                               VerbalModels.Individual(props=[prop_non_b, prop_c], t=t1),
+                               VerbalModels.Individual(props=[prop_non_b, prop_c], t=t1)])
+                if prop_b not in exhausted:
+                    exhausted.append(prop_b)
+                if prop_c not in exhausted:
+                    exhausted.append(prop_c)
+            elif prem[0] == "O":
+                if subj1 == "b":
+                    for n, i in enumerate(i_b):
+                        if not mm[i].contains(prop_non_c):
+                            mm[i].props.append(prop_non_c)
+                        # augment max 2 individuals
+                        if n == 1:
+                            break
+                    mm.append(ind_c)
+                elif subj1 == "c":
+                    mm.extend([VerbalModels.Individual(props=[prop_non_b, prop_c], t=t1),
+                               VerbalModels.Individual(props=[prop_c], t=t1)])
+
+        return mm, sorted(exhausted, key=lambda p: p.name)
+
+    def mreasoner_encode(self, item, size, deviation):
         syllogism = ccobra.syllogistic.encode_task(item.task)
 
         t0 = sylutil.get_time()
@@ -824,6 +1168,12 @@ class Operations:
         non_p0 = VerbalModels.Prop(name=pred0, neg=True, identifying=False, t=t0)
         s1 = VerbalModels.Prop(name=subj1, neg=False, identifying=False, t=t0)
         prop_b = VerbalModels.Prop(name="b", neg=False, identifying=False, t=t0)
+
+        exhausted = []
+        if syllogism[0] in ["A", "E"]:
+            exhausted.append(s0)
+            if syllogism[0] == "E":
+                exhausted.append(p0)
 
         xy = VerbalModels.Individual(props=[s0, p0], t=t0)
         xnony = VerbalModels.Individual(props=[s0, non_p0], t=t0)
@@ -942,6 +1292,13 @@ class Operations:
             conclusions[i] = self.mreasoner.model.verify_conclusion(conclusions[i], self.current_syllogism)
         return sylutil.uniquify_keep_order(conclusions)
 
+    def mreasoner_falsify_all(self, mr):
+        conclusions = copy.deepcopy(mr[1])
+        verified_conclusions = []
+        for c in conclusions:
+            verified_conclusions.append(self.mreasoner.model.verify_conclusion(c, self.current_syllogism))
+        return sylutil.uniquify_keep_order(conclusions)
+
     def mreasoner_falsify_with_model(self, mr, weaken=False, i=0):
         conclusions = copy.deepcopy(mr[1])
         if i >= len(conclusions):
@@ -952,6 +1309,16 @@ class Operations:
             else:
                 conclusions[i] = "NVC"
         return sylutil.uniquify_keep_order(conclusions)
+
+    def mreasoner_falsify_all_with_model(self, mr):
+        conclusions = copy.deepcopy(mr[1])
+        checked_conclusions = []
+        for c in conclusions:
+            if self.mreasoner.model.check_if_holds(sylutil.vm_to_mm(mr[0][0]), c):
+                checked_conclusions.append(c)
+        if len(checked_conclusions) == 0:
+            return ["NVC"]
+        return sorted(checked_conclusions)
 
     def weaken_conclusion(self, mr):
         conclusions = copy.deepcopy(mr[1])
@@ -965,7 +1332,7 @@ class Operations:
         return sylutil.uniquify_keep_order(new_conclusions)
 
     ### 9. Response selection ###
-    def resp_prefer(self, mr, stronger_weaker=None, ac_ca=None, mood_first=None, posneg=None):
+    def resp_prefer(self, mr, stronger_weaker=None, ac_ca=None, mood_first=None, posneg="pos"):
         """
         >>> ops = Operations()
         >>> ops.resp_prefer((None, ["Aac", "Aca", "Iac", "Ica", "NVC"]), "stronger", "ac")
@@ -1026,19 +1393,76 @@ class Operations:
 
         return prefered_conclusions[0]
 
+    def resp_prefer_test(self, mr, stronger_weaker=None, ac_ca=None):
+        """
+        >>> ops = Operations()
+        >>> ops.resp_prefer((None, ["Aac", "Aca", "Iac", "Ica", "NVC"]), "stronger", "ac")
+        'Aac'
+        >>> ops.resp_prefer((None, ["Aac", "Aca", "Iac", "Ica", "NVC"]), "weaker", "ac")
+        'Iac'
+        >>> ops.resp_prefer((None, ["Aac", "Aca", "Iac", "Ica", "NVC"]), "stronger", "ca")
+        'Aca'
+        >>> ops.resp_prefer((None, ["Aac", "Aca", "Iac", "Ica", "NVC"]), "weaker", "ca")
+        'Ica'
+        >>> ops.resp_prefer((None, ["Aac", "Aca"]), "weaker", "ca")
+        'Aca'
+
+        >>> ops.resp_prefer((None, ["NVC"]), "weaker", "ca")
+        'NVC'
+        >>> ops.resp_prefer((None, ["NVC", "NVC", "NVC", "NVC", "NVC", "NVC", "NVC"]), "weaker", "ca")
+        'NVC'
+        >>> ops.resp_prefer((None, ["NVC", "NVC", "NVC", "NVC", "NVC", "NVC", "Aac"]), "weaker", "ca")
+        'Aac'
+
+        >>> ops.resp_prefer((None, ["Aac", "Ica"]), "stronger", "ca", True, "pos")
+        'Aac'
+        >>> ops.resp_prefer((None, ["Aac", "Ica"]), "weaker", "ca", False, "pos")
+        'Ica'
+        >>> ops.resp_prefer((None, ['Oac', 'Eca', 'Iac', 'Ica']), "stronger", "ca", True, "pos")
+        'Ica'
+        >>> ops.resp_prefer((None, ['Oac', 'Eca', 'Iac', 'Ica']), "weaker", "ac", True, "neg")
+        'Oac'
+        >>> ops.resp_prefer((None, ['Iac', 'Ica', 'Oac', 'Oca']), "weaker", "ac", True, "pos")
+        'Iac'
+        """
+
+        conclusions = [c for c in mr[1] if c != "NVC"]
+        if len(conclusions) == 0:
+            return "NVC"
+
+        prefered_conclusions = []
+        for c in conclusions:
+            if stronger_weaker == "stronger":
+                if c[0] in ["I", "O"] and ({"I": "A", "O": "E"}[c[0]] + c[1:] in conclusions or {"I": "A", "O": "E"}[c[0]] + c[2] + c[1] in conclusions):
+                    continue
+
+            elif stronger_weaker == "weaker":
+                if c[0] in ["A", "E"] and ({"A": "I", "E": "O"}[c[0]] + c[1:] in conclusions or {"A": "I", "E": "O"}[c[0]] + c[2] + c[1] in conclusions):
+                    continue
+            if ac_ca is not None:
+                if c[1:] != ac_ca and (c[0] + ac_ca[0] + ac_ca[1]) in conclusions:
+                    continue
+            prefered_conclusions.append(c)
+
+        if len(prefered_conclusions) == 1:
+            return prefered_conclusions[0]
+        else:
+            raise Exception
+
     def resp_random(self, mr):
-        return random.choice(mr[1])
+        return mr[1]
 
 
 # All implemented basic operations
 BASIC_OPERATIONS = [
+    Operation(OpType.ENCODE_PREMISES, Operations.mreasoner_encode_premises, (3, 0.0)),
+    Operation(OpType.ENCODE_PREMISES, Operations.mm_encode_premises_vmstyle, ()),
+
     Operation(OpType.NONE, Operations.vm_encode_flex, ()),
     Operation(OpType.NONE, Operations.mm_encode_flex, ()),
-    Operation(OpType.NONE, Operations.mreasoner_encode_flex, (2, 0.0)),
     Operation(OpType.NONE, Operations.mreasoner_encode_flex, (3, 0.0)),
 
     # Preencode
-    Operation(OpType.PREENCODE, Operations.ic_reverse_premise, (False, False)),
     Operation(OpType.PREENCODE, Operations.ic_reverse_premise, (False, True)),
     Operation(OpType.PREENCODE, Operations.ic_reverse_premise, (True, False)),
     Operation(OpType.PREENCODE, Operations.ic_reverse_premise, (True, True)),
@@ -1050,12 +1474,11 @@ BASIC_OPERATIONS = [
     Operation(OpType.HEURISTIC, Operations.mreasoner_heuristic, ()),
 
     # Encode
-    Operation(OpType.ENCODE_PREMISES, Operations.mm_encode_premises_vmstyle, ()),
-    Operation(OpType.ENCODE, Operations.mreasoner_encode, (2, 0.0)),
     Operation(OpType.ENCODE, Operations.mreasoner_encode, (3, 0.0)),
     Operation(OpType.ENCODE, Operations.mm_encode_vmstyle, ()),
     Operation(OpType.ENCODE, Operations.vm_encode, ()),
     Operation(OpType.ENCODE_PREMISES, Operations.vm_encode_premises, ()),
+    Operation(OpType.HEURISTIC_PREMISES, Operations.phm_heuristic_min_premises, ()),
 
     # Conclude
     Operation(OpType.CONCLUDE, Operations.mm_conclude, ()),
@@ -1066,18 +1489,9 @@ BASIC_OPERATIONS = [
     Operation(OpType.ENTAIL, Operations.psycop_check, ()),
 
     # Falsify
-    Operation(OpType.FALSIFY, Operations.mm_falsify, [0]),
-    Operation(OpType.FALSIFY, Operations.mm_falsify, [1]),
-    Operation(OpType.FALSIFY, Operations.mm_falsify, [2]),
-    Operation(OpType.FALSIFY, Operations.mm_falsify, [3]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify, [0]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify, [1]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify, [2]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify, [3]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify_with_model, [0]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify_with_model, [1]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify_with_model, [2]),
-    Operation(OpType.ENTAIL, Operations.mreasoner_falsify_with_model, [3]),
+    Operation(OpType.REENCODE, Operations.mm_falsify_all, ()),
+    Operation(OpType.FALSIFY, Operations.mreasoner_falsify_all, ()),
+    Operation(OpType.ENTAIL, Operations.mreasoner_falsify_all_with_model, ()),
 
     # Entail
     Operation(OpType.ENTAIL, Operations.phm_p_entailment, ()),
@@ -1085,12 +1499,9 @@ BASIC_OPERATIONS = [
     Operation(OpType.ENTAIL, Operations.phm_reply, ()),
 
     # Respond
-    Operation(OpType.RESPOND, Operations.resp_prefer, ("stronger", "ac", True, "pos")),  # wichtig
-    Operation(OpType.RESPOND, Operations.resp_prefer, ("weaker", "ac", True, "pos")),  # wichtig
-    Operation(OpType.RESPOND, Operations.resp_prefer, ("stronger", "ca", True, "pos")),  # wichtig
-    Operation(OpType.RESPOND, Operations.resp_prefer, ("weaker", "ca", True, "pos")),  # wichtig
-#    Operation(OpType.RESPOND, Operations.resp_random, ()),  # wichtig
+    Operation(OpType.RESPOND, Operations.resp_random, ()),  # random response
 ]
+
 
 # Additional operations to create complete 1-model-plans of every model
 EXTRA_OPERATIONS = [
@@ -1100,7 +1511,7 @@ EXTRA_OPERATIONS = [
 
 
 class AbstractModelBase:
-    def __init__(self, operations, only_pure=False, extra_weight=0.8, max_depth=6, name="Tree_Model (base)", init_ops=True):
+    def __init__(self, operations, only_pure=False, extra_weight=0.8, max_depth=7, name="Tree_Model (base)", init_ops=True):
         self.name = name
 
         # Initialize container with all implemented operations
@@ -1151,8 +1562,9 @@ class AbstractModelBase:
     def adapt(self, item, target, **kwargs):
         syl = ccobra.syllogistic.encode_task(item.task)
         # Adapt plan model by increasing score of paths that lead from item to target
-        for plan in self.find_plans(syl, ccobra.syllogistic.encode_response(target, item.task)):
-            self.all_plans[plan] += self.n_pre_subjects * self.extra_weight
+
+        for (plan, probability) in self.find_plans(syl, ccobra.syllogistic.encode_response(target, item.task)):
+            self.all_plans[plan] += self.n_pre_subjects * self.extra_weight * probability
 
     def recursive_follow(self, root, plan):
         node = self.follow_plan(root, plan)
@@ -1211,10 +1623,9 @@ class AbstractModelBase:
             for answer in participant:
                 syl = ccobra.syllogistic.encode_task(answer["item"].task)
                 target = ccobra.syllogistic.encode_response(answer["response"], answer["item"].task)
-                target_nodes = self.find_plans(syl, target)
-                for tn in target_nodes:
-                    plan = tn
-                    self.all_plans[plan] += 1
+                plans = self.find_plans(syl, target)
+                for (plan, probability) in plans:
+                    self.all_plans[plan] += probability
 
     def applicable(self, operation, current_node):
         """ Check if operation is applicable in current_node """
@@ -1237,8 +1648,13 @@ class AbstractModelBase:
             new_vars["num_concludes"] += 1
         elif operation.optype == OpType.REENCODE:
             new_vars["num_reencodes"] += 1
+        if operation.fnc.__name__ == "mreasoner_falsify_all_with_model":
+            new_vars["num_mfawm"] += 1
+        if "falsify" in operation.fnc.__name__ or "psycop" in operation.fnc.__name__:
+            current_node.vars["num_falsifies_general"] += 1
+            pass
         if operation.fnc.__name__ == "phm_p_entailment":
-            new_vars["num_entails"] += 1
+            new_vars["num_weakens"] += 1
         if operation.fnc.__name__ == "mreasoner_falsify" or operation.fnc.__name__ == "mreasoner_falsify_with_model":
             new_vars["mreasoner_last_falsify"] = operation.args[0]
         elif operation.optype == OpType.FALSIFY:
@@ -1270,34 +1686,6 @@ class AbstractModelBase:
                 return None
         return current_node
 
-    def plan_vote(self, item):
-        syl = ccobra.syllogistic.encode_task(item.task)
-
-        conclusions = ccobra.syllogistic.RESPONSES
-        scores = []
-
-        for concl in conclusions:
-            target_nodes = self.find_plans(syl, concl)
-            scores.append(sum([self.all_plans[tn] for tn in target_nodes]))
-        return conclusions[scores.index(max(scores))]
-
-    def plan_vote2(self, item):
-        conclusions = ccobra.syllogistic.RESPONSES
-        scores = []
-
-        for concl in conclusions:
-            target_nodes = self.find_plans(item, concl)
-            concl_score = 0
-            for tn in target_nodes:
-                additional_weight = np.prod([self.param_bevorzugung[f] for f in self.param_bevorzugung if f in tn.name])
-                concl_score += self.all_plans[tn.name] * additional_weight
-
-            scores.append(concl_score)
-
-        n = sum(scores)
-        scores = [s / n for s in scores]
-        return conclusions[scores.index(max(scores))]
-
     def find_plans(self, syl, target):
         return self.concl_syl_to_plans[(syl, target)]
 
@@ -1309,17 +1697,19 @@ class AbstractModelBase:
             post_content = (operation.fnc(self.ops, current_node.content, *operation.args), current_node.content[1])
         elif operation.optype == OpType.PREENCODE:
             post_content = operation.fnc(self.ops, current_node.content, *operation.args)
-        elif operation.optype == OpType.HEURISTIC:
+        elif operation.optype == OpType.HEURISTIC or operation.optype == OpType.HEURISTIC_PREMISES:
             post_content = (None, operation.fnc(self.ops, current_node.content, *operation.args))
         elif operation.optype == OpType.ENCODE or operation.optype == OpType.ENCODE_PREMISES:
             post_content = (operation.fnc(self.ops, current_node.content, *operation.args), None)
         elif operation.optype == OpType.CONCLUDE or operation.optype == OpType.REENCODE or operation.optype == OpType.ENTAIL:
-            if operation.fnc.__name__ == "vm_reencode":
+            if operation.fnc.__name__ == "vm_reencode" or operation.fnc.__name__ == "mm_falsify_all":
                 post_content = operation.fnc(self.ops, current_node.content, *operation.args)
             else:
                 post_content = (current_node.content[0], operation.fnc(self.ops, current_node.content, *operation.args))
         elif operation.optype == OpType.FALSIFY:
             post_content = (operation.fnc(self.ops, current_node.content, *operation.args), current_node.content[1])
+            if operation.fnc.__name__ == "mreasoner_falsify_all":
+                post_content = (current_node.content[0], operation.fnc(self.ops, current_node.content, *operation.args))
         elif operation.optype == OpType.RESPOND:
             post_content = operation.fnc(self.ops, current_node.content, *operation.args)
         elif operation.optype == OpType.XYZ:
@@ -1341,12 +1731,24 @@ class AbstractModelBase:
     def remove_leaf(self, leaf):
         leaf.parent.children = tuple(n for n in leaf.parent.children if n is not leaf)\
 
+    @staticmethod
+    def stochastic_target(content):
+        """
+        >>> AbstractModelBase.stochastic_target(["Aac"])
+        True
+        """
+        try:
+            return all([c in ccobra.syllogistic.RESPONSES for c in content])
+        except TypeError:
+            return False
+
     def span(self, item):
         self.ops.current_syllogism = ccobra.syllogistic.encode_task(item.task)
         root = AnyNode(name="root", content=item, state=State.Item, vars={"num_preencodes": 0,
                                                                           "num_concludes": 0,
                                                                           "num_falsifies": 0,
-                                                                          "num_entails": 0,
+                                                                          "num_mfawm": 0,
+                                                                          "num_falsifies_general": 0,
                                                                           "num_weakens": 0,
                                                                           "num_phm_replies": 0,
                                                                           "num_reencodes": 0,
@@ -1356,7 +1758,6 @@ class AbstractModelBase:
                                                                           "n_conclusions": 0,
                                                                           })
         fringe = [root]
-
         while True:
             if len(fringe) == 0:
                 break
@@ -1370,9 +1771,9 @@ class AbstractModelBase:
                     x = self.new_child(op, current_node)
                     fringe.append(x)
 
-        # Remove all leaves that don't contain a conclusion
+        # Remove all leaves that doesn't contain conclusions
         while True:
-            leaves_to_remove = [leaf for leaf in root.leaves if leaf.content not in ccobra.syllogistic.RESPONSES]
+            leaves_to_remove = [leaf for leaf in root.leaves if not self.stochastic_target(leaf.content)]
             if len(leaves_to_remove) == 0:
                 break
             for leaf in leaves_to_remove:
@@ -1388,17 +1789,21 @@ class AbstractModelBase:
                 concl_syl_to_plans[(syllogism, concl)] = []
         for i, item in enumerate(sylutil.GENERIC_ITEMS):
             syl = ccobra.syllogistic.encode_task(item.task)
+            with open(syl + ".txt", "w") as f:
+                f.write(syl)
             root = self.span(item)
             for i, leaf in enumerate(root.leaves):
-                concl = leaf.content
+                concls = leaf.content
+                p = 1/len(concls)
                 plan = leaf.name
-                plan_syl_to_concl[(plan, syl)] = concl
-                concl_syl_to_plans[(syl, concl)].append(plan)
+                plan_syl_to_concl[(plan, syl)] = []
+                for c in concls:
+                    plan_syl_to_concl[(plan, syl)].append(c)
+                    concl_syl_to_plans[(syl, c)].append((plan, p))
 
         return plan_syl_to_concl, concl_syl_to_plans
 
     def predict(self, item, **kwargs):
-#        random.seed(1243)
         syl = ccobra.syllogistic.encode_task(item.task)
-        prediction_node = self.follow_plan_no_root(syl, self.get_best_plan(item))
+        prediction_node = random.choice(self.follow_plan_no_root(syl, self.get_best_plan(item)))
         return ccobra.syllogistic.decode_response(prediction_node, item.task)

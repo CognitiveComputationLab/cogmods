@@ -9,12 +9,14 @@ from modular_models.util import sylutil
 
 
 class MentalModels(SyllogisticReasoningModel):
-    """ Mentals models theory after Bucciarelli & Johnson-Laird 1999. """
+    """ Mentals Models theory after Bucciarelli & Johnson-Laird 1999. """
 
     def __init__(self):
         SyllogisticReasoningModel.__init__(self)
-        self.params["falsify"] = 0.6
-        self.param_grid["falsify"] = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+        self.params["falsify_first"] = 0.5
+        self.param_grid["falsify_first"] = [0.0, 0.5, 0.95]
+        self.params["falsify_further"] = 0.5
+        self.param_grid["falsify_further"] = [0.0, 0.5, 0.95]
 
     def encode(self, syllogism):
         """ Returns initial MM representation of a syllogism + list of exhausted terms
@@ -348,17 +350,20 @@ class MentalModels(SyllogisticReasoningModel):
         initial_model, exhausted = self.encode(syllogism)
         conclusions = self.conclude(initial_model, exhausted)
         current_model = initial_model
-        while random.random() < self.params["falsify"]:
-            conclusions = self.conclude(current_model, exhausted)
-
-            # Falsify first conclusion
-            new_model = self.falsify(current_model, exhausted, conclusions[0])
-            if self.models_equal(new_model, current_model):
-                # No counterexample found - falsify second conclusion
-                new_model = self.falsify(current_model, exhausted, conclusions[1])
+        if random.random() < self.params["falsify_first"]:
+            while True:
+                # Falsify first conclusion
+                new_model = self.falsify(current_model, exhausted, conclusions[0])
                 if self.models_equal(new_model, current_model):
-                    # No counterexample found - stop searching
+                    # No counterexample found - falsify second conclusion
+                    new_model = self.falsify(current_model, exhausted, conclusions[1])
+                    if self.models_equal(new_model, current_model):
+                        # No counterexample found - stop searching
+                        break
+                # Counterexample found - replace old model
+                current_model = new_model
+                conclusions = self.conclude(current_model, exhausted)
+                if random.random() >= self.params["falsify_further"]:
                     break
-            # Counterexample found - replace old model
-            current_model = new_model
+
         return conclusions
