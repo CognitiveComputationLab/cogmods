@@ -20,22 +20,22 @@ class IllicitConversion(SyllogisticReasoningModel):
         # Use blackbox logically correct reasoning as deduction mechanism
         self.reasoning_model = LogicallyValidLookup()
 
-        self.params["reverse_first_premise"] = 0.6
-        self.params["reverse_second_premise"] = 0.6
-        self.params["reverse_A"] = 0.6
-        self.params["reverse_O"] = 0.6
+        self.params["reverse_first_premise"] = 1.0
+        self.params["reverse_second_premise"] = 1.0
+        self.params["reverse_A"] = 1.0
+        self.params["reverse_O"] = 1.0
 
-        self.param_grid["reverse_first_premise"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-        self.param_grid["reverse_second_premise"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-        self.param_grid["reverse_A"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-        self.param_grid["reverse_O"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+        self.param_grid["reverse_first_premise"] = [0.0, 1.0]
+        self.param_grid["reverse_second_premise"] = [0.0, 1.0]
+        self.param_grid["reverse_A"] = [0.0, 1.0]
+        self.param_grid["reverse_O"] = [0.0, 1.0]
 
     @staticmethod
     def reverse_premises(syllogism, first=True, second=True):
         additional_premises = []
         if first:
             additional_premises.append(syllogism[0] + sylutil.term_order(syllogism[2])[0][::-1])
-        elif second:
+        if second:
             additional_premises.append(syllogism[1] + sylutil.term_order(syllogism[2])[1][::-1])
         return additional_premises
 

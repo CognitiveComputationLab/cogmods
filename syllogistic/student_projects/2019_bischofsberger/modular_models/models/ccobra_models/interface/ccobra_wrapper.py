@@ -48,7 +48,7 @@ class CCobraWrapper:
         # the average error from all pre-training subjects (-> used to determine parameters in adapt step)
         # 1: 1/1 in 1st adaption step, 2/1 in 2nd step, 3/1 in 3rd step, ..., n/1 in nth step (n = # items)
         # 0.5: 1/2 -> 2/2 -> 3/2 -> 4/2 -> 5/2 -> ... -> n/2
-        self.extra_weight = 5
+        self.extra_weight = 0.8
 
     def generate_predictions(self):
         """ Generate all predictions for all configurations of model parameters for storage and quick retrieval """
@@ -114,6 +114,7 @@ class CCobraWrapper:
 
         self.errors = []
         data = sylutil.aggregate_data(dataset)
+
         for params in self.configurations:
             self.model.set_params(params)
             error = 0
@@ -144,7 +145,7 @@ class CCobraWrapper:
         self.model.set_params(best_configuration)
 
     def cached_prediction(self, syllogism):
-        """ retrieve prediction from cache """
+        """ Retrieve prediction from cache """
 
         actual_params = self.model.get_params()
         for i, params in enumerate(self.configurations):

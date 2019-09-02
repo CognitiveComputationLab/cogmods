@@ -348,6 +348,9 @@ class VerbalModels(SyllogisticReasoningModel):
         ['Iac', 'Ica']
         >>> m.conclude([m.Individual(props=[b_, a, cn_], t=0)]) # own EA4
         ['NVC']
+        >>> m.conclude([m.Individual(props=[a_, b_, c], t=0),
+        ...             m.Individual(props=[a_, b_], t=0)]) # own IA1
+        ['Iac']
         """
 
         conclusions = []
@@ -522,36 +525,6 @@ class VerbalModels(SyllogisticReasoningModel):
                         if any([c not in conclusions for c in new_conclusions]):
                             return vm, new_conclusions
         return vm, ["NVC"]
-
-
-#    def reencode_bewaehrt(self, syllogism, vm, conclusions):
-        # sort rows (individuals) of VM by access time (most recent first)
-        sorted_inds = sorted(vm, key=lambda x: x.t, reverse=True)
-
-        # sort properties per individual by access time (most recent first), flatten and uniquify
-        sorted_props = [sorted(ind.props, key=lambda p: p.t, reverse=True) for ind in sorted_inds]
-        sorted_props = sylutil.uniquify_keep_order([p for l in sorted_props for p in l])
-
-        p1_terms, p2_terms = sylutil.term_order(syllogism[2])
-        for prop in sorted_props:
-            for target_premise in [syllogism[0] + p1_terms, syllogism[1] + p2_terms]:
-                if prop.name in target_premise:
-                    # reencode the target premise without additional information
-                    if not prop.neg:
-                        vm = self.extend_vm(vm, target_premise, reencoding=True)
-                        new_conclusions = self.conclude(vm)
-                        if any([c not in conclusions for c in new_conclusions]):
-                            return new_conclusions
-
-                    # get indirect information encoded as additional premise
-                    prem, subj_neg = self.get_additional_premises(target_premise, prop)
-                    if prem is not None:
-                        # reencode using the additional premise
-                        vm = self.extend_vm(vm, prem, reencoding=True, subj_neg=subj_neg)
-                        new_conclusions = self.conclude(vm)
-                        if any([c not in conclusions for c in new_conclusions]):
-                            return new_conclusions
-        return ["NVC"]
 
     def predict(self, syllogism):
         vm = self.encode(syllogism)

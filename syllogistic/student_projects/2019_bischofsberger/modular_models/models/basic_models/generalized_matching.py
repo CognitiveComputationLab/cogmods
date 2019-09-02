@@ -69,5 +69,90 @@ class GeneralizedMatching(SyllogisticReasoningModel):
         return res_moods
 
     def predict(self, syllogism):
+        """
+        >>> from modular_models.models.basic_models import Matching
+        >>> import ccobra
+        >>> m = Matching()
+        >>> gm = GeneralizedMatching()
+        >>> gm.params["total_order"] = [["E", "O", "I", "A"], ["=", "=", ">"]]
+        >>> for s in ccobra.syllogistic.SYLLOGISMS:
+        ...     print(s, m.predict(s) == gm.predict(s))
+        AA1 True
+        AA2 True
+        AA3 True
+        AA4 True
+        AI1 True
+        AI2 True
+        AI3 True
+        AI4 True
+        AE1 True
+        AE2 True
+        AE3 True
+        AE4 True
+        AO1 True
+        AO2 True
+        AO3 True
+        AO4 True
+        IA1 True
+        IA2 True
+        IA3 True
+        IA4 True
+        II1 True
+        II2 True
+        II3 True
+        II4 True
+        IE1 True
+        IE2 True
+        IE3 True
+        IE4 True
+        IO1 True
+        IO2 True
+        IO3 True
+        IO4 True
+        EA1 True
+        EA2 True
+        EA3 True
+        EA4 True
+        EI1 True
+        EI2 True
+        EI3 True
+        EI4 True
+        EE1 True
+        EE2 True
+        EE3 True
+        EE4 True
+        EO1 True
+        EO2 True
+        EO3 True
+        EO4 True
+        OA1 True
+        OA2 True
+        OA3 True
+        OA4 True
+        OI1 True
+        OI2 True
+        OI3 True
+        OI4 True
+        OE1 True
+        OE2 True
+        OE3 True
+        OE4 True
+        OO1 True
+        OO2 True
+        OO3 True
+        OO4 True
+        >>> gm.params["total_order"] = [["E", "O", "I", "A"], ["=", "=", "="]]
+        >>> from modular_models.util import sylutil
+        >>> all([gm.predict(s) == sorted(list(set([m+ac for m in s[:2] for ac in ["ac", "ca"]]))) for s in ccobra.syllogistic.SYLLOGISMS])
+        True
+        >>> gm.params["total_order"] = [["I", "A", "O", "E"], [">", ">", ">"]]
+        >>> gm.predict("EO1")
+        ['Oac', 'Oca']
+        >>> gm.predict("EI2")
+        ['Iac', 'Ica']
+        >>> gm.predict("AI3")
+        ['Iac', 'Ica']
+        """
+
         concl_moods = self.heuristic_generalized_matching(syllogism)
-        return [mood + ac for ac in ["ac", "ca"] for mood in concl_moods]
+        return sorted([mood + ac for ac in ["ac", "ca"] for mood in concl_moods])

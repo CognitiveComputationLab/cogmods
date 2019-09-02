@@ -1,7 +1,7 @@
+import math
 import os
 import random
 import sys
-import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..")))
 from modular_models.models.basic_models.interface import SyllogisticReasoningModel
@@ -27,8 +27,8 @@ class MReasoner(SyllogisticReasoningModel):
         # Same grid as Khemlani and Johnson-Laird 2016
         self.param_grid["lambda"] = [2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
         self.param_grid["epsilon"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-        self.param_grid["System 2"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-        self.param_grid["Weaken"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+        self.param_grid["System 2"] = [0.0, 1.0]
+        self.param_grid["Weaken"] = [0.0, 1.0]
 
     def draw_individual(self, mood, subj, pred, complete):
         """ Stochastically yields an individual for building the MM of a syllogistic proposition """
@@ -84,7 +84,7 @@ class MReasoner(SyllogisticReasoningModel):
 
         # O needs an additional requirement to make sure "b" is present (otherwise e.g. [a -b] [-a -b] would be allowed)
         while not all([ind in appendix for ind in required_inds]) or \
-                syllogism[0] == "O" and not any([prop == "b" for ind in appendix for prop in ind]):
+                syllogism[0] == "O" and not any([prop == pred0 for ind in appendix for prop in ind]):
             appendix = []
             for i in range(size):
                 appendix.append(self.draw_individual(syllogism[0], subj0, pred0, random.random() < deviation))
@@ -278,6 +278,8 @@ class MReasoner(SyllogisticReasoningModel):
         False
         >>> m.check_if_holds([['a', 'b', '-c'], ['a', 'b', '-c'], ['a', 'b'], ['a', 'b']], "Oac")
         True
+        >>> m.check_if_holds([['b', 'c'], ['a', 'b'], ['c']], "Iac")
+        False
         """
 
         subj, pred = proposition[1], proposition[2]
@@ -316,34 +318,78 @@ class MReasoner(SyllogisticReasoningModel):
                     return generic_model
         return None
 
-    def verify_conclusion(self, conclusion, syllogism):
+    def verify_conclusion(self, conclusion, syllogism, weaken=None):
         """ Verify a conclusion by counterexample search and (possibly) weakening the conclusion """
+        if weaken is None:
+            weaken = random.random()
 
         counterexample_model = self.search_counterexample(conclusion, syllogism)
         if counterexample_model is not None:
             # Counterexample found
-            if random.random() < self.params["Weaken"]:
+            if weaken < self.params["Weaken"]:
                 # Try to weaken conclusion
                 if conclusion[0] in ["A", "E"]:
                     weaker_conclusion = {"A": "I", "E": "O"}[conclusion[0]] + conclusion[1:]
                     weaker_counterexample_model = self.search_counterexample(weaker_conclusion, syllogism)
                     if weaker_counterexample_model is not None:
                         # Counterexample found for weaker conclusion
-                        return "NVC"
+                        return "NVC", False
                     else:
                         # No counterexample found for weaker conclusion
-                        return weaker_conclusion
+                        return weaker_conclusion, False
                 else:
                     # Conclusion can not be weakened (= "I" or "O")
-                    return "NVC"
+                    return "NVC", False
             else:
                 # Don't try to weaken conclusion
-                return "NVC"
+                return "NVC", False
         # No counterexample found
-        return conclusion
+        if weaken >= self.params["Weaken"]:
+            return conclusion, True
+        return conclusion, False
+
+    def trunc_poisson_density(self, n, lam):
+        """ Copied from mReasoner source code.
+
+        >>> m = MReasoner()
+        >>> m.trunc_poisson_density(1, 1)
+        0.36787944117144233
+        >>> m.trunc_poisson_density(10, 4)
+        0.0052924766764201195
+        >>> m.trunc_poisson_density(0, 4)
+        0.01831563888873418
+        """
+        if n > 34:
+            n = 34
+        if lam > 0.0:
+            x1 = math.pow(lam, n)
+            x2 = math.exp(-lam)
+            x3 = math.factorial(n)
+            x = x1*x2/x3
+            return x
+        elif lam == 0.0:
+            if n == 0:
+                return 1.0
+            else:
+                return 0.0
+        else:
+            raise Exception
+
+    def trunc_poisson_sample(self, lam):
+        """ Copied from mReasoner source code."""
+        u = random.random()
+        p = 0
+        i = 0
+        while True:
+            p += self.trunc_poisson_density(i, lam)
+            if u < p:
+                return i
+            i += 1
 
     def predict(self, syllogism):
-        size = np.random.poisson(self.params["lambda"])
+        size = 0
+        while size < 2:
+            size = int(self.trunc_poisson_sample(self.params["lambda"]))
 
         initial_model = self.encode(syllogism, size, self.params["epsilon"])
         conclusions = self.heuristic(syllogism)
@@ -353,12 +399,20 @@ class MReasoner(SyllogisticReasoningModel):
             if self.check_if_holds(initial_model, conclusions[i]):
                 checked_conclusions.append(conclusions[i])
 
+        conclusions = checked_conclusions
+        weaken = random.random()
+
+        add_nvc = False
         if random.random() < self.params["System 2"]:
             for i, _ in enumerate(conclusions):
                 if conclusions[i] == "NVC":
                     continue
-                conclusions[i] = self.verify_conclusion(conclusions[i], syllogism)
-
+                x = self.verify_conclusion(conclusions[i], syllogism, weaken)
+                conclusions[i] = x[0]
+                if x[1]:
+                    add_nvc = True
         # Only return NVC if no valid conclusion was found
         conclusions = set([c for c in conclusions if c != "NVC"])
+        if add_nvc:
+            conclusions.add("NVC")
         return sorted(list(conclusions)) if len(conclusions) != 0 else ["NVC"]

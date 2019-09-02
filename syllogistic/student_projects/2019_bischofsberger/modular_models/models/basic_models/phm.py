@@ -21,7 +21,7 @@ class PHM(SyllogisticReasoningModel):
         self.params["confidenceE"] = 0.5
         self.params["confidenceO"] = 0.4
 
-        self.param_grid["p-entailment"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+        self.param_grid["p-entailment"] = [0.0, 1.0]
         self.param_grid["confidenceA"] = [0.0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0]
         self.param_grid["confidenceI"] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
         self.param_grid["confidenceE"] = [0.0, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0]
