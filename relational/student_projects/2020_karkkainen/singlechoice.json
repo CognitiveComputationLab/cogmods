@@ -1,0 +1,20 @@
+{
+    "data.train": "data/Ragni2018_carddir.csv",
+    "data.test": "data/Ragni2018_carddir.csv",
+    "corresponding_data": true,
+    "domains": ["spatial-relational"],
+    "response_types": ["single-choice"],
+    "models": [
+    "models/Baseline/Random-Model/random_model.py",
+    "models/Baseline/Transitive-Closure/transitive_closure.py",
+    "models/Baseline/Most-Frequent-Answer/model.py",
+	"models/cognitive/prism/Prism/prismmodel.py",
+	"models/cognitive/verbal/model.py",
+	"models/cognitive/dft/model.py",
+	"models/ml/ann2/model.py",
+	"models/ml/rnn/model.py",
+	"models/ml/lstm/model.py",
+	"models/ml/automl/model.py",
+	"models/ml/mlp/model.py"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "data.train": "data/3ps.csv",
+    "data.test": "data/3ps.csv",
+    "corresponding_data": true,
+    "domains": ["spatial-relational"],
+    "response_types": ["verify"],
+    "models": [
+        "models/Baseline/Random-Model/random_model.py",
+        "models/Baseline/Transitive-Closure/transitive_closure.py",
+        "models/Baseline/Most-Frequent-Answer/model3ps.py",
+        "models/cognitive/prism/Prism/prismmodel.py",
+        "models/cognitive/verbal/model.py",
+        "models/ml/rnn/model3ps.py",
+        "models/ml/lstm/model3ps.py",
+        "models/ml/automl/model3ps.py",
+        "models/ml/mlp/model3ps.py"
+    ]
+}
