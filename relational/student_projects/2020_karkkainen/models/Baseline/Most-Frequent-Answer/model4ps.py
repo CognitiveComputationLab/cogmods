@@ -39,4 +39,4 @@ class MostFreqModel(ccobra.CCobraModel):
     def predict(self, item, **kwargs):
         """ Predicts the most frequent answer for the given task ID """
 
-        return self.answers[item.task_id]
+        return self.answers[kwargs['Task-ID']]

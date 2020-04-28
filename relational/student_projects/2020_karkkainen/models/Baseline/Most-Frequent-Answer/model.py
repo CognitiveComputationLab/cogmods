@@ -46,9 +46,6 @@ class MostFreqModel(ccobra.CCobraModel):
         """ Predicts the most frequent answer for the given task ID """
         
         if item.response_type == 'verify':
-            return self.verify_answers[item.task_id]
+            return self.verify_answers[kwargs['Task-ID']]
         else:
-            print(item)
-            print(self.single_choice_answers[item.task_id])
-
-            return [self.single_choice_answers[item.task_id], item.task[-1][-1], item.task[0][1]]
+            return [self.single_choice_answers[kwargs['Task-ID']], item.task[-1][-1], item.task[0][1]]

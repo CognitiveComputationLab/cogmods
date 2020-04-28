@@ -9,10 +9,8 @@ Benchmarking is done with the help of the CCOBRA framework.
 ## To run the benchmark:
 
 * First, make sure you have python and required libraries installed.
-    * Required libraries: NumPy, Pytorch, auto-sklearn, tqdm, pandas
+    * Required libraries: ccobra, NumPy, Pytorch, auto-sklearn, tqdm, pandas
 
-* NOTE: A customized version of the CCOBRA framework is used on some of the models, if you're already working with CCOBRA, I recommend setting up a virtual environment (https://github.com/pyenv/pyenv) to prevent clashing. Install the customized CCOBRA framework with the following command: pip install /PATH/TO/ccobra_modified
-    * However, the customized version is only needed by the Most-Frequent-Answer and Dynamic field theory -models. All the other models will work on the normal version of ccobra.
 
 * To use the PRISM-model, you also have to install the spatial reasoner.
     * This is done by traversing to the prism folder under: benchmarking/models/cognitive/prism and running the command: python setup.py install
@@ -32,21 +30,34 @@ The benchmark is ran on 4 different datasets, which all contain subject data fro
 The benchmark currently consists of the following models:
 
 * Baseline models:
-    * Random guess (all benchmarks)
-    * Transitive-closure (all benchmarks)
+    * Random guess (all benchmarks) (*)
+    * Transitive-closure (all benchmarks) (*)
     * Most Frequent Answer (all benchmarks)
 
 * Cognitive models:
-    * Dynamic Field Theory -model (only on 'singlechoice' and 'verification'.) 
-    * Preferred Mental Models (all benchmarks) 
-    * Verbal reasoning (all benchmarks)
+    * Dynamic Field Theory -model (only on 'singlechoice' and 'verification'.) (*)  (Kounatidou,  Richter & Schöner, 2018)
+    * Preferred Mental Models (all benchmarks) (*) (Ragni & Knauff, 2013)
+    * Verbal reasoning (all benchmarks) (*) (Krumnack, Bucher, Nejasmic, & Knauff, 2010)
 
 
 * Machine learning models:
-    * Spatial artificial neural network (ANN) (only on 'singlechoice)
+    * Spatial artificial neural network (ANN) (only on 'singlechoice) (*) (Ragni & Klein, 2012)
     * Multilayer perceptron (MLP) (all benchmarks)
     * Recurrent neural network (RNN) (all benchmarks)
     * Recurrent neural network with LSTM cells (LSTM) (all benchmarks)
     * AutoML (all benchmarks)
+
+(Models marked with a star (*) were originally implemented by other people working at the lab.)
+
+References to cognitive models:
+
+    Kounatidou, P., Richter, M., & Schöner, G.  (2018).  A neural  dynamic  architecture  that  autonomously  builds  mental  models.In  C.  Kalish,  M.  A.  Rau,  X.  J.  Zhu,  &T. T. Rogers (Eds.),Proceedings of the 40th annual meeting of the cognitive science society, cogsci 2018, madison,wi, usa, july 25-28, 2018
+
+    Krumnack, A., Bucher, L., Nejasmic, J., & Knauff, M. (2010). Spatial reasoning as verbal reasoning. In Proceedings of the Annual Meeting of the Cognitive Science Society (Vol. 32, No. 32).
+
+    Ragni, M., & Klein, A. (2012). Deductive Reasoning-Using Artificial Neural Networks to Simulate Preferential Reasoning. In IJCCI (pp. 635-638).
+
+    Ragni,  M., & Knauff,  M.   (2013).   A theory and a compu-tational model of spatial reasoning with preferred mental models.Psychological review,120(3), 561
+
 
 

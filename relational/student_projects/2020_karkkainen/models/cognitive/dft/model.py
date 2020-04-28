@@ -28,7 +28,7 @@ class DynamicArchitectureModel(ccobra.CCobraModel):
         choice = None
 
         if response_type == 'verify':
-            choice = self.verification.lookup(item.task_id)
+            choice = self.verification.lookup(kwargs['Task-ID'])
 
         elif response_type == 'single-choice':
             direction = self.single_choice.lookup((item.task[0][0],
