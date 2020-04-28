@@ -1,6 +1,6 @@
 # SpatialCCobra
 
-This folder contains relational reasoning models implemented as part of the Master project by Saku Kärkkäinen in 2020.
+This folder contains relational reasoning models benchmarked as part of the Master project by Saku Kärkkäinen in 2020.
 
 Aim of the project was to study the predictive performance of different computational models for spatial reasoning and create a comprehensive benchmark.
 
