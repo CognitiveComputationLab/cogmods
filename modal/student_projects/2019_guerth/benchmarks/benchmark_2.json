@@ -1,0 +1,18 @@
+{
+    "corresponding_data": false,
+    "data.train": "../data/experiment2/ex2_data.csv",
+    "data.test": "../data/experiment2/ex2_data.csv",
+    "domains": ["modal"],
+    "response_types": ["verify"],
+    "models": [
+        "../models/modal_logic_K.py",
+        "../models/modal_logic_T.py",
+        "../models/system_1.py",
+        "../models/system_2.py",
+        "../models/system_2_weak.py",
+        "../models/system_1_possible.py",
+        "../models/system_2_possible.py",
+        "../models/mModalSentential_model.py",
+        "../models/mModalSentential_pretrained_model.py"
+    ]
+}
