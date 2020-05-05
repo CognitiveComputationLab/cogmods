@@ -1,0 +1,12 @@
+{
+    "corresponding_data": true,
+    "data.train": "../data/experiment4/ex4_data.csv",
+    "data.test": "../data/experiment4/ex4_data.csv",
+    "domains": ["modal"],
+    "response_types": ["verify"],
+    "models": [
+        "../models/modal_logic_K.py",
+        "../models/modal_logic_T.py",
+        "../models/mModalSentential_model.py"
+    ]
+}

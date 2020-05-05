@@ -1,0 +1,311 @@
+id,sequence,task,choices,response,response_type,domain,task_original,choices_original
+LOGVWD,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+LOGVWD,1,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+LOGVWD,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+LOGVWD,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+PLFJGC,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+PLFJGC,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+PLFJGC,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+PLFJGC,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+JFTJPY,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+JFTJPY,1,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+JFTJPY,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JFTJPY,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+JFTJPY,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+JFTJPY,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JFTJPY,1,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+JFTJPY,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+JFTJPY,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NABASM,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+NABASM,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JFWNYR,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+NABASM,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+JFWNYR,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NABASM,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+JFWNYR,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+JFWNYR,3,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+IJSYLX,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+IJSYLX,1,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+IJSYLX,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+IJSYLX,3,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+GVIFKK,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+GVIFKK,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+BCUMDQ,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+BCUMDQ,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+BCUMDQ,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+BCUMDQ,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NIEJMQ,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+NIEJMQ,1,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NIEJMQ,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+NIEJMQ,3,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SFFPHF,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+SFFPHF,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+SFFPHF,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SFFPHF,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+UNIEDG,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+UNIEDG,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZWXKZP,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZWXKZP,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+VXUJOV,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+VXUJOV,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+VXUJOV,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+FINGIG,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+FINGIG,1,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FINGIG,2,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+FINGIG,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+AKESHX,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+AKESHX,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+AKESHX,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+AKESHX,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MJELYD,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+MJELYD,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MJELYD,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+MJELYD,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FSZVDW,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+FSZVDW,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+MNVAMX,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MNVAMX,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+MNVAMX,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+FXDHJE,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+FXDHJE,1,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+FXDHJE,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FXDHJE,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+POVFSY,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+POVFSY,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+POVFSY,2,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+POVFSY,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+ENCLXM,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ENCLXM,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+ENCLXM,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ENCLXM,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+UDZAAR,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+UDZAAR,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+UDZAAR,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+UDZAAR,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+MOUQAY,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+MOUQAY,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MOUQAY,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+MOUQAY,3,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JXNFJM,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JXNFJM,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+QOWGDC,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+QOWGDC,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+QOWGDC,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+QOWGDC,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+GINQXI,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+GINQXI,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+GINQXI,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+GINQXI,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+RQEKEF,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+RQEKEF,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+RQEKEF,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+RQEKEF,3,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+HVMWPL,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+HVMWPL,1,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+HVMWPL,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+JVMIMA,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+JVMIMA,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+HVJYYQ,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+HVJYYQ,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+GXYLLT,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+GXYLLT,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+GXYLLT,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+GXYLLT,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+HNAFLU,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+HNAFLU,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+HNAFLU,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+HNAFLU,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+GVCBKG,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+GVCBKG,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+GVCBKG,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+GVCBKG,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NJYRNT,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+NJYRNT,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NJYRNT,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+NJYRNT,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+RKGBPM,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+RKGBPM,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+RKGBPM,2,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+RKGBPM,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+WNORPC,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+WNORPC,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+WNORPC,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SKEZFB,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+SKEZFB,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+SKEZFB,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SKEZFB,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NJCAGG,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+NJCAGG,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NJCAGG,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NJCAGG,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+FYJVHG,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ADAXWH,0,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ADAXWH,1,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+ADAXWH,2,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ADAXWH,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+XXINSY,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+XXINSY,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FZGITT,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+FZGITT,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FZGITT,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+HNVEBG,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+HNVEBG,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+HNVEBG,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+QTPTYC,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+QTPTYC,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+QTPTYC,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+QTPTYC,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+SJLYGY,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+SJLYGY,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SJLYGY,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+SJLYGY,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+SLENIA,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+SLENIA,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SLENIA,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+SLENIA,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+QXDPJT,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+QXDPJT,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+QXDPJT,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+QXDPJT,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+RRNUFM,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+RRNUFM,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+RRNUFM,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+RRNUFM,3,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+LHNVME,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+LHNVME,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+LHNVME,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+NZGMTC,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+NZGMTC,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+NZGMTC,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NZGMTC,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+EXGXAR,0,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+EXGXAR,1,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+EXGXAR,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+EXGXAR,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ZPTSUD,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+ZPTSUD,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ZPTSUD,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZPTSUD,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+DOVBNB,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+DOVBNB,1,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+DOVBNB,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+DOVBNB,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+KUEDDN,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+KUEDDN,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+KUEDDN,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+KUEDDN,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MEWAGI,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MEWAGI,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+MEWAGI,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+MEWAGI,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+ERQBJD,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ERQBJD,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+TATYST,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+TATYST,1,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+TATYST,3,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZQKQCJ,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ZQKQCJ,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+ZQKQCJ,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+ZQKQCJ,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+CGLWEL,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+CGLWEL,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+CGLWEL,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+CGLWEL,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+XKHCSM,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+XKHCSM,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+XKHCSM,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+ZQYSTZ,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZQYSTZ,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+ZQYSTZ,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+UAEZPQ,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+UAEZPQ,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+UAEZPQ,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+UAEZPQ,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+NNBJHS,0,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+UTOERR,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+UTOERR,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+UTOERR,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+UTOERR,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+HETGIJ,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+HETGIJ,1,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+HETGIJ,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+HETGIJ,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+CBJXHG,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+CBJXHG,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+CBJXHG,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+CBJXHG,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JCWPJQ,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+JCWPJQ,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+JCWPJQ,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+JCWPJQ,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+YMTSSG,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+YMTSSG,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+YMTSSG,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+YMTSSG,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+CYFJLS,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+CYFJLS,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+CYFJLS,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+HYHPZD,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+FTGLSW,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+FTGLSW,1,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+FTGLSW,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+FTGLSW,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+TUBFWZ,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+TUBFWZ,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+YMMIPV,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+YMMIPV,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+YMMIPV,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+IHREQY,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+IHREQY,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+IHREQY,2,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+IHREQY,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+CQUCYG,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+CQUCYG,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+TNJCPR,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+TNJCPR,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+TNJCPR,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+LVIXFQ,0,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+LVIXFQ,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+LVIXFQ,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+LVIXFQ,3,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+QQOUPN,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+QQOUPN,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+YQQQGP,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+YQQQGP,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+YQQQGP,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+VUZFHS,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+VUZFHS,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+VUZFHS,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+VUZFHS,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+MHMEDO,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+MHMEDO,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NNSOCI,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+NNSOCI,1,possible;A,possible;not;A,False,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NNSOCI,2,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+NNSOCI,3,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NMGLIU,0,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+NMGLIU,1,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+SBFFFM,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+NMGLIU,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+SBFFFM,3,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+NMGLIU,3,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+GMPGSO,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+GMPGSO,3,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+ASZDZY,0,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ASZDZY,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ASZDZY,2,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+ASZDZY,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+AUCUUB,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+AUCUUB,1,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+AUCUUB,2,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+AUCUUB,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+TIRYVV,0,possible;A,A,True,verify,modal,It is possible that it will {A},It will {A}
+TIRYVV,1,possible;not;A,possible;A,False,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+TIRYVV,2,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+TIRYVV,3,possible;not;A,not;A,True,verify,modal,It is possible that it will {notA},It will {notA}
+HFIWKL,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+HFIWKL,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
+ZOYKQC,0,possible;A,possible;not;A,True,verify,modal,It is possible that it will {A},It is possible that it will {notA}
+ZOYKQC,1,possible;not;A,not;A,False,verify,modal,It is possible that it will {notA},It will {notA}
+ZOYKQC,2,possible;A,A,False,verify,modal,It is possible that it will {A},It will {A}
+ZOYKQC,3,possible;not;A,possible;A,True,verify,modal,It is possible that it will {notA},It is possible that it will {A}
