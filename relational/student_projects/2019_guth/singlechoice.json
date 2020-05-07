@@ -1,0 +1,11 @@
+{
+    "data.train": "data/Ragni2018_carddir.csv",
+    "data.test": "data/Ragni2018_carddir.csv",
+    "corresponding_data": true,
+    "domains": ["spatial-relational"],
+    "response_types": ["single-choice"],
+    "models": [
+        "models/Rule_Genetic/Genetic_Rule_Singlechoice.py",
+        "models/MMI_Genetic/Genetic_MMI_Singlechoice.py"
+    ]
+}
