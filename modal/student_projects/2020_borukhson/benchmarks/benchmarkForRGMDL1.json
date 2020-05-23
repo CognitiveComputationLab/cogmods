@@ -1,0 +1,22 @@
+{
+        "data.train": "data/empty-TI.csv",
+        "data.test": "data/RGMDL1-TI.csv",
+        "corresponding_data": false,
+        "domains": ["spacional-relational"],
+        "response_types": ["single-choice"],
+        "models": [
+            "../models/Baseline/Rational/trueAnswer.py",
+            "../models/Baseline/RandomModel/random_model.py",
+            "../models/TransitiveInference/SCT.py",
+            "../models/TransitiveInference/RLELO.py",
+            "../models/TransitiveInference/RLELO_F.py",
+            "../models/TransitiveInference/siemannDelius.py",
+            "../models/TransitiveInference/RescorlaWagnerBS.py",
+            "../models/TransitiveInference/RescorlaWagnerWynne95.py",
+            "../models/TransitiveInference/valueTransferTheoryBS.py",
+            "../models/TransitiveInference/BushMosteller.py",
+            "../models/TransitiveInference/configuralCuesWynne95.py",
+            "../models/TransitiveInference/Trabasso.py",
+            "../models/TransitiveInference/SCTinterpr.py",
+            "../models/TransitiveInference/DeSoto.py"
+        ]}
