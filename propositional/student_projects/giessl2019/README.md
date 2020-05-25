@@ -11,12 +11,12 @@ Libraries: ccobra, (pandas, numpy)
 ## Models
 
 Several models have been implemented:
--Logic model:
+- Logic model:
  choses responces for a given task according to normal propositional logic.
--MFA model:
+- MFA model:
  choses responces for a task according to the most frequent response to that task.
--Recommender model:
- -choses responses for a task based upon previous responses (to similar tasks) of the participants.
+- Recommender model:
+ choses responses for a task based upon previous responses (to similar tasks) of the participants.
 
 ## Files
 
