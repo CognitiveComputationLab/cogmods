@@ -1,4 +1,4 @@
-Prediction models for propositinal logical tasks
+Prediction models for propositional logical tasks
 =======
 
 propositional reasoning models implemented as part of the Bachelor project by Julian Giessl in 2019.
