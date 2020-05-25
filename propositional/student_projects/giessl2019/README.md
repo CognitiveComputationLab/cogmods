@@ -6,7 +6,7 @@ propositional reasoning models implemented as part of the Bachelor project by Ju
 ## Prerequisites
 
 Python 3.5
-Libraries: ccobra, (pandas, numpy)
+Libraries: ccobra version 0.16.0 , (pandas, numpy)
 
 ## Models
 
