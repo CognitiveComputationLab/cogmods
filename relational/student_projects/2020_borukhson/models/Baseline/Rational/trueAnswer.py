@@ -7,7 +7,7 @@ import numpy as np
 class CorrectReply(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
     """
-    def __init__(self, name='CorrectReply', commands = []):
+    def __init__(self, name='CorrectReply'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -15,7 +15,7 @@ class CorrectReply(ccobra.CCobraModel):
             Unique name of the model. Will be used throughout the ORCA
             framework as a means for identifying the model.
         """
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

@@ -1,6 +1,6 @@
 {
-        "data.train": "data/empty-TI.csv",
-        "data.test": "data/RGMDL1-TI.csv",
+        "data.train": "../data/empty-TI.csv",
+        "data.test": "../data/RGMDL1-TI.csv",
         "corresponding_data": false,
         "domains": ["spacional-relational"],
         "response_types": ["single-choice"],

@@ -7,7 +7,7 @@ import numpy as np
 class SCTinterpr(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
     """
-    def __init__(self, name='SCTinterpr-McIlvane2003', commands = []): #Stimulus Control Topography
+    def __init__(self, name='SCTinterpr-McIlvane2003'): #Stimulus Control Topography
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -17,7 +17,7 @@ class SCTinterpr(ccobra.CCobraModel):
         """
         self.valueSCT = {} #[n.Node('referencePoint')]
         self.lastChoiceSCT = {} #interpretation for tendency
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

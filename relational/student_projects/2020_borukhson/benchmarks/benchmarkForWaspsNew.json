@@ -1,6 +1,6 @@
 {
-        "data.train": "data/empty-TI.csv",
-        "data.test": "data/WaspsNew-TI.csv",
+        "data.train": "../data/empty-TI.csv",
+        "data.test": "../data/WaspsNew-TI.csv",
         "corresponding_data": false,
         "domains": ["spacional-relational"],
         "response_types": ["single-choice"],

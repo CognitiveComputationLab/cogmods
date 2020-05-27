@@ -10,7 +10,7 @@ def rewardedStimulus(stim, pair):
 class SiemannDelius(ccobra.CCobraModel):
     """ TransitivityInt CCORA implementation.
     """
-    def __init__(self, name='SiemannDelius-Guez2013', commands = []):
+    def __init__(self, name='SiemannDelius-Guez2013'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -27,7 +27,7 @@ class SiemannDelius(ccobra.CCobraModel):
         self.K = 1 - self.e     #CONFIGURALWEIGHT  
         self.elemV = {}
         self.confV = {}
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

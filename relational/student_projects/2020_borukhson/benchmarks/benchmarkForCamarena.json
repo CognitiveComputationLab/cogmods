@@ -1,6 +1,6 @@
 {
-        "data.train": "data/empty-TI.csv",
-        "data.test": "data/Camarena-TI.csv",
+        "data.train": "../data/empty-TI.csv",
+        "data.test": "../data/Camarena-TI.csv",
         "corresponding_data": false,
         "domains": ["spacional-relational"],
         "response_types": ["single-choice"],

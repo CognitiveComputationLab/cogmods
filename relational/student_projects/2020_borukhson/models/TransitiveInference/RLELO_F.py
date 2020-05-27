@@ -8,7 +8,7 @@ import numpy as np
 class RLELO_F(ccobra.CCobraModel):
     """ TransitivityInt CCOself.BRA implementation.
     """
-    def __init__(self, name='RL_ELO_F-Kumaran2016', commands = []):
+    def __init__(self, name='RL_ELO_F-Kumaran2016'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -22,7 +22,7 @@ class RLELO_F(ccobra.CCobraModel):
         self.vInit = 0.001
         self.V = {}             #ranks
         self.lastChosen = None
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])

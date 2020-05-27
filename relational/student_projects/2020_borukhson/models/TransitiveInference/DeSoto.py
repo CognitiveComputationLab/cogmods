@@ -8,7 +8,7 @@ import numpy as np
 class DeSoto(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
     """
-    def __init__(self, name='DeSoto-1965', commands = []):
+    def __init__(self, name='DeSoto-1965'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -17,7 +17,7 @@ class DeSoto(ccobra.CCobraModel):
             framework as a means for identifying the model.
         """
         self.spacialPos = {}
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

@@ -10,7 +10,7 @@ class RandomModel(ccobra.CCobraModel):
 
     """
 
-    def __init__(self, name='RandomModel', commands = []):
+    def __init__(self, name='RandomModel'):
         """ Initializes the random model.
 
         Parameters
@@ -23,7 +23,7 @@ class RandomModel(ccobra.CCobraModel):
         self.a = 0
 
         super().__init__(
-            name, ["spatial-relational"], ["verify", "single-choice"], commands)
+            name, ["spatial-relational"], ["verify", "single-choice"])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

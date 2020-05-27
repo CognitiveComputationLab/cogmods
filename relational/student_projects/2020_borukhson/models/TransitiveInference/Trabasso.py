@@ -16,7 +16,7 @@ def setEq(a, b):
 class Trabasso(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
     """
-    def __init__(self, name='Trabasso-Riley74', commands = []):
+    def __init__(self, name='Trabasso-Riley74'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -27,7 +27,7 @@ class Trabasso(ccobra.CCobraModel):
         #Done; various other interpretations conceivable 
         self.intArrs = [] 
         self.h = 0.5
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         """ Predicts weighted responses to a given syllogism.

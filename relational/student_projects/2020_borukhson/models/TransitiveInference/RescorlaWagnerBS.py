@@ -7,7 +7,7 @@ import math
 class RescorlaWagnerBS(ccobra.CCobraModel):
     """ TransitivityInt CCOself.BRA implementation.
     """
-    def __init__(self, name='RescorlaWagner-Kumaran2016', commands = []):
+    def __init__(self, name='RescorlaWagner-Kumaran2016'):
         """ Initializes the TransitivityInt model.
         Parameters
         ----------
@@ -20,7 +20,7 @@ class RescorlaWagnerBS(ccobra.CCobraModel):
         self.V = {}             #ranks
         self.vInit = 0.001
         self.lastChosen = None
-        super().__init__(name, ['spatial-relational'], ['single-choice'], commands)
+        super().__init__(name, ['spatial-relational'], ['single-choice'])
 
     def predict(self, item, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])
