@@ -3,6 +3,8 @@
 import ccobra
 import random
 import math
+from modelfunctions import *
+
 
 class RLELO(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
@@ -42,20 +44,20 @@ class RLELO(ccobra.CCobraModel):
         return chosen
     def adapt(self, item, target, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             self.V[left] = self.a*(1-self.p('left', (left, right))) + self.v(left)
             self.V[right] = (-1)*self.a*(1-self.p('left', (left, right))) + self.v(right)
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             self.V[left] = (-1)*self.a*(1-self.p('right', (left, right))) + self.v(left) 
             self.V[right] = self.a*(1-self.p('right', (left, right)))  + self.v(right)
         else:
             print('error')
     def adaptS(self, itemPair):
         left, right = int(itemPair[0]), int(itemPair[1])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             self.V[left] = self.a*(1-self.p('left', (left, right))) + self.v(left)
             self.V[right] = (-1)*self.a*(1-self.p('left', (left, right))) + self.v(right)
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             self.V[left] = (-1)*self.a*(1-self.p('right', (left, right))) + self.v(left) 
             self.V[right] = self.a*(1-self.p('right', (left, right)))  + self.v(right)
         else:

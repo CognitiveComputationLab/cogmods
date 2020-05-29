@@ -3,10 +3,12 @@
 import ccobra
 import random
 import math
+from modelfunctions import * 
 
 class BushMosteller(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
     """
+
     def __init__(self, name='Bush-Mosteller-Wynne95'):
         """ Initializes the TransitivityInt model.
         Parameters
@@ -46,20 +48,20 @@ class BushMosteller(ccobra.CCobraModel):
         return 0.5 - 0.883*pow(1-2*r,0.75)
     def adaptS(self, itemPair):
         left, right = int(itemPair[0]), int(itemPair[1])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             self.V[left] = self.Db*(1-self.v(left)) + self.v(left)
             self.V[right] = (-1)*self.Db*self.v(right) + self.v(right)
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             self.V[left] = (-1)*self.Db*self.v(left) + self.v(left)
             self.V[right] = self.Db*(1-self.v(right)) + self.v(right)
         else:
             print('error')
     def adapt(self, item, target, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             self.V[left] = self.Db*(1-self.v(left)) + self.v(left)
             self.V[right] = (-1)*self.Db*self.v(right) + self.v(right)
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             self.V[left] = (-1)*self.Db*self.v(left) + self.v(left)
             self.V[right] = self.Db*(1-self.v(right)) + self.v(right)
         else:

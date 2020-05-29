@@ -3,6 +3,8 @@
 import ccobra
 import random
 import math
+from modelfunctions import *
+
 
 class RescorlaWagnerBS(ccobra.CCobraModel):
     """ TransitivityInt CCOself.BRA implementation.
@@ -39,10 +41,10 @@ class RescorlaWagnerBS(ccobra.CCobraModel):
         return chosen
     def adaptS(self, itemPair):
         left, right = int(itemPair[0]), int(itemPair[1])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             Ol = 1
             Or = -1
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             Ol = -1
             Or = 1
         else:
@@ -53,10 +55,10 @@ class RescorlaWagnerBS(ccobra.CCobraModel):
 
     def adapt(self, item, target, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             Ol = 1
             Or = -1
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             Ol = -1
             Or = 1
         else:

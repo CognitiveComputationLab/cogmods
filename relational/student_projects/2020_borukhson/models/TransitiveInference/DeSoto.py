@@ -3,6 +3,8 @@
 import ccobra
 import random
 import numpy as np
+from modelfunctions import *
+
 
 
 class DeSoto(ccobra.CCobraModel):
@@ -43,7 +45,7 @@ class DeSoto(ccobra.CCobraModel):
     def adaptS(self, pair):
         self.putInSpace(pair)
     def putInSpace(self, pair):
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         if first in self.spacialPos.keys() and second in self.spacialPos.keys():
             if self.spacialPos[first] > self.spacialPos[second]:
                 return #all ok

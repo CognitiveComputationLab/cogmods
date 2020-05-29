@@ -3,6 +3,8 @@
 import ccobra
 import random
 import math
+from modelfunctions import *
+
 
 class VTTBS(ccobra.CCobraModel):
     """ TransitivityInt CCOself.BRA implementation.
@@ -59,12 +61,12 @@ class VTTBS(ccobra.CCobraModel):
 
     def adapt(self, item, target, **kwargs):
         left, right = int(item.choices[0][0][0]), int(item.choices[1][0][0])
-        if self.correctReply((left, right)) == str(left):
+        if correctReply((left, right)) == str(left):
             Ol = 1
             Or = -1
             Il = 0
             Ir = 1
-        elif self.correctReply((left, right)) == str(right):
+        elif correctReply((left, right)) == str(right):
             Ol = -1
             Or = 1
             Il = 1

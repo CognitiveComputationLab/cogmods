@@ -1,0 +1,3 @@
+[console_scripts]
+ccobra = ccobra.benchmark.runner:entry_point
+

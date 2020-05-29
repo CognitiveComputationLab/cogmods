@@ -3,6 +3,7 @@
 """
 import ccobra
 import random
+from modelfunctions import *
 
 def rewardedStimulus(stim, pair):
     return min([int(a) for a in pair]) == int(stim)

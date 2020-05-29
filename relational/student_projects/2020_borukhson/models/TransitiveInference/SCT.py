@@ -3,6 +3,7 @@
 import ccobra
 import random
 import numpy as np
+from modelfunctions import * 
 
 class SCT(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
@@ -35,7 +36,7 @@ class SCT(ccobra.CCobraModel):
 
     def adapt(self, item, target, **kwargs):
         pair = item.choices[0][0][0], item.choices[1][0][0]
-        (first, second) = self.sortedPair(pair)
+        (first, second) = sortedPair(pair)
         for elem in [first, second]:
             if elem not in self.valueSCT.keys():
                 self.valueSCT[elem] = 0
@@ -64,7 +65,7 @@ class SCT(ccobra.CCobraModel):
         return int([first, second][np.random.randint(0, len([first, second]))])
 
     def adaptS(self, pair):
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         for elem in [first, second]:
             if elem not in self.valueSCT.keys():
                 self.valueSCT[elem] = 0

@@ -3,6 +3,8 @@
 import ccobra
 import random
 import numpy as np
+from modelfunctions import *
+
 
 def setEq(a, b):
     for aI in a:
@@ -59,7 +61,7 @@ class Trabasso(ccobra.CCobraModel):
                     return max(1 - array.index(second)/max(0.0001,len(array)*self.h), 1 - array.index(first)/max(0.0001,len(array)*self.h))
         return 0.5
     def adaptS(self, pair):
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         first, second = str(first), str(second)
         pairsFound = 0
         for array in self.intArrs:
@@ -101,7 +103,7 @@ class Trabasso(ccobra.CCobraModel):
             self.intArrs.append([first, second])
 
     def adapt(self, item, target, **kwargs):
-        first, second = self.sortedPair((item.choices[0][0][0], item.choices[1][0][0]))
+        first, second = sortedPair((item.choices[0][0][0], item.choices[1][0][0]))
         pairsFound = 0
         for array in self.intArrs:
             if first in array and second in array:

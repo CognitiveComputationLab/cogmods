@@ -3,6 +3,8 @@
 import ccobra
 import random
 import numpy as np
+from modelfunctions import *
+
 
 class SCTinterpr(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
@@ -49,7 +51,7 @@ class SCTinterpr(ccobra.CCobraModel):
 
     def adapt(self, item, target, **kwargs):
         pair = item.choices[0][0][0], item.choices[1][0][0]
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         for elem in [first, second]:
             if elem not in self.valueSCT.keys():
                 self.valueSCT[elem] = 0
@@ -69,21 +71,21 @@ class SCTinterpr(ccobra.CCobraModel):
         if len(modes) == 0:
             modes = ['onlySelect','onlyReject','bothSelectAndReject']
         case = random.choice(modes)
-        if case is 'onlySelect':
+        if case == 'onlySelect':
             self.valueSCT[first] += 1
             self.lastChoiceSCT[first] = 'onlySelectMe'
             self.lastChoiceSCT[second] = 'onlySelectOther'
-        if case is 'onlyReject':
+        if case == 'onlyReject':
             self.valueSCT[second] -= 1
             self.lastChoiceSCT[second] = 'onlyRejectMe'
             self.lastChoiceSCT[first] = 'onlyRejectOther'
-        if case is 'bothSelectAndReject':
+        if case == 'bothSelectAndReject':
             self.lastChoiceSCT[(first, second)] = 'bothSelectAndReject'
             self.valueSCT[first] += 1
             self.valueSCT[second] -= 1
     
     def adaptS(self, pair):
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         for elem in [first, second]:
             if elem not in self.valueSCT.keys():
                 self.valueSCT[elem] = 0

@@ -5,6 +5,13 @@ import random
 import numpy as np
 
 class CorrectReply(ccobra.CCobraModel):
+
+    def rewardedStimulus(self, stim, pair):
+        return min([int(a) for a in pair]) == int(stim)    
+    def sortedPair(self, pair):
+        return str(min([int(a) for a in pair])), str(max([int(a) for a in pair]))
+    def correctReply(self, pair):
+        return str(min([int(a) for a in pair]))
     """ TransitivityInt CCOBRA implementation.
     """
     def __init__(self, name='CorrectReply'):

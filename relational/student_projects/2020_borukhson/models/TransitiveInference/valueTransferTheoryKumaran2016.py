@@ -4,6 +4,8 @@
 import ccobra
 import random
 import math
+from modelfunctions import *
+
 
 class VTTInt(ccobra.CCobraModel):
     

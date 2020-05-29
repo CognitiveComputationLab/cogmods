@@ -4,6 +4,7 @@
 import ccobra
 import random
 import math
+from modelfunctions import *
 
 class configuralCuesWynne95(ccobra.CCobraModel):
     """ TransitivityInt CCOBRA implementation.
@@ -49,7 +50,7 @@ class configuralCuesWynne95(ccobra.CCobraModel):
             return int(first)
     def adapt(self, item, target, **kwargs):
         pair = item.choices[0][0][0], item.choices[1][0][0]
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         self.assocVinit(pair)
         self.assocV[first] += self.B*(1-(self.assocV[first] + self.Vz))
         self.assocV[second] -= self.B*(self.assocV[second] + self.Vz)
@@ -59,7 +60,7 @@ class configuralCuesWynne95(ccobra.CCobraModel):
     def adaptS(self, itemPair):
         left, right = itemPair[0], itemPair[1]
         pair = (left, right)
-        first, second = self.sortedPair(pair)
+        first, second = sortedPair(pair)
         self.assocVinit(pair)
         self.assocV[first] += self.B*(1-(self.assocV[first] + self.Vz))
         self.assocV[second] -= self.B*(self.assocV[second] + self.Vz)
