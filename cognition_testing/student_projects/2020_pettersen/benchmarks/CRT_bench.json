@@ -1,14 +1,14 @@
 {
     "type": "adaption",
-    "data.pre_train": "data/CRT_trainset.csv",
-    "data.test": "data/CRT_testset.csv",
+    "data.pre_train": "../data/CRT_trainset.csv",
+    "data.test": "../data/CRT_testset.csv",
     "corresponding_data": false,
     "response_types": ["single-choice"],
     "models": [
-        "models/CRT_rand.py",
-        "models/CRT_false.py",
-        "models/CRT_mfa.py",
-        "models/CRT_conditional.py",
-        "models/CRT_combined.py"
+        "../models/CRT_rand.py",
+        "../models/CRT_false.py",
+        "../models/CRT_mfa.py",
+        "../models/CRT_conditional.py",
+        "../models/CRT_combined.py"
     ]
 }
