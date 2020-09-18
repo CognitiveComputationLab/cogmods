@@ -1,0 +1,23 @@
+{
+        "data.pre_train": "../data/exp23.csv",
+        "data.test": "../data/exp23.csv",
+        "corresponding_data": false,
+        "domains": ["misinformation"],
+        "response_types": ["single-choice"],
+        "models": [
+            "../models/Heuristic/fftmaxPrepared23.py",
+            "../models/Heuristic/fftzigzagPrepared23.py",
+            "../models/Heuristic/hrlinear.py",
+            "../models/Heuristic/hr.py",
+            "../models/Heuristic/rt.py",
+            "../models/Heuristic/fft.py",
+            "../models/MotivatedReasoning/s2mr.py",
+            "../models/ClassicalReasoning/cr.py",
+            "../models/Recommender/recommenderPersonLinear.py",
+            "../models/LinearCombination/fpit.py",
+            "../models/LinearCombination/lc.py",
+            "../models/LinearCombination/sent.py",
+            "../models/Baseline/rand.py",
+            "../models/Baseline/corr.py",
+            "../models/Baseline/rej.py"
+        ]}
