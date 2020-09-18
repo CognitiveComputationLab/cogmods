@@ -1,0 +1,16 @@
+{
+    "corresponding_data": true,
+    "data.train": "data/out-agregated-nonmonotonic.csv",
+    "data.test": "data/out-agregated-nonmonotonic.csv",
+    "domains": ["nonmonotonic"],
+    "response_types": ["single-choice"],
+    "models": [
+        "models/uniform_model.py",
+        "models/Reiter-Model/Reiter_model.py",,
+        "models/Reiter-Model/Reiter_model_improved.py",
+        "models/Ocf-Model/ocf_model.py",
+        "models/WCS-Model/wcs_noab.py,
+        "models/WCS-Model/wcs_pretrain.py,
+        "models/MFA.py"
+    ]
+}
