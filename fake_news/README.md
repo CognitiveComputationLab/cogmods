@@ -13,7 +13,7 @@ Implemented Models and as summary of their respective proposition are listed bel
 -- Experiencing an intensive mood, shifts people's news item accept versus reject tendency. 
 - **Fast-And-Frugal Tree: Max**
 -- Decision Tree strategy that implements the Take-The-Best heuristic.
-- **Fast-And-Frugal Tree: ZigZag (z+)**
+- **Fast-And-Frugal Tree: ZigZag (Z+)**
 -- Decision Tree strategy that implements the Take-The-Best heuristic and alternates exit directions on every cue. 
 - **Fast-And-Frugal Tree: ifan**
 -- Decision Tree strategy optimized for best performance in high-risk decision situations.
