@@ -33,7 +33,7 @@ Implemented Models and as summary of their respective proposition are listed bel
 -- Randomly predict accept or reject responses. 
 - **Baseline: Correct Reply**
 -- Always predict the accurate classification for a news item.
-- **Recommender: Linear Combination of Features* *
+- **Recommender: Linear Combination of Features**
 -- Model the prediction of a participant as the mean of other people that share similar features. 
 
 
