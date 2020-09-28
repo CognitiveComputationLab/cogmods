@@ -1,13 +1,11 @@
 {
         "type": "coverage",
         "data.test": "../data/exp23.csv",
+        "data.pre_train": "../data/exp23.csv",
         "corresponding_data": true,
         "domains": ["misinformation"],
         "response_types": ["single-choice"],
         "models": [
-            "../models/LinearCombination/fpit.py",
-            "../models/LinearCombination/lc.py",
-            "../models/LinearCombination/sent.py",
             "../models/ClassicalReasoning/cr.py",
             "../models/MotivatedReasoning/s2mr.py",
             "../models/Recommender/recommenderPersonLinear.py",
@@ -19,5 +17,8 @@
             "../models/Heuristic/fft.py",
             "../models/Baseline/rand.py",
             "../models/Baseline/corr.py",
-            "../models/Baseline/rej.py"
+            "../models/Baseline/rej.py",
+            "../models/LinearCombination/fpit.py",
+            "../models/LinearCombination/lc.py",
+            "../models/LinearCombination/sent.py"
         ]}
