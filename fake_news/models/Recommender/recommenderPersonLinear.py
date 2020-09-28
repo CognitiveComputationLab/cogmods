@@ -123,6 +123,7 @@ class RecommenderPlinear(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing similarity measure paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])

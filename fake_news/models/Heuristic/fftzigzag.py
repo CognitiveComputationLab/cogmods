@@ -41,9 +41,9 @@ class FFTzigzag(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
+        #Globally trains zigzag FFT on data for all persons
         if FFTtool.ZigZag != None:
             return
-        #print('Pretrain started')
         trialList = []
         for pers in dataset:
             perslist = []
@@ -85,17 +85,16 @@ class FFTzigzag(ccobra.CCobraModel):
             elif item['conservatism'] <= 3.5:
                 if 'Democrats' in a:
                     a = a.replace('Democrats', 'Party')
-
+            #calculate predictive quality of individual cues
             marginOptimum = basinhopping(parametrizedPredictiveQualityLT, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['>' + a] = marginOptimum.x[0]
             predictionQuality['>' + a] = marginOptimum.fun
             marginOptimum = basinhopping(parametrizedPredictiveQualityST, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['<' + a] = marginOptimum.x[0]
             predictionQuality['<' + a] = marginOptimum.fun
-
-
         orderedConditionsPos = []
         orderedConditionsNeg = []
+        #calculate order and direction of cues for both Accept (Pos) and Reject (Neg) exits
         for a in sorted(predictionQuality.items(), key=lambda x: x[1], reverse=False):
             if a[0][1:] not in item.keys():
                 continue
@@ -104,6 +103,7 @@ class FFTzigzag(ccobra.CCobraModel):
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[a[0]])
             newnode = Node(cond,True,False)
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
+            #determine exit direction
             if rep1preds/length1 >= rep0preds/length0:
                 if a[0][1:] not in [i[1:] for i in orderedConditionsPos + orderedConditionsNeg] and a[0][1:] in self.componentKeys:
                     orderedConditionsPos.append(a[0])
@@ -116,11 +116,11 @@ class FFTzigzag(ccobra.CCobraModel):
                 orderedConditions.append(orderedConditionsNeg[i])
             if len(orderedConditionsPos) > i:
                 orderedConditions.append(orderedConditionsPos[i])
-        exitLeft = True
+        exitLeft = True #as Z+ version implemented
+        #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
             s = sa[0]
-            #print('item[\'aux\'][\'', b, '\'] ', s, ' ', str(predictionMargin[sa]), str(predictionQuality[sa]))
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[sa])
             newnode = Node(cond,True,False)
             if self.fft == None:
@@ -135,7 +135,6 @@ class FFTzigzag(ccobra.CCobraModel):
                     self.lastnode = self.lastnode.right
             exitLeft = not exitLeft
         FFTtool.ZigZag = self.fft
-        #print(FFTtool.ZigZag.getstring())
 
     def predictS(self, item, **kwargs):
         if len(kwargs.keys()) == 1:
@@ -205,7 +204,6 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
-        #print(item, kwargs)
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left

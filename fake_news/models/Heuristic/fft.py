@@ -39,7 +39,7 @@ class FFTifan(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
-        #print('Pretrain started')
+        #Globally trains ifan FFT on data for all persons
         trialList = []
         for pers in dataset:
             perslist = []
@@ -52,6 +52,7 @@ class FFTifan(ccobra.CCobraModel):
         return self.fitTreeOnTrials(trialList)
 
     def fitTreeOnTrials(self, trialList, maxLength=-1, person='global'):
+        #Handles fasttrees ifan implementation. Definition of the fasttrees class was only adjusted to become compitable with up-to-date python and numpy versions
         if FFTtool.fc != None:
             return
         for item in trialList:

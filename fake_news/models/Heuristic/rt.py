@@ -78,6 +78,7 @@ class RT(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
@@ -106,6 +107,7 @@ class RT(ccobra.CCobraModel):
         return -1*mean(performanceOfPerson) 
 
     def pre_train(self, dataset):
+        #Globally fits a linear equation of CRT on real and fake new item measures 
         if len(RT.globalpars.keys()) > 0:
             return
         trialList = []

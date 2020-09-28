@@ -40,6 +40,7 @@ class FFTzigzag(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
+        #Globally trains zigzag FFT on data for all persons
         trialList = []
         for pers in dataset:
             perslist = []
@@ -74,9 +75,11 @@ class FFTzigzag(ccobra.CCobraModel):
         maxLength = -1
         predictionQuality = {}
         predictionMargin = {}
+        #precalculated predictive quality of individual cues
         predictionQuality, predictionMargin = {'>crt': -0.499969808586438, '<crt': -0.499969808586438, '>conservatism': -0.499969808586438, '<conservatism': -0.499969808586438, '>ct': -0.499969808586438, '<ct': -0.499969808586438, '>education': -0.499969808586438, '<education': -0.499969808586438, '>accimp': -0.499969808586438, '<accimp': -0.499969808586438, '>panasPos': -0.499969808586438, '<panasPos': -0.499969808586438, '>panasNeg': -0.499969808586438, '<panasNeg': -0.499969808586438, '>Exciting_Party_Combined': -0.499969808586438, '<Exciting_Party_Combined': -0.9967320261437909, '>Familiarity_Party_Combined': -0.9996378123868164, '<Familiarity_Party_Combined': -0.499969808586438, '>Importance_Party_Combined': -0.9978308026030369, '<Importance_Party_Combined': -0.7963446475195822, '>Partisanship_All_Combined': -0.9978308026030369, '<Partisanship_All_Combined': -0.777589954117363, '>Partisanship_All_Partisan': -0.9978308026030369, '<Partisanship_All_Partisan': -0.9997585124366095, '>Partisanship_Party_Combined': -0.9967845659163987, '<Partisanship_Party_Combined': -0.7990093847758082, '>Worrying_Party_Combined': -0.499969808586438, '<Worrying_Party_Combined': -0.9935897435897436}, {'>crt': 1.972872196401318, '<crt': 0.0, '>conservatism': 0.0, '<conservatism': 0.0, '>ct': 0.0, '<ct': 0.0, '>education': 0.0, '<education': 0.0, '>accimp': 0.0, '<accimp': 0.0, '>panasPos': 0.0, '<panasPos': 0.0, '>panasNeg': 0.0, '<panasNeg': 0.0, '>Exciting_Party_Combined': 0.0, '<Exciting_Party_Combined': 3.574226008657847, '>Familiarity_Party_Combined': 2.6042025215277933, '<Familiarity_Party_Combined': 0.0, '>Importance_Party_Combined': 2.2036394876853738, '<Importance_Party_Combined': 4.255574086579121, '>Partisanship_All_Combined': 1.965200689848336, '<Partisanship_All_Combined': 3.8353730503393244, '>Partisanship_All_Partisan': 1.2298451980672356, '<Partisanship_All_Partisan': 0.7176463353940941, '>Partisanship_Party_Combined': 4.223723273224007, '<Partisanship_Party_Combined': 3.885513240139143, '>Worrying_Party_Combined': 0.0, '<Worrying_Party_Combined': 1.6378138233962547}
         orderedConditionsPos = []
         orderedConditionsNeg = []
+        #calculate order and direction of cues for both Accept (Pos) and Reject (Neg) exits
         for a in sorted(predictionQuality.items(), key=lambda x: x[1], reverse=False):
             if a[0][1:] not in item.keys():
                 continue
@@ -85,6 +88,7 @@ class FFTzigzag(ccobra.CCobraModel):
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[a[0]])
             newnode = Node(cond,True,False)
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
+            #determine exit direction
             if rep1preds/length1 >= rep0preds/length0:
                 if a[0][1:] not in [i[1:] for i in orderedConditionsPos + orderedConditionsNeg] and a[0][1:] in self.componentKeys:
                     orderedConditionsPos.append(a[0])
@@ -97,7 +101,8 @@ class FFTzigzag(ccobra.CCobraModel):
                 orderedConditions.append(orderedConditionsNeg[i])
             if len(orderedConditionsPos) > i:
                 orderedConditions.append(orderedConditionsPos[i])
-        exitLeft = True
+        exitLeft = True #as Z+ version implemented
+        #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
             s = sa[0]
@@ -142,18 +147,6 @@ class FFTzigzag(ccobra.CCobraModel):
     def executeCommands(self, commands):
         for command in commands:
             exec(command)
-        
-
-
-def parametrizedPredictiveQualityLT(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] > ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-def parametrizedPredictiveQualityST(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] < ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-
 
 def predictiveQuality(node, trialList):
     rep0preds = 0
@@ -176,6 +169,7 @@ class Node:
         self.right = right
     
     def run(self, item, **kwargs):
+        #get prediction of tree
         try:
             if 'aux' not in item.keys():
                 item['aux'] = item
@@ -184,7 +178,6 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
-        #print(item, kwargs)
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
@@ -195,6 +188,7 @@ class Node:
             return self.right.run(item)
 
     def getstring(self):
+        #visualize tree
         a = ''
         if isinstance(self.left,bool):
             a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.left) + ', else: ' 

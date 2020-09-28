@@ -73,6 +73,7 @@ class RHlinear(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         if len(dataset) == 0:
             return

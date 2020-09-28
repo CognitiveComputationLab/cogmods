@@ -58,6 +58,7 @@ class CR(ccobra.CCobraModel):
         return 'Accept' if random() < self.predictS(item, **kwargs) else 'Reject'
 
     def pre_train(self, dataset):
+        #Globally fits a linear equation of CRT on real and fake new item measures 
         if len(CR.globalpar.keys())>0:
             return
         trialList = []

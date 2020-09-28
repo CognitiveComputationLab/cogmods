@@ -97,6 +97,7 @@ class FPIT(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])

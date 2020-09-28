@@ -78,6 +78,7 @@ class SURP(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
@@ -107,6 +108,7 @@ class SURP(ccobra.CCobraModel):
 
 
     def pre_train(self, dataset):
+        #Globally fits a linear equation of CRT on real and fake new item measures 
         if len(SURP.globalpars.keys()) > 0:
             return
         trialList = []
