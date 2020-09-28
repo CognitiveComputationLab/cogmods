@@ -42,4 +42,5 @@ Implemented Models and as summary of their respective proposition are listed bel
 - numpy
 - random
 - math
+- scipy
 
