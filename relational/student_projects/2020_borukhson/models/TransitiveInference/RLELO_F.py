@@ -8,10 +8,10 @@ from modelfunctions import *
 
 
 class RLELO_F(ccobra.CCobraModel):
-    """ TransitivityInt CCOself.BRA implementation.
+    """ News reasoning CCOself.BRA implementation.
     """
     def __init__(self, name='RL_ELO_F-Kumaran2016'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

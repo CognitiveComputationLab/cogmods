@@ -7,10 +7,10 @@ import math
 from modelfunctions import *
 
 class configuralCuesWynne95(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='configuralCues-Wynne95'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

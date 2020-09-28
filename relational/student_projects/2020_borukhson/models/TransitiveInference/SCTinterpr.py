@@ -7,10 +7,10 @@ from modelfunctions import *
 
 
 class SCTinterpr(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='SCTinterpr-McIlvane2003'): #Stimulus Control Topography
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

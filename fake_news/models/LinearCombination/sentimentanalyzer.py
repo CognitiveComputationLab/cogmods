@@ -2,6 +2,8 @@ from empath import Empath
 
 
 class SentimentAnalyzer:
+    #Interface for Empath module
+
     responses = []
     count = {}
     count2 = {}
@@ -10,6 +12,8 @@ class SentimentAnalyzer:
     relevant = ['negative_emotion', 'health', 'dispute', 'government', 'leisure', 'healing', 'military', 'fight', 'meeting', 'shape_and_size', 'power', 'terrorism', 'competing', 'optimism', 'sexual', 'zest', 'love', 'joy', 'lust', 'office', 'money', 'aggression', 'wealthy', 'banking', 'kill', 'business', 'fabric', 'speaking', 'work', 'valuable', 'economics', 'clothing', 'payment', 'feminine', 'worship', 'affection', 'friends', 'positive_emotion', 'giving', 'help', 'school', 'college', 'real_estate', 'reading', 'gain', 'science', 'negotiate', 'law', 'crime', 'stealing', 'white_collar_job', 'weapon', 'night', 'strength']
     result = {}
     result2 = {}
+
+    #codes and headlines dictionaries for experiment 1 (text) and experiment 2 and 3 (text2)
     text = {
             'Real1': "Border Patrol Chief on migrant crisis: We're seeing increase after increase,' no signs of slowing",
             'Real2': "Conservative groups form coalition to 'agressively' oppose socialized medicine in US",
@@ -201,15 +205,17 @@ class SentimentAnalyzer:
 
     @staticmethod
     def filterFrequency():
+        #drops sentiments that occur less than 4 times in any headline; including every sentiment would lead to exponential overhead in model optimization functions.  
         for a in SentimentAnalyzer.relevant:
-            SentimentAnalyzer.count[a] = 0 
             SentimentAnalyzer.count[a] = 0 
         for task in SentimentAnalyzer.text.keys():
             for a in SentimentAnalyzer.relevant:
                 SentimentAnalyzer.count[a] += float(SentimentAnalyzer.result[task][a])
+                SentimentAnalyzer.count['Sent: ' + a] = SentimentAnalyzer.count[a] 
         for task in SentimentAnalyzer.text2.keys():
             for a in SentimentAnalyzer.relevant:
                 SentimentAnalyzer.count[a] += float(SentimentAnalyzer.result2[task][a])
+                SentimentAnalyzer.count['Sent: ' + a] = SentimentAnalyzer.count[a] 
         x = SentimentAnalyzer.count
         sortedFreq = {k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
         minimumFreq = 3
@@ -217,6 +223,7 @@ class SentimentAnalyzer:
 
     @staticmethod
     def analysis(item, second = False):
+        #returns sentiment value for an item's headline as calcuted by Empath.
         if not SentimentAnalyzer.initialized:
             SentimentAnalyzer.initialize()
         if second or item.task_str not in SentimentAnalyzer.result.keys():

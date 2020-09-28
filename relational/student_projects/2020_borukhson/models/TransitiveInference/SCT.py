@@ -6,10 +6,10 @@ import numpy as np
 from modelfunctions import * 
 
 class SCT(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='SCT-McIlvane2003'): #Stimulus Control Topography
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

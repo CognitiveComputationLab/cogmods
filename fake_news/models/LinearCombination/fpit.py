@@ -1,4 +1,13 @@
-""" News Item Processing model implementation.
+#adjust import structure if started as script
+import os
+import sys
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+""" 
+News Item Processing model implementation.
 """
 import ccobra
 from random import random 
@@ -6,13 +15,14 @@ import math
 from LinearCombination.sentimentanalyzer import SentimentAnalyzer
 from scipy.optimize._basinhopping import basinhopping
 from numpy import mean
+import numpy as np
 
 
 class FPIT(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='FPIT', commands = []):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
@@ -86,15 +96,16 @@ class FPIT(ccobra.CCobraModel):
         for command in commands:
             exec(command)
 
-    def pre_person_background(self, dataset):
+    def pre_train_person(self, dataset):
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
-            personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=200, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+            with np.errstate(divide='ignore'):
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
-            optpars = [] 
+            optpars = []
         self.executeCommands(self.toCommandList(optpars))
 
     def itemsOnePersonThisModelPeformance(self, pars, items):
@@ -103,7 +114,6 @@ class FPIT(ccobra.CCobraModel):
         performanceOfPerson = []
         self.executeCommands(self.toCommandList(pars))
         for item in items:
-            #print(item['item'], item['aux'])
             pred = min(1.0,max(self.predictS(item=item['item'], kwargs= item['aux']),0.0)) 
             if item['aux']['binaryResponse']:
                 predictionPerf = min(1.0,max(self.predictS(item=item['item'], kwargs=item['aux']),0.0)) 

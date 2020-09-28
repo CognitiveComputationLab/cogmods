@@ -1,14 +1,31 @@
-""" News Item Processing model implementation.
+#adjust import structure if started as script
+import os
+import sys
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+""" 
+News Item Processing model implementation.
 """
 import ccobra
 from random import random 
 import math
+from numpy import mean
+import numpy as np
+from scipy.optimize._basinhopping import basinhopping
+from scipy.optimize import curve_fit
+
+
 
 class CR(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    globalpar = {}
+
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='ClassicReas', commands = []):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
@@ -16,23 +33,17 @@ class CR(ccobra.CCobraModel):
             framework as a means for identifying the model.
         """
         self.parameter = {}                          
-        super().__init__(name, ['misinformation'], ['single-choice'])
-
-
-    def predictS(self, item, **kwargs):
-        if len(kwargs.keys()) == 1:
-            kwargs = kwargs['kwargs']
-        #Exp3
         self.parameter['Cr'] = 0.65 
         self.parameter['Cf'] = 0.2 
         self.parameter['Mr'] = 0.13                              
         self.parameter['Mf'] = - 0.12 
+        super().__init__(name, ['misinformation'], ['single-choice'])
 
-        #Exp2
-        self.parameter['Cr'] = 0.6 
-        self.parameter['Cf'] = 0.3 
-        self.parameter['Mr'] = 0.14                              
-        self.parameter['Mf'] = - 0.22   
+
+    def predictS(self, item, **kwargs):
+        self.parameter = CR.globalpar
+        if len(kwargs.keys()) == 1:
+            kwargs = kwargs['kwargs']
         if kwargs['truthful']:
             threshold = self.parameter['Cr'] + self.parameter['Mr'] * kwargs['crt']
         if not kwargs['truthful']:
@@ -46,49 +57,50 @@ class CR(ccobra.CCobraModel):
     def predict(self, item, **kwargs):
         return 'Accept' if random() < self.predictS(item, **kwargs) else 'Reject'
 
-    def toCommandList(self,pars):
-        optCommands = []
-        i = 0
-        parKeys = sorted(self.parameter.keys())
-        for a in parKeys:
-            if len(pars)<=i: 
-                print('keys length error', self.name)
-                break
-            optCommands.append('self.parameter[\'' + a + '\'] = ' + str(pars[i]))
-            i += 1
-        return optCommands
-    
-    def executeCommands(self, commands):
-        for command in commands:
-            exec(command)
-
-    def pre_person_background(self, dataset):
+    def pre_train(self, dataset):
+        if len(CR.globalpar.keys())>0:
+            return
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
-        if len(self.parameter.keys()) > 0:
-            personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=200, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
-            optpars = personOptimum.x
-        else: 
-            optpars = [] 
-        self.executeCommands(self.toCommandList(optpars))
+        mean_acc_values_fake = {}
+        mean_acc_values_real = {}
+        acc_values_fake = {}
+        acc_values_real = {}
+        for alist in trialList:
+            if False and len(alist) < max(len(l) for l in trialList):
+                continue
+            for a in alist:
+                crt_value = a['aux']['crt']
+                if a['aux']['truthful'] == 1:
+                    if crt_value not in acc_values_real.keys():
+                        acc_values_real[crt_value] = []
+                    acc_values_real[crt_value].append(abs(a['aux']['binaryResponse']))
+                else:
+                    if crt_value not in acc_values_fake.keys():
+                        acc_values_fake[crt_value] = []
+                    acc_values_fake[crt_value].append(abs(a['aux']['binaryResponse']))
+        for key in sorted([a for a in acc_values_real.keys()]):
+            if len(acc_values_real[key]) / max(len(l)/2 for l in trialList) < 10:
+                continue
+            mean_acc_values_real[key] =  mean(acc_values_real[key])
+        for key in sorted([a for a in acc_values_fake.keys()]):
+            if len(acc_values_fake[key]) / max(len(l)/2 for l in trialList) < 10:
+                continue
+            mean_acc_values_fake[key] =  mean(acc_values_fake[key])
+        ry = [mean_acc_values_real[a] for a in mean_acc_values_real.keys()]
+        rx = [a for a in mean_acc_values_real.keys()]
+        fy = [mean_acc_values_fake[a] for a in mean_acc_values_fake.keys()]
+        fx = [a for a in mean_acc_values_fake.keys()]
+        realOpt = curve_fit(fit_func,np.array(rx), np.array(ry), method = 'trf')
+        fakeOpt = curve_fit(fit_func,np.array(fx), np.array(fy), method = 'trf')
+        realLine = realOpt[0]
+        fakeLine = fakeOpt[0]
+        self.parameter['Mr'] = realLine[0]
+        self.parameter['Cr'] = realLine[1]                         
+        self.parameter['Mf'] = fakeLine[0]
+        self.parameter['Cf'] = fakeLine[1]
+        CR.globalpar = self.parameter.copy()
 
-    def itemsOnePersonThisModelPeformance(self, pars, items):
-        #input: list of items
-        items = [a for a in items]
-        performanceOfPerson = []
-        self.executeCommands(self.toCommandList(pars))
-        for item in items:
-            #print(item['item'], item['aux'])
-            pred = min(1.0,max(self.predictS(item=item['item'], kwargs= item['aux']),0.0)) 
-            if item['aux']['binaryResponse']:
-                predictionPerf = min(1.0,max(self.predictS(item=item['item'], kwargs=item['aux']),0.0)) 
-            elif not item['aux']['binaryResponse']:
-                predictionPerf = 1.0 - pred
-            else:
-                print('Error')
-            performanceOfPerson.append(predictionPerf)
-        return -1*mean(performanceOfPerson) 
-
-        
-
+def fit_func(crt, m, c):
+    return crt*m + c

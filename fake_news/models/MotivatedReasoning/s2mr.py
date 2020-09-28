@@ -1,17 +1,27 @@
-""" News Item Processing model implementation.
+#adjust import structure if started as script
+import os
+import sys
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+""" 
+News Item Processing model implementation.
 """
 import ccobra
 from random import random
 import math
 from scipy.optimize._basinhopping import basinhopping
 from numpy import mean
+import numpy as np
 
 
 class S2MR(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='S2MR'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
@@ -19,14 +29,6 @@ class S2MR(ccobra.CCobraModel):
             framework as a means for identifying the model.
         """
         self.parameter = {}
-        #self.parameter['Dcons'] = 3
-        #self.parameter['Dlib'] = 1.5
-
-        self.parameter['Kc'] = 0.55
-        self.parameter['Kl'] = 0.3
-        
-        self.parameter['Mc'] = 0.2
-        self.parameter['Ml'] = - 0.2
 
         #dictionary for testing with value from rough optimization on Experiment 1
         optdict = {'Kc': -0.056536155629514195, 'Kl': -0.09074348945552314, 'Mc': -0.027349753930657073, 'Ml': -0.036805428943731885}
@@ -39,13 +41,15 @@ class S2MR(ccobra.CCobraModel):
             kwargs = kwargs['kwargs']
         conservativePerson = kwargs['conservatism'] >= 3.5
         liberalPerson = kwargs['conservatism'] <= 3.5
-        if kwargs['Partisanship_All_Combined']>3.8 and conservativePerson:
+        cons_partisanship = 3.8
+        lib_partisanship = 2.2
+        if kwargs['Partisanship_All_Combined']>cons_partisanship and conservativePerson:
             threshold = self.parameter['Kc'] + kwargs['crt'] * self.parameter['Mc']
-        elif kwargs['Partisanship_All_Combined']<2.2 and liberalPerson:
+        elif kwargs['Partisanship_All_Combined']<lib_partisanship and liberalPerson:
             threshold = self.parameter['Kc'] + kwargs['crt'] * self.parameter['Mc']
-        elif kwargs['Partisanship_All_Combined']<2.2 and conservativePerson:
+        elif kwargs['Partisanship_All_Combined']<lib_partisanship and conservativePerson:
             threshold = self.parameter['Kl'] + kwargs['crt'] * self.parameter['Ml']
-        elif kwargs['Partisanship_All_Combined']>3.8 and liberalPerson:
+        elif kwargs['Partisanship_All_Combined']>cons_partisanship and liberalPerson:
             threshold = self.parameter['Kl'] + kwargs['crt'] * self.parameter['Ml']
         else:
             threshold = 0.5
@@ -73,12 +77,13 @@ class S2MR(ccobra.CCobraModel):
         for command in commands:
             exec(command)
 
-    def pre_person_background(self, dataset):
+    def pre_train_person(self, dataset):
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
-            personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=200, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+            with np.errstate(divide='ignore'):
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
             optpars = [] 
@@ -90,7 +95,6 @@ class S2MR(ccobra.CCobraModel):
         performanceOfPerson = []
         self.executeCommands(self.toCommandList(pars))
         for item in items:
-            #print(item['item'], item['aux'])
             pred = min(1.0,max(self.predictS(item=item['item'], kwargs= item['aux']),0.0)) 
             if item['aux']['binaryResponse']:
                 predictionPerf = min(1.0,max(self.predictS(item=item['item'], kwargs=item['aux']),0.0)) 

@@ -1,4 +1,4 @@
 class FFTtool:
-    fc = {}
-    MAX = {}
-    ZIGZAG = {}
+    fc = None
+    MAX = None
+    ZigZag = None

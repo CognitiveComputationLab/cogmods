@@ -1,4 +1,13 @@
-""" News Item Processing model implementation.
+#adjust import structure if started as script
+import os
+import sys
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+""" 
+News Item Processing model implementation.
 """
 import ccobra
 from random import random 
@@ -9,10 +18,10 @@ from scipy.optimize._basinhopping import basinhopping
 from numpy import mean
 
 class RecommenderPlinear(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='RecommenderPersonLinear', commands = []):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
@@ -41,7 +50,6 @@ class RecommenderPlinear(ccobra.CCobraModel):
         #print(len(trialList))
 
     def pre_train(self, dataset):
-        #print('Pretrain person started')
         trialList = []
         for pers in dataset:
             perslist = []
@@ -70,7 +78,6 @@ class RecommenderPlinear(ccobra.CCobraModel):
         self.parameter = {'education': 0.41276193531865624, 'crt': -1.4941098613407457}
         self.parameter = {'education': 0.7369543795644158, 'crt': 0.4801283733698878}
         if not RS.trained:
-            print('Untrained Model')
             return 
         repliesOfSimilar = 0
         numberOfReplies = 0
@@ -80,12 +87,10 @@ class RecommenderPlinear(ccobra.CCobraModel):
             if ('S' in [a for a in RS.featuresOfAllPeople[person].keys()][0] != 'S' in item.task_str):
                 continue
             if item.identifier in RS.featuresOfAllPeople.keys() and self.similar(person, item.identifier) and item.task_str in RS.repliesOfAllPeople[person].keys():
-                #print(person, trial.identifier)
                 repliesOfSimilar += RS.repliesOfAllPeople[person][item.task[0][0]]
                 numberOfReplies += 1
             else:
                 continue
-        #print(trial.identifier, repliesOfSimilar,numberOfReplies)
         if numberOfReplies == 0:
             return 0.5
         meanResponse = repliesOfSimilar/numberOfReplies
@@ -117,12 +122,13 @@ class RecommenderPlinear(ccobra.CCobraModel):
         for command in commands:
             exec(command)
 
-    def pre_person_background(self, dataset):
+    def pre_train_person(self, dataset):
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
-            personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=200, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+            with np.errstate(divide='ignore'):
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
             optpars = [] 
@@ -134,7 +140,6 @@ class RecommenderPlinear(ccobra.CCobraModel):
         performanceOfPerson = []
         self.executeCommands(self.toCommandList(pars))
         for item in items:
-            #print(item['item'], item['aux'])
             pred = min(1.0,max(self.predictS(item=item['item'], kwargs= item['aux']),0.0)) 
             if item['aux']['binaryResponse']:
                 predictionPerf = min(1.0,max(self.predictS(item=item['item'], kwargs=item['aux']),0.0)) 

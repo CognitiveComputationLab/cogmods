@@ -1,4 +1,13 @@
-""" News Item Processing model implementation.
+#adjust import structure if started as script
+import os
+import sys
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
+""" 
+News Item Processing model implementation.
 """
 import ccobra
 from random import random 
@@ -13,11 +22,11 @@ from scipy.optimize import *
 
 
 class FFTifan(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     
     def __init__(self, name='Fast-Frugal-Tree-ifan', commands = []):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
@@ -26,7 +35,6 @@ class FFTifan(ccobra.CCobraModel):
         """
         SentimentAnalyzer.initialize()
         self.parameter = {}
-        #self.parameter['thresh'] = 10
         self.componentKeys = ['crt','ct','conservatism','panasPos','panasNeg','education', 'reaction_time','accimp','age','gender','Exciting_Democrats_Combined', 'Exciting_Republicans_Combined', 'Familiarity_Democrats_Combined', 'Familiarity_Republicans_Combined', 'Importance_Democrats_Combined', 'Importance_Republicans_Combined', 'Likelihood_Democrats_Combined', 'Likelihood_Republicans_Combined', 'Partisanship_All_Combined', 'Partisanship_All_Partisan', 'Partisanship_Democrats_Combined', 'Partisanship_Republicans_Combined','Sharing_Democrats_Combined', 'Sharing_Republicans_Combined', 'Worrying_Democrats_Combined','Worrying_Republicans_Combined', 'Sent: negative_emotion', 'Sent: health', 'Sent: dispute', 'Sent: government', 'Sent: healing', 'Sent: military', 'Sent: fight', 'Sent: meeting', 'Sent: shape_and_size', 'Sent: power', 'Sent: terrorism', 'Sent: competing', 'Sent: office', 'Sent: money', 'Sent: aggression', 'Sent: wealthy', 'Sent: banking', 'Sent: kill', 'Sent: business', 'Sent: speaking', 'Sent: work', 'Sent: valuable', 'Sent: economics', 'Sent: payment', 'Sent: friends', 'Sent: giving', 'Sent: help', 'Sent: school', 'Sent: college', 'Sent: real_estate', 'Sent: reading', 'Sent: gain', 'Sent: science', 'Sent: negotiate', 'Sent: law', 'Sent: crime', 'Sent: stealing', 'Sent: strength']#Keys.person + Keys.task 
         super().__init__(name, ['misinformation'], ['single-choice'])
 
@@ -44,6 +52,8 @@ class FFTifan(ccobra.CCobraModel):
         return self.fitTreeOnTrials(trialList)
 
     def fitTreeOnTrials(self, trialList, maxLength=-1, person='global'):
+        if FFTtool.fc != None:
+            return
         for item in trialList:
             for a in self.componentKeys:
                 if a not in item.keys():
@@ -60,14 +70,9 @@ class FFTifan(ccobra.CCobraModel):
                         item.pop(a.replace('Democrats','Republicans'))
                 if 'Sent' in a:
                     item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
-        #print(len(trialList))
         data = self.toDFFormatTruthful(trialList)
-        FFTtool.fc[person] = FastFrugalTreeClassifier(max_levels=5)
-        #print('Started Fitting Fast-Frugal-Tree')
-        FFTtool.fc[person].fit(data.drop(columns='response'), data['response'])
-        #print('   Done Fitting Fast-Frugal-Tree')
-        #print(FFTtool.fc[person].get_tree(top10=True,decision_view=True))
-        #print(FFTtool.fc[person].get_tree(decision_view=False))
+        FFTtool.fc = FastFrugalTreeClassifier(max_levels=5)
+        FFTtool.fc.fit(data.drop(columns='response'), data['response'])
 
     def toDFFormat(self, trialList):
         featList = []
@@ -103,13 +108,11 @@ class FFTifan(ccobra.CCobraModel):
                         continue
             else:
                 featList.append(newPars)
-        #print('number of FFT error trials:', errorcount)
         cat_columns = [] 
         nr_columns = [a for a in self.componentKeys
             if a not in cat_columns and a in item.keys()]
         data_columns = ['response'] +cat_columns + nr_columns
         data = pd.DataFrame(data=featList, columns=data_columns)
-        #print(len(featList), len(data))
         for col in cat_columns:
             data[col] = data[col].astype('category')
             for col in nr_columns:
@@ -132,7 +135,7 @@ class FFTifan(ccobra.CCobraModel):
                     kwargs[a.replace('Democrats', 'Party')] = kwargs[a]
             if 'Sent' in a:
                 kwargs[a] = SentimentAnalyzer.analysis(kwargs['item'])[a.split(' ')[1]]
-        pred = FFTtool.fc[person].predict(self.toDFFormat([kwargs]))
+        pred = FFTtool.fc.predict(self.toDFFormat([kwargs]))
         return int(pred[0])
 
     def predict(self, item, **kwargs):
