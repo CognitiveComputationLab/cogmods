@@ -34,13 +34,13 @@ class FFTmax(ccobra.CCobraModel):
         """
         SentimentAnalyzer.initialize()
         self.parameter = {}
-        #self.parameter['thresh'] = 1
         self.fft = None
         self.lastnode = None
         self.componentKeys = ['crt','ct','conservatism','panasPos','panasNeg','education', 'reaction_time','accimp','age','gender','Exciting_Democrats_Combined', 'Exciting_Republicans_Combined', 'Familiarity_Democrats_Combined', 'Familiarity_Republicans_Combined', 'Importance_Democrats_Combined', 'Importance_Republicans_Combined', 'Likelihood_Democrats_Combined', 'Likelihood_Republicans_Combined', 'Partisanship_All_Combined', 'Partisanship_All_Partisan', 'Partisanship_Democrats_Combined', 'Partisanship_Republicans_Combined','Sharing_Democrats_Combined', 'Sharing_Republicans_Combined', 'Worrying_Democrats_Combined','Worrying_Republicans_Combined', 'Sent: negative_emotion', 'Sent: health', 'Sent: dispute', 'Sent: government', 'Sent: healing', 'Sent: military', 'Sent: fight', 'Sent: meeting', 'Sent: shape_and_size', 'Sent: power', 'Sent: terrorism', 'Sent: competing', 'Sent: office', 'Sent: money', 'Sent: aggression', 'Sent: wealthy', 'Sent: banking', 'Sent: kill', 'Sent: business', 'Sent: speaking', 'Sent: work', 'Sent: valuable', 'Sent: economics', 'Sent: payment', 'Sent: friends', 'Sent: giving', 'Sent: help', 'Sent: school', 'Sent: college', 'Sent: real_estate', 'Sent: reading', 'Sent: gain', 'Sent: science', 'Sent: negotiate', 'Sent: law', 'Sent: crime', 'Sent: stealing', 'Sent: strength']#Keys.person + Keys.task 
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
+        #Globally trains max FFT on data for all persons
         trialList = []
         for pers in dataset:
             perslist = []
@@ -71,36 +71,35 @@ class FFTmax(ccobra.CCobraModel):
                         item.pop(a,None)
                         item.pop(a.replace('Democrats','Republicans'))
                 if 'Sent' in a:
+                    if a.split(' ')[1] not in SentimentAnalyzer.relevant:
+                        continue
                     item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
         maxLength = -1
         predictionQuality = {}
         predictionMargin = {}
         for a in self.componentKeys:
-            if a not in item.keys():
+            a = a.replace('Democrats','Party')
+            a = a.replace('Republicans','Party')
+            if '<' + a in predictionMargin.keys():
                 continue
-            if item['conservatism'] >= 3.5:
-                if 'Republicans' in a:
-                    a = a.replace('Republicans','Party')
-            elif item['conservatism'] <= 3.5:
-                if 'Democrats' in a:
-                    a = a.replace('Democrats', 'Party')
+            #calculate predictive quality of individual cues
             marginOptimum = basinhopping(parametrizedPredictiveQualityLT, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['>' + a] = marginOptimum.x[0]
             predictionQuality['>' + a] = marginOptimum.fun
             marginOptimum = basinhopping(parametrizedPredictiveQualityST, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['<' + a] = marginOptimum.x[0]
             predictionQuality['<' + a] = marginOptimum.fun
-
+        #calculate order and direction of cues
         orderedConditions = []
         for a in sorted(predictionQuality.items(), key=lambda x: x[1], reverse=False):
             if a[0][1:] not in item.keys():
                 continue
             if a[0][1:] not in [i[1:] for i in orderedConditions] and a[0][1:] in self.componentKeys:
                 orderedConditions.append(a[0])
+        #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
             s = sa[0]
-            #print('item[\'aux\'][\'', b, '\'] ', s, ' ', str(predictionMargin[sa]), str(predictionQuality[sa]))
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[sa])
             newnode = Node(cond,True,False)
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
@@ -161,6 +160,17 @@ def predictiveQuality(node, trialList):
     length0 = 1
     length1 = 1
     for item in trialList:
+        if 'aux' not in item.keys():
+            item['aux'] = item
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in node.condition:
+                node.condition = node.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in node.condition:
+                node.condition = node.condition.replace('Democrats', 'Party')
+        
+        if node.condition.split('\'')[3] not in item['aux'].keys():
+            continue
         if 1 == node.run(item):
             rep1preds += int(bool(item['aux']['truthful'] == 1))
             length1 += 1
@@ -184,6 +194,14 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
+
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in self.condition:
+                self.condition = self.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in self.condition:
+                self.condition = self.condition.replace('Democrats', 'Party')
+
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
@@ -196,9 +214,9 @@ class Node:
     def getstring(self):
         a = ''
         if isinstance(self.left,bool):
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.left) + ', else: ' 
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.left) + ', else: ' 
             a += 'Return ' + str(self.right) if isinstance(self.right,bool) else self.right.getstring()
         else:
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.right) + ', else: '
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.right) + ', else: '
             a += 'Return ' + str(self.left) if isinstance(self.left,bool) else self.left.getstring()
         return a 

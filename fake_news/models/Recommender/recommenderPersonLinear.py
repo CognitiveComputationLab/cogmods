@@ -13,9 +13,10 @@ import ccobra
 from random import random 
 import math
 from Recommender.RS import RS
-
+from LinearCombination.optimizationParameters import OptPars
 from scipy.optimize._basinhopping import basinhopping
 from numpy import mean
+import numpy as np
 
 class RecommenderPlinear(ccobra.CCobraModel):
     """ News reasoning CCOBRA implementation.
@@ -30,8 +31,7 @@ class RecommenderPlinear(ccobra.CCobraModel):
         """
         self.parameter = {}
         self.relevant = ['education', 'crt']
-        for a in self.relevant:
-            continue
+        for a in self.relevant: 
             self.parameter[a] = 0
                 
         super().__init__(name, ['misinformation'], ['single-choice'])
@@ -123,12 +123,13 @@ class RecommenderPlinear(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing similarity measure paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
             with np.errstate(divide='ignore'):
-                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=OptPars.iterations, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
             optpars = [] 

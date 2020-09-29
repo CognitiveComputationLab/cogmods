@@ -42,6 +42,9 @@ class FFTmax(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
+        #Globally trains max FFT on data for all persons
+        if FFTtool.MAX != None:
+            return
         trialList = []
         for pers in dataset:
             perslist = []
@@ -55,10 +58,12 @@ class FFTmax(ccobra.CCobraModel):
 
 
     def fitTreeOnTrials(self, trialList, maxLength=-1, person='global'):
-        if FFTtool.MAX != None:
-            return
         for item in trialList:
             for a in self.componentKeys:
+                if 'Sent' in a:
+                    if a.split(' ')[1] not in SentimentAnalyzer.relevant:
+                        continue
+                    item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
                 if a not in item.keys():
                     continue
                 if item['conservatism'] >= 3.5:
@@ -71,26 +76,25 @@ class FFTmax(ccobra.CCobraModel):
                         item[a.replace('Democrats', 'Party')] = item[a]
                         item.pop(a,None)
                         item.pop(a.replace('Democrats','Republicans'))
-                if 'Sent' in a:
-                    item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
         maxLength = -1
         predictionQuality = {}
         predictionMargin = {}
+        #precalculated predictive quality of individual cues
         predictionQuality, predictionMargin = {'>crt': -0.5765148663906662, '<crt': -0.5835007682307056, '>conservatism': -0.5840998087605864, '<conservatism': -0.576172936416883, '>ct': -0.5755846761552449, '<ct': -0.6117876278616659, '>education': -0.6196549137284321, '<education': -0.576172936416883, '>gender': -0.5751785605274403, '<gender': -0.6629834254143646, '>accimp': -0.6245434623813002, '<accimp': -0.576257736867164, '>panasPos': -0.423766680755993, '<panasPos': -0.576172936416883, '>panasNeg': -0.423766680755993, '<panasNeg': -0.576172936416883, '>Exciting_Party_Combined': -0.6378066378066378, '<Exciting_Party_Combined': -0.6442516268980477, '>Familiarity_Party_Combined': -0.8807965084560829, '<Familiarity_Party_Combined': -0.576172936416883, '>Importance_Party_Combined': -0.9197396963123644, '<Importance_Party_Combined': -0.7952691680261011, '>Partisanship_All_Combined': -0.824295010845987, '<Partisanship_All_Combined': -0.7604868506846337, '>Partisanship_All_Partisan': -0.824295010845987, '<Partisanship_All_Partisan': -0.7213447326474424, '>Partisanship_Party_Combined': -0.9166666666666666, '<Partisanship_Party_Combined': -0.7128539213229766, '>Worrying_Party_Combined': -0.576172936416883, '<Worrying_Party_Combined': -0.7948717948717948}, {'>crt': 0.9611886396917466, '<crt': 0.6196903610860507, '>conservatism': 3.5312980367111253, '<conservatism': 0.0, '>ct': 5.0, '<ct': 4.227544258038495, '>education': 2.2412854095104953, '<education': 0.0, '>gender': 4.550795699820794, '<gender': 5.0, '>accimp': 1.7730933959075976, '<accimp': 5.0, '>panasPos': 0.0, '<panasPos': 0.0, '>panasNeg': 0.0, '<panasNeg': 0.0, '>Exciting_Party_Combined': 1.9445809043351385, '<Exciting_Party_Combined': 3.2554860566661565, '>Familiarity_Party_Combined': 2.2340655206116744, '<Familiarity_Party_Combined': 0.0, '>Importance_Party_Combined': 2.271886359375083, '<Importance_Party_Combined': 4.180200375448119, '>Partisanship_All_Combined': 4.098278058073108, '<Partisanship_All_Combined': 3.825921609404447, '>Partisanship_All_Partisan': 1.2084637950209594, '<Partisanship_All_Partisan': 0.8947571888022123, '>Partisanship_Party_Combined': 4.263257855394618, '<Partisanship_Party_Combined': 3.8420666367941125, '>Worrying_Party_Combined': 5.0, '<Worrying_Party_Combined': 3.937920683250629}
+        #calculate order and direction of cues
         orderedConditions = []
         for a in sorted(predictionQuality.items(), key=lambda x: x[1], reverse=False):
             if a[0][1:] not in item.keys():
                 continue
             if a[0][1:] not in [i[1:] for i in orderedConditions] and a[0][1:] in self.componentKeys:
                 orderedConditions.append(a[0])
+        #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
             s = sa[0]
-            #print('item[\'aux\'][\'', b, '\'] ', s, ' ', str(predictionMargin[sa]), str(predictionQuality[sa]))
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[sa])
             newnode = Node(cond,True,False)
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
-            #print(rep1preds/length1, rep0preds/length0, rep1preds,length1, rep0preds, length0)
             if self.fft == None:
                 self.fft = newnode
                 self.lastnode = self.fft
@@ -102,7 +106,6 @@ class FFTmax(ccobra.CCobraModel):
                     self.lastnode.right = newnode
                     self.lastnode = self.lastnode.right
         FFTtool.MAX = self.fft
-        #print(FFTmax.MAX.getstring())
 
     def predictS(self, item, **kwargs):
         if len(kwargs.keys()) == 1:
@@ -149,6 +152,17 @@ def predictiveQuality(node, trialList):
     length0 = 1
     length1 = 1
     for item in trialList:
+        if 'aux' not in item.keys():
+            item['aux'] = item
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in node.condition:
+                node.condition = node.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in node.condition:
+                node.condition = node.condition.replace('Democrats', 'Party')
+        
+        if node.condition.split('\'')[3] not in item['aux'].keys():
+            continue
         if 1 == node.run(item):
             rep1preds += int(bool(item['aux']['truthful'] == 1))
             length1 += 1
@@ -172,7 +186,14 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
-        #print(item, kwargs)
+
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in self.condition:
+                self.condition = self.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in self.condition:
+                self.condition = self.condition.replace('Democrats', 'Party')
+
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
@@ -185,9 +206,9 @@ class Node:
     def getstring(self):
         a = ''
         if isinstance(self.left,bool):
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.left) + ', else: ' 
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.left) + ', else: ' 
             a += 'Return ' + str(self.right) if isinstance(self.right,bool) else self.right.getstring()
         else:
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.right) + ', else: '
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.right) + ', else: '
             a += 'Return ' + str(self.left) if isinstance(self.left,bool) else self.left.getstring()
         return a 

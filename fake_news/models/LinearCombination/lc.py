@@ -13,10 +13,11 @@ import ccobra
 from random import random 
 import math
 from LinearCombination.sentimentanalyzer import SentimentAnalyzer
-
+from LinearCombination.optimizationParameters import OptPars
 from scipy.optimize._basinhopping import basinhopping
 from numpy import mean
 import numpy as np
+
 class LC(ccobra.CCobraModel):
     """ News reasoning CCOBRA implementation.
     """
@@ -89,12 +90,13 @@ class LC(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
             with np.errstate(divide='ignore'):
-                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=OptPars.iterations, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
             optpars = [] 

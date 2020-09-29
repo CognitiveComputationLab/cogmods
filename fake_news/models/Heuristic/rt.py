@@ -17,6 +17,7 @@ from numpy import mean
 from scipy import mean
 from scipy.optimize.minpack import curve_fit
 import numpy as np
+from LinearCombination.optimizationParameters import OptPars
 
 class RT(ccobra.CCobraModel):
     """ News reasoning CCOBRA implementation.
@@ -78,12 +79,13 @@ class RT(ccobra.CCobraModel):
             exec(command)
 
     def pre_train_person(self, dataset):
+        #Optimpizing paramaters per person 
         trialList = []
         for pers in dataset:
             trialList.extend([pers])
         if len(self.parameter.keys()) > 0:
             with np.errstate(divide='ignore'):
-                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=3, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
+                personOptimum = basinhopping(self.itemsOnePersonThisModelPeformance, [1]*len(self.parameter.keys()), niter=OptPars.iterations, stepsize=3, T=4,  minimizer_kwargs={"args" : (trialList)})
             optpars = personOptimum.x
         else: 
             optpars = [] 
@@ -106,6 +108,7 @@ class RT(ccobra.CCobraModel):
         return -1*mean(performanceOfPerson) 
 
     def pre_train(self, dataset):
+        #Globally fits a linear equation of CRT on real and fake new item measures 
         if len(RT.globalpars.keys()) > 0:
             return
         trialList = []

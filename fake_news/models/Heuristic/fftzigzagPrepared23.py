@@ -41,7 +41,9 @@ class FFTzigzag(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
-        #print('Pretrain started')
+        #Globally trains zigzag FFT on data for all persons
+        if FFTtool.ZigZag != None:
+            return
         trialList = []
         for pers in dataset:
             perslist = []
@@ -55,10 +57,12 @@ class FFTzigzag(ccobra.CCobraModel):
 
 
     def fitTreeOnTrials(self, trialList, maxLength=-1, person='global'):
-        if FFTtool.ZigZag != None:
-            return
         for item in trialList:
             for a in self.componentKeys:
+                if 'Sent' in a:
+                    if a.split(' ')[1] not in SentimentAnalyzer.relevant:
+                        continue
+                    item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
                 if a not in item.keys():
                     continue
                 if item['conservatism'] >= 3.5:
@@ -71,14 +75,14 @@ class FFTzigzag(ccobra.CCobraModel):
                         item[a.replace('Democrats', 'Party')] = item[a]
                         item.pop(a,None)
                         item.pop(a.replace('Democrats','Republicans'))
-                if 'Sent' in a:
-                    item[a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
         maxLength = -1
         predictionQuality = {}
         predictionMargin = {}
+        #precalculated predictive quality of individual cues
         predictionQuality, predictionMargin = {'>crt': -0.9996858309770656, '<crt': -0.9986962190352021, '>conservatism': -0.5007337607167683, '<conservatism': -0.5003962614779187, '>reaction_time': -0.6742837053963789, '<reaction_time': -0.5003962614779187, '>Familiarity_Party_Combined': -0.9999108416547788, '<Familiarity_Party_Combined': -0.5003962614779187, '>Partisanship_All_Combined': -0.9996858309770656, '<Partisanship_All_Combined': -0.9986962190352021, '>Sent: negative_emotion': -0.9996849401386263, '<Sent: negative_emotion': -0.5003962614779187, '>Sent: health': -0.5003962614779187, '<Sent: health': -0.6130589430894309, '>Sent: dispute': -0.6450213266656861, '<Sent: dispute': -0.5003962614779187, '>Sent: government': -0.9986893840104849, '<Sent: government': -0.5003962614779187, '>Sent: healing': -0.9993434011818779, '<Sent: healing': -0.5003962614779187, '>Sent: military': -0.9998210130660462, '<Sent: military': -0.5003962614779187, '>Sent: fight': -0.7681743973878805, '<Sent: fight': -0.5003962614779187, '>Sent: meeting': -0.9997459349593496, '<Sent: meeting': -0.5003962614779187, '>Sent: shape_and_size': -0.9996849401386263, '<Sent: shape_and_size': -0.5003962614779187, '>Sent: power': -0.9998427425695864, '<Sent: power': -0.5003962614779187, '>Sent: terrorism': -0.9996849401386263, '<Sent: terrorism': -0.5003962614779187, '>Sent: competing': -0.9996849401386263, '<Sent: competing': -0.5003962614779187, '>Sent: office': -0.9996846420687481, '<Sent: office': -0.5003962614779187, '>Sent: money': -0.999787007454739, '<Sent: money': -0.5003962614779187, '>Sent: aggression': -0.9999039385206532, '<Sent: aggression': -0.5003962614779187, '>Sent: wealthy': -0.9997457411645054, '<Sent: wealthy': -0.5003962614779187, '>Sent: banking': -0.9993421052631579, '<Sent: banking': -0.5003962614779187, '>Sent: kill': -0.9998209169054442, '<Sent: kill': -0.5003962614779187, '>Sent: business': -0.9998209169054442, '<Sent: business': -0.5003962614779187, '>Sent: speaking': -0.999842668344871, '<Sent: speaking': -0.5003962614779187, '>Sent: work': -0.9998209169054442, '<Sent: work': -0.5003962614779187, '>Sent: valuable': -0.9995617879053462, '<Sent: valuable': -0.5003962614779187, '>Sent: economics': -0.9998593134496342, '<Sent: economics': -0.5003962614779187, '>Sent: payment': -0.9993421052631579, '<Sent: payment': -0.5003962614779187, '>Sent: friends': -0.9986807387862797, '<Sent: friends': -0.5003962614779187, '>Sent: giving': -0.999344262295082, '<Sent: giving': -0.5003962614779187, '>Sent: help': -0.9986893840104849, '<Sent: help': -0.7597607052896725, '>Sent: school': -0.5003962614779187, '<Sent: school': -0.7597607052896725, '>Sent: college': -0.5003962614779187, '<Sent: college': -0.7597607052896725, '>Sent: real_estate': -0.9996851385390428, '<Sent: real_estate': -0.5003962614779187, '>Sent: reading': -0.9986893840104849, '<Sent: reading': -0.5003962614779187, '>Sent: gain': -0.9996851385390428, '<Sent: gain': -0.5003962614779187, '>Sent: science': -0.9996851385390428, '<Sent: science': -0.5003962614779187, '>Sent: negotiate': -0.9986893840104849, '<Sent: negotiate': -0.5003962614779187, '>Sent: law': -0.9998427920138343, '<Sent: law': -0.5003962614779187, '>Sent: crime': -0.9998213966779782, '<Sent: crime': -0.5003962614779187, '>Sent: stealing': -0.9996861268047709, '<Sent: stealing': -0.5003962614779187, '>Sent: strength': -0.9997928319867413, '<Sent: strength': -0.5003962614779187}, {'>crt': 2.108692258820941, '<crt': 4.221334524079497, '>conservatism': 2.4733894476129064, '<conservatism': 0.0, '>reaction_time': 2.0723292361934, '<reaction_time': 0.0, '>Familiarity_Party_Combined': 2.1152623939462805, '<Familiarity_Party_Combined': 0.0, '>Partisanship_All_Combined': 2.1077281741718545, '<Partisanship_All_Combined': 4.307574112948173, '>Sent: negative_emotion': 0.0, '<Sent: negative_emotion': 0.0, '>Sent: health': 2.6557183446611052, '<Sent: health': 9.278284718691123e-06, '>Sent: dispute': 0.0, '<Sent: dispute': 0.0, '>Sent: government': 1.951016698230048, '<Sent: government': 0.0, '>Sent: healing': 0.0, '<Sent: healing': 0.0, '>Sent: military': 0.0, '<Sent: military': 0.0, '>Sent: fight': 0.0, '<Sent: fight': 0.0, '>Sent: meeting': 0.0, '<Sent: meeting': 0.0, '>Sent: shape_and_size': 0.0, '<Sent: shape_and_size': 0.0, '>Sent: power': 0.0, '<Sent: power': 0.0, '>Sent: terrorism': 0.0, '<Sent: terrorism': 0.0, '>Sent: competing': 0.0, '<Sent: competing': 0.0, '>Sent: office': 0.0, '<Sent: office': 0.0, '>Sent: money': 0.0, '<Sent: money': 0.0, '>Sent: aggression': 0.0, '<Sent: aggression': 0.0, '>Sent: wealthy': 0.0, '<Sent: wealthy': 0.0, '>Sent: banking': 0.0, '<Sent: banking': 0.0, '>Sent: kill': 0.0, '<Sent: kill': 0.0, '>Sent: business': 0.0, '<Sent: business': 0.0, '>Sent: speaking': 0.0, '<Sent: speaking': 0.0, '>Sent: work': 0.0, '<Sent: work': 0.0, '>Sent: valuable': 0.0, '<Sent: valuable': 0.0, '>Sent: economics': 0.0, '<Sent: economics': 0.0, '>Sent: payment': 0.0, '<Sent: payment': 0.0, '>Sent: friends': 0.0, '<Sent: friends': 0.0, '>Sent: giving': 1.303250036513945, '<Sent: giving': 0.0, '>Sent: help': 1.3873013971092425, '<Sent: help': 9.278284717033553e-06, '>Sent: school': 2.0401223021398005, '<Sent: school': 9.278284719291338e-06, '>Sent: college': 1.4173002482924701, '<Sent: college': 9.278284719291338e-06, '>Sent: real_estate': 0.0, '<Sent: real_estate': 0.0, '>Sent: reading': 0.0, '<Sent: reading': 0.0, '>Sent: gain': 0.0, '<Sent: gain': 0.0, '>Sent: science': 0.0, '<Sent: science': 0.0, '>Sent: negotiate': 1.7659083823077841, '<Sent: negotiate': 0.0, '>Sent: law': 0.0, '<Sent: law': 0.0, '>Sent: crime': 0.0, '<Sent: crime': 0.0, '>Sent: stealing': 0.0, '<Sent: stealing': 0.0, '>Sent: strength': 0.0, '<Sent: strength': 0.0}
         orderedConditionsPos = []
         orderedConditionsNeg = []
+        #calculate order and direction of cues for both Accept (Pos) and Reject (Neg) exits
         for a in sorted(predictionQuality.items(), key=lambda x: x[1], reverse=False):
             if a[0][1:] not in item.keys():
                 continue
@@ -87,6 +91,7 @@ class FFTzigzag(ccobra.CCobraModel):
             cond = 'item[\'aux\'][\'' + b + '\'] ' + s + ' ' + str(predictionMargin[a[0]])
             newnode = Node(cond,True,False)
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
+            #determine exit direction
             if rep1preds/length1 >= rep0preds/length0:
                 if a[0][1:] not in [i[1:] for i in orderedConditionsPos + orderedConditionsNeg] and a[0][1:] in self.componentKeys:
                     orderedConditionsPos.append(a[0])
@@ -99,7 +104,8 @@ class FFTzigzag(ccobra.CCobraModel):
                 orderedConditions.append(orderedConditionsNeg[i])
             if len(orderedConditionsPos) > i:
                 orderedConditions.append(orderedConditionsPos[i])
-        exitLeft = True
+        exitLeft = True #for first exit, as Z+ version implemented
+        #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
             s = sa[0]
@@ -163,6 +169,17 @@ def predictiveQuality(node, trialList):
     length0 = 1
     length1 = 1
     for item in trialList:
+        if 'aux' not in item.keys():
+            item['aux'] = item
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in node.condition:
+                node.condition = node.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in node.condition:
+                node.condition = node.condition.replace('Democrats', 'Party')
+        
+        if node.condition.split('\'')[3] not in item['aux'].keys():
+            continue
         if 1 == node.run(item):
             rep1preds += int(bool(item['aux']['truthful'] == 1))
             length1 += 1
@@ -186,6 +203,14 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
+
+        if item['aux']['conservatism'] >= 3.5:
+            if 'Republicans' in self.condition:
+                self.condition = self.condition.replace('Republicans','Party')
+        elif item['aux']['conservatism'] <= 3.5:
+            if 'Democrats' in self.condition:
+                self.condition = self.condition.replace('Democrats', 'Party')
+
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
@@ -198,9 +223,9 @@ class Node:
     def getstring(self):
         a = ''
         if isinstance(self.left,bool):
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.left) + ', else: ' 
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.left) + ', else: ' 
             a += 'Return ' + str(self.right) if isinstance(self.right,bool) else self.right.getstring()
         else:
-            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[1] + ' then return ' + str(self.right) + ', else: '
+            a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.right) + ', else: '
             a += 'Return ' + str(self.left) if isinstance(self.left,bool) else self.left.getstring()
         return a 
