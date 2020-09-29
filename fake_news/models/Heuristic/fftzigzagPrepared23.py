@@ -42,8 +42,11 @@ class FFTzigzag(ccobra.CCobraModel):
 
     def pre_train(self, dataset):
         #Globally trains zigzag FFT on data for all persons
+<<<<<<< HEAD
         if FFTtool.ZigZag != None:
             return
+=======
+>>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
         trialList = []
         for pers in dataset:
             perslist = []
@@ -104,7 +107,11 @@ class FFTzigzag(ccobra.CCobraModel):
                 orderedConditions.append(orderedConditionsNeg[i])
             if len(orderedConditionsPos) > i:
                 orderedConditions.append(orderedConditionsPos[i])
+<<<<<<< HEAD
         exitLeft = True #for first exit, as Z+ version implemented
+=======
+        exitLeft = True #as Z+ version implemented
+>>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
         #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
@@ -151,17 +158,6 @@ class FFTzigzag(ccobra.CCobraModel):
         for command in commands:
             exec(command)
         
-
-
-def parametrizedPredictiveQualityLT(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] > ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-def parametrizedPredictiveQualityST(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] < ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-
 
 def predictiveQuality(node, trialList):
     rep0preds = 0

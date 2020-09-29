@@ -82,6 +82,15 @@ class FFTmax(ccobra.CCobraModel):
             a = a.replace('Republicans','Party')
             if '<' + a in predictionMargin.keys():
                 continue
+<<<<<<< HEAD
+=======
+            if item['conservatism'] >= 3.5:
+                if 'Republicans' in a:
+                    a = a.replace('Republicans','Party')
+            elif item['conservatism'] <= 3.5:
+                if 'Democrats' in a:
+                    a = a.replace('Democrats', 'Party')
+>>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
             #calculate predictive quality of individual cues
             marginOptimum = basinhopping(parametrizedPredictiveQualityLT, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['>' + a] = marginOptimum.x[0]
@@ -186,6 +195,7 @@ class Node:
         self.right = right
     
     def run(self, item, **kwargs):
+        #get prediction of tree
         try:
             if 'aux' not in item.keys():
                 item['aux'] = item
@@ -212,6 +222,7 @@ class Node:
             return self.right.run(item)
 
     def getstring(self):
+        #visualize tree
         a = ''
         if isinstance(self.left,bool):
             a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.left) + ', else: ' 

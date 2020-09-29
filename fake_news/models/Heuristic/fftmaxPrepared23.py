@@ -42,8 +42,11 @@ class FFTmax(ccobra.CCobraModel):
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
+<<<<<<< HEAD
         if FFTtool.MAX != None:
             return
+=======
+>>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
         #Globally trains max FFT on data for all persons
         trialList = []
         for pers in dataset:
@@ -133,18 +136,6 @@ class FFTmax(ccobra.CCobraModel):
     def executeCommands(self, commands):
         for command in commands:
             exec(command)
-        
-
-
-def parametrizedPredictiveQualityLT(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] > ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-def parametrizedPredictiveQualityST(margin, a, trialList):
-    node = Node('item[\'aux\'][\'' + a + '\'] < ' + str(margin[0]), True, False)
-    rep0preds, rep1preds, length0, length1 = predictiveQuality(node, trialList)
-    return -1*max(rep0preds/length0, rep1preds/length1)
-
 
 def predictiveQuality(node, trialList):
     rep0preds = 0
@@ -178,6 +169,7 @@ class Node:
         self.right = right
     
     def run(self, item, **kwargs):
+        #get prediction of tree
         try:
             if 'aux' not in item.keys():
                 item['aux'] = item
@@ -186,6 +178,7 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
+<<<<<<< HEAD
 
         if item['aux']['conservatism'] >= 3.5:
             if 'Republicans' in self.condition:
@@ -194,6 +187,8 @@ class Node:
             if 'Democrats' in self.condition:
                 self.condition = self.condition.replace('Democrats', 'Party')
 
+=======
+>>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
@@ -204,6 +199,7 @@ class Node:
             return self.right.run(item)
 
     def getstring(self):
+        #visualize tree
         a = ''
         if isinstance(self.left,bool):
             a = 'If ' + self.condition.split('\'')[3] + self.condition.split(']')[2] + ' then return ' + str(self.left) + ', else: ' 
