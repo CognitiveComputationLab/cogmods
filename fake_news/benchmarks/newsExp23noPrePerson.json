@@ -7,5 +7,18 @@
         "response_types": ["single-choice"],
         "models": [
             "../models/Heuristic/fftzigzagPrepared23.py",
-            "../models/Heuristic/fftmaxPrepared23.py"
+            "../models/Heuristic/fftmaxPrepared23.py",
+            "../models/Heuristic/fft.py",
+            "../models/Heuristic/hrlinear.py",
+            "../models/Heuristic/hr.py",
+            "../models/Heuristic/rt.py",
+            "../models/Recommender/recommenderPersonLinear.py",
+            "../models/ClassicalReasoning/cr.py",
+            "../models/MotivatedReasoning/s2mr.py",
+            "../models/Baseline/rand.py",
+            "../models/Baseline/corr.py",
+            "../models/Baseline/rej.py",
+            "../models/LinearCombination/fpit.py",
+            "../models/LinearCombination/lc.py",
+            "../models/LinearCombination/sent.py"
         ]}

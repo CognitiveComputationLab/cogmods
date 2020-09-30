@@ -23,7 +23,8 @@ from scipy.optimize import *
 class FFTzigzag(ccobra.CCobraModel):
     """ FFTzigzag CCOBRA implementation.
     """
-    
+    componentKeys = []
+
     def __init__(self, name='Fast-Frugal-Tree-ZigZag(Z+)', commands = []):
         """ Initializes the model.
         Parameters
@@ -36,7 +37,7 @@ class FFTzigzag(ccobra.CCobraModel):
         self.parameter = {}
         self.fft = None
         self.lastnode = None
-        self.componentKeys = [ 'Familiarity_Democrats_Combined', 'Familiarity_Republicans_Combined', 'crt','ct','conservatism','panasPos','panasNeg','education', 'reaction_time','accimp','age','gender','Exciting_Democrats_Combined', 'Exciting_Republicans_Combined','Importance_Democrats_Combined', 'Importance_Republicans_Combined', 'Likelihood_Democrats_Combined', 'Likelihood_Republicans_Combined', 'Partisanship_All_Combined', 'Partisanship_All_Partisan', 'Partisanship_Democrats_Combined', 'Partisanship_Republicans_Combined','Sharing_Democrats_Combined', 'Sharing_Republicans_Combined', 'Worrying_Democrats_Combined','Worrying_Republicans_Combined','Sent: negative_emotion', 'Sent: health', 'Sent: dispute', 'Sent: government', 'Sent: healing', 'Sent: military', 'Sent: fight', 'Sent: meeting', 'Sent: shape_and_size', 'Sent: power', 'Sent: terrorism', 'Sent: competing', 'Sent: office', 'Sent: money', 'Sent: aggression', 'Sent: wealthy', 'Sent: banking', 'Sent: kill', 'Sent: business', 'Sent: speaking', 'Sent: work', 'Sent: valuable', 'Sent: economics', 'Sent: payment', 'Sent: friends', 'Sent: giving', 'Sent: help', 'Sent: school', 'Sent: college', 'Sent: real_estate', 'Sent: reading', 'Sent: gain', 'Sent: science', 'Sent: negotiate', 'Sent: law', 'Sent: crime', 'Sent: stealing', 'Sent: strength']#Keys.person + Keys.task 
+        FFTzigzag.componentKeys = [ 'Familiarity_Democrats_Combined', 'Familiarity_Republicans_Combined', 'crt','ct','conservatism','panasPos','panasNeg','education', 'reaction_time','accimp','age','gender','Exciting_Democrats_Combined', 'Exciting_Republicans_Combined','Importance_Democrats_Combined', 'Importance_Republicans_Combined', 'Likelihood_Democrats_Combined', 'Likelihood_Republicans_Combined', 'Partisanship_All_Combined', 'Partisanship_All_Partisan', 'Partisanship_Democrats_Combined', 'Partisanship_Republicans_Combined','Sharing_Democrats_Combined', 'Sharing_Republicans_Combined', 'Worrying_Democrats_Combined','Worrying_Republicans_Combined']+ [ a for a in ['Sent: negative_emotion', 'Sent: health', 'Sent: dispute', 'Sent: government', 'Sent: healing', 'Sent: military', 'Sent: fight', 'Sent: meeting', 'Sent: shape_and_size', 'Sent: power', 'Sent: terrorism', 'Sent: competing', 'Sent: office', 'Sent: money', 'Sent: aggression', 'Sent: wealthy', 'Sent: banking', 'Sent: kill', 'Sent: business', 'Sent: speaking', 'Sent: work', 'Sent: valuable', 'Sent: economics', 'Sent: payment', 'Sent: friends', 'Sent: giving', 'Sent: help', 'Sent: school', 'Sent: college', 'Sent: real_estate', 'Sent: reading', 'Sent: gain', 'Sent: science', 'Sent: negotiate', 'Sent: law', 'Sent: crime', 'Sent: stealing', 'Sent: strength'] if a in SentimentAnalyzer.relevant]#Keys.person + Keys.task 
         super().__init__(name, ['misinformation'], ['single-choice'])
 
     def pre_train(self, dataset):
@@ -57,7 +58,7 @@ class FFTzigzag(ccobra.CCobraModel):
 
     def fitTreeOnTrials(self, trialList, maxLength=-1, person='global'):
         for item in trialList:
-            for a in self.componentKeys:
+            for a in FFTzigzag.componentKeys:
                 if 'Sent' in a:
                     if a.split(' ')[1] not in SentimentAnalyzer.relevant:
                         continue
@@ -77,21 +78,18 @@ class FFTzigzag(ccobra.CCobraModel):
         maxLength = -1
         predictionQuality = {}
         predictionMargin = {}
-        for a in self.componentKeys:
+        for a in FFTzigzag.componentKeys:
             a = a.replace('Democrats','Party')
             a = a.replace('Republicans','Party')
             if '<' + a in predictionMargin.keys():
                 continue
-<<<<<<< HEAD
-            print('started', a)
-=======
             if item['conservatism'] >= 3.5:
                 if 'Republicans' in a:
                     a = a.replace('Republicans','Party')
             elif item['conservatism'] <= 3.5:
                 if 'Democrats' in a:
                     a = a.replace('Democrats', 'Party')
->>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
+
             #calculate predictive quality of individual cues
             marginOptimum = basinhopping(parametrizedPredictiveQualityLT, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['>' + a] = marginOptimum.x[0]
@@ -99,10 +97,6 @@ class FFTzigzag(ccobra.CCobraModel):
             marginOptimum = basinhopping(parametrizedPredictiveQualityST, [0.00], niter=60, stepsize=3.0, T=.9, minimizer_kwargs={"args" : (a,trialList), "tol":0.001, "bounds" : [[0,5]]},disp=0)
             predictionMargin['<' + a] = marginOptimum.x[0]
             predictionQuality['<' + a] = marginOptimum.fun
-<<<<<<< HEAD
-            print('finished', a)
-=======
->>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
         orderedConditionsPos = []
         orderedConditionsNeg = []
         #calculate order and direction of cues for both Accept (Pos) and Reject (Neg) exits
@@ -116,10 +110,10 @@ class FFTzigzag(ccobra.CCobraModel):
             rep0preds, rep1preds, length0, length1 = predictiveQuality(newnode, trialList)
             #determine exit direction
             if rep1preds/length1 >= rep0preds/length0:
-                if a[0][1:] not in [i[1:] for i in orderedConditionsPos + orderedConditionsNeg] and a[0][1:] in self.componentKeys:
+                if a[0][1:] not in [i[1:] for i in orderedConditionsPos + orderedConditionsNeg] and a[0][1:] in [a.replace('Democrats','Party').replace('Republicans','Party') for a in FFTzigzag.componentKeys]:
                     orderedConditionsPos.append(a[0])
             else:
-                if a[0][1:] not in [i[1:] for i in orderedConditionsNeg +orderedConditionsPos] and a[0][1:] in self.componentKeys:
+                if a[0][1:] not in [i[1:] for i in orderedConditionsNeg +orderedConditionsPos] and a[0][1:] in  [a.replace('Democrats','Party').replace('Republicans','Party') for a in FFTzigzag.componentKeys]:
                     orderedConditionsNeg.append(a[0])
         orderedConditions = []
         for i in range(max(len(orderedConditionsNeg), len(orderedConditionsPos))):
@@ -127,11 +121,9 @@ class FFTzigzag(ccobra.CCobraModel):
                 orderedConditions.append(orderedConditionsNeg[i])
             if len(orderedConditionsPos) > i:
                 orderedConditions.append(orderedConditionsPos[i])
-<<<<<<< HEAD
+
         exitLeft = True #for first exit, as Z+ version implemented
-=======
-        exitLeft = True #as Z+ version implemented
->>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
+
         #assemble tree
         for sa in orderedConditions[:maxLength] if maxLength > 0 else orderedConditions:
             b = sa[1:]
@@ -150,17 +142,41 @@ class FFTzigzag(ccobra.CCobraModel):
                     self.lastnode = self.lastnode.right
             exitLeft = not exitLeft
         FFTtool.ZigZag = self.fft
-<<<<<<< HEAD
-        print(predictionQuality)
-        print(predictionMargin)
-        print(FFTtool.ZigZag.getstring())
-=======
->>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
 
     def predictS(self, item, **kwargs):
+        #prepare item features format and partisanship
+
         if len(kwargs.keys()) == 1:
             kwargs = kwargs['kwargs']
-        return FFTtool.ZigZag.run(item, **kwargs)
+        try:
+            if 'aux' not in item.keys():
+                item['aux'] = item
+        except:
+            tempitem = item
+            item = {}
+            item['item'] = tempitem
+            item['aux'] = kwargs
+        
+        for a in FFTzigzag.componentKeys:
+            if 'Sent' in a:
+                if a.split(' ')[1] not in SentimentAnalyzer.relevant:
+                    continue
+                item['aux'][a] = SentimentAnalyzer.analysis(item['item'])[a.split(' ')[1]]
+            if a.replace('Republicans', 'Party') not in item['aux'].keys() and a.replace('Democrats', 'Party') not in item['aux'].keys():
+                continue
+            if item['aux']['conservatism'] >= 3.5:
+                if 'Republicans' in a:
+                    item['aux'][a.replace('Republicans', 'Party')] = item['aux'][a]
+                    item['aux'].pop(a,None)
+                    item['aux'].pop(a.replace('Republicans','Democrats'))
+            elif item['aux']['conservatism'] <= 3.5:
+                if 'Democrats' in a:
+                    item['aux'][a.replace('Democrats', 'Party')] = item['aux'][a]
+                    item['aux'].pop(a,None)
+                    item['aux'].pop(a.replace('Democrats','Republicans'))
+
+        #evaluate FFT from root node on
+        return FFTtool.ZigZag.run(item, **kwargs, show=False)
 
     def adapt(self, item, target, **kwargs):
         pass
@@ -222,12 +238,14 @@ def predictiveQuality(node, trialList):
     return rep0preds, rep1preds, length0, length1
 
 class Node:
-    def __init__(self, conditionstr, left, right):
+    def __init__(self, conditionstr, left, right, show = False):
         self.condition = conditionstr
         self.left = left
         self.right = right
+        self.show = show
     
-    def run(self, item, **kwargs):
+    def run(self, item, show = False, **kwargs):
+        self.show = show
         try:
             if 'aux' not in item.keys():
                 item['aux'] = item
@@ -236,7 +254,7 @@ class Node:
             item = {}
             item['item'] = tempitem
             item['aux'] = kwargs
-<<<<<<< HEAD
+
 
         if item['aux']['conservatism'] >= 3.5:
             if 'Republicans' in self.condition:
@@ -245,8 +263,11 @@ class Node:
             if 'Democrats' in self.condition:
                 self.condition = self.condition.replace('Democrats', 'Party')
 
-=======
->>>>>>> 0c02a2d5bfa15e027422a57aaa328f4f49e9fb08
+        if self.show:
+            print(item['aux'])
+            print(self.condition)
+
+
         if eval(self.condition):
             if isinstance(self.left,bool):
                 return self.left
