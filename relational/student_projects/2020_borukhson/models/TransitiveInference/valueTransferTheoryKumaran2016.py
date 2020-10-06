@@ -17,10 +17,10 @@ class VTTInt(ccobra.CCobraModel):
     def orderedPair(self, pair):
         return min([int(a) for a in pair]), max([int(a) for a in pair])
 
-    """ TransitivityInt CCOself.BRA implementation.
+    """ News reasoning CCOself.BRA implementation.
     """
     def __init__(self, name='VTT'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

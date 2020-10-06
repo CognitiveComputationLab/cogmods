@@ -7,10 +7,10 @@ from modelfunctions import *
 
 
 class RescorlaWagnerBS(ccobra.CCobraModel):
-    """ TransitivityInt CCOself.BRA implementation.
+    """ News reasoning CCOself.BRA implementation.
     """
     def __init__(self, name='RescorlaWagner-Kumaran2016'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

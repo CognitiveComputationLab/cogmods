@@ -12,10 +12,10 @@ class CorrectReply(ccobra.CCobraModel):
         return str(min([int(a) for a in pair])), str(max([int(a) for a in pair]))
     def correctReply(self, pair):
         return str(min([int(a) for a in pair]))
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='CorrectReply'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

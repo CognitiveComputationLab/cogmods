@@ -9,10 +9,10 @@ def rewardedStimulus(stim, pair):
     return min([int(a) for a in pair]) == int(stim)
 
 class SiemannDelius(ccobra.CCobraModel):
-    """ TransitivityInt CCORA implementation.
+    """ News reasoning CCORA implementation.
     """
     def __init__(self, name='SiemannDelius-Guez2013'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

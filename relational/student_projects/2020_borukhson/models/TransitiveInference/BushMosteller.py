@@ -6,11 +6,11 @@ import math
 from modelfunctions import * 
 
 class BushMosteller(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
 
     def __init__(self, name='Bush-Mosteller-Wynne95'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str

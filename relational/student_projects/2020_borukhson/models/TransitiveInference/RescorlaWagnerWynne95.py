@@ -8,10 +8,10 @@ from modelfunctions import *
 
 
 class RescorlaWagnerWynne95(ccobra.CCobraModel):
-    """ TransitivityInt CCOBRA implementation.
+    """ News reasoning CCOBRA implementation.
     """
     def __init__(self, name='RescorlaWagner-Wynne95'):
-        """ Initializes the TransitivityInt model.
+        """ Initializes the news reasoning model.
         Parameters
         ----------
         name : str
