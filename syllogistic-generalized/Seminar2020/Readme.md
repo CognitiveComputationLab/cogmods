@@ -10,3 +10,4 @@ The models contained in this folder were implemented for the 2020 seminar on cog
 - mReasoner: Pascal Bachor and Friedrich Ewald
 - Preferred Mental Models: Peter Brandl and Simon Steinkrüger
 - Monotonicity: Alan Reichert
+- Baselines: Nicolas Riesterer and Daniel Brand
