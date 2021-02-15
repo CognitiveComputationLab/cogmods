@@ -1,0 +1,18 @@
+{
+    "type": "prediction",
+    "data.test": "data/compare.csv",
+    "data.pre_train": "data/compare.csv",
+    "corresponding_data": true,
+    "domains": ["moral"],
+    "response_types": ["single-choice"],
+    "models": [
+        "models/Baseline/Random-Model/random_model.py",
+        "models/Baseline/Most-Frequent-Answer/model_compare.py",
+        "models/ethics/Heuristics/modelC.py",
+        "models/ml/logreg/modelCompare.py",
+        "models/ml/ridge/modelCompare.py",
+        "models/ml/mlp/modelCompare.py",
+        "models/contender/archetypesCompare.py",
+        "models/ml/rf/modelCompare.py"
+    ]
+}
