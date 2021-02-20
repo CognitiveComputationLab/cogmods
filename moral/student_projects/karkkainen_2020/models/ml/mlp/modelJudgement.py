@@ -157,7 +157,7 @@ class MLPModel(ccobra.CCobraModel):
             self.net.eval()
 
 
-    # Turns the predicted, one-hot encoded output into class-label, which is further turned into a cardinal direction.      
+ 
     def predict(self, item, **kwargs):
         input = {'task': item.task}
         input['aux'] = kwargs
@@ -167,7 +167,7 @@ class MLPModel(ccobra.CCobraModel):
         label = np.round(output.detach().numpy())
 
         self.prediction = label[0][0]
-        return self.prediction
+        return int(self.prediction)
 
 
 

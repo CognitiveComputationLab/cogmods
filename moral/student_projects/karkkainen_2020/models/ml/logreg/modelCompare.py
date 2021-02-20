@@ -81,7 +81,7 @@ class LogRegModel(ccobra.CCobraModel):
 
 
 
-    # Turns the predicted, one-hot encoded output into class-label, which is further turned into a cardinal direction.      
+
     def predict(self, item, **kwargs):
         input = {'task': item.task}
         input['aux'] = kwargs

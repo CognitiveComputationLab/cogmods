@@ -84,7 +84,7 @@ class RidgeModel(ccobra.CCobraModel):
                 print('Mean accuracy:')
                 print(self.clf.score(train_x, train_y))
 
-    # Turns the predicted, one-hot encoded output into class-label, which is further turned into a cardinal direction.      
+  
     def predict(self, item, **kwargs):
         input = {'task': item.task}
         input['aux'] = kwargs
@@ -93,7 +93,7 @@ class RidgeModel(ccobra.CCobraModel):
 
 
         self.prediction = output[0]
-        return self.prediction
+        return int(self.prediction)
 
 
 
