@@ -1,0 +1,18 @@
+{
+    "type": "prediction",
+    "data.test": "data/permissibility.csv",
+    "data.pre_train": "data/permissibility.csv",
+    "corresponding_data": true,
+    "domains": ["moral"],
+    "response_types": ["single-choice"],
+    "models": [
+        "models/Baseline/Random-Model/random_modelPerm.py",
+        "models/Baseline/Most-Frequent-Answer/model_Perm.py",
+        "models/ethics/utilitarian/modelP.py",
+        "models/ethics/meansPrinciple/modelP.py",
+        "models/ml/logreg/modelPerm.py",
+        "models/ml/ridge/modelPerm.py",
+        "models/ml/mlp/modelPerm.py",
+        "models/ml/rf/modelPerm.py"
+    ]
+}

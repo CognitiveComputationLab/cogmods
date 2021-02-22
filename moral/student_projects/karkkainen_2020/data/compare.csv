@@ -1,0 +1,181 @@
+id,Alter,Geschlecht,Bildungsabschluss,Beruf,Logikerfahrung,Mathekenntnisse,Gruppe,Task_ID,task,response,Hardness,domain,sequence,choices,response_type
+1,43,m,High School,Construction,1,4,2,1,PW-RT,2,88,moral,1,1|2|3,single-choice
+1,43,m,High School,Construction,1,4,2,2,OB-PW,1,90,moral,2,1|2|3,single-choice
+1,43,m,High School,Construction,1,4,2,3,RT-OB,2,80,moral,3,1|2|3,single-choice
+2,25,w,High School,Self-Employed,3,3,0,1,PW-RT,1,90,moral,1,1|2|3,single-choice
+2,25,w,High School,Self-Employed,3,3,0,2,OB-PW,1,91,moral,2,1|2|3,single-choice
+2,25,w,High School,Self-Employed,3,3,0,3,RT-OB,2,65,moral,3,1|2|3,single-choice
+3,70,m,as,retire Manufacturing Engineer,2,3,2,1,PW-RT,2,81,moral,1,1|2|3,single-choice
+3,70,m,as,retire Manufacturing Engineer,2,3,2,2,OB-PW,1,60,moral,2,1|2|3,single-choice
+3,70,m,as,retire Manufacturing Engineer,2,3,2,3,RT-OB,2,77,moral,3,1|2|3,single-choice
+4,29,w,Bachelor's,Accountant,2,2,1,1,PW-RT,2,38,moral,1,1|2|3,single-choice
+4,29,w,Bachelor's,Accountant,2,2,1,2,OB-PW,1,65,moral,2,1|2|3,single-choice
+4,29,w,Bachelor's,Accountant,2,2,1,3,RT-OB,2,8,moral,3,1|2|3,single-choice
+5,41,m,high school,freelancer,2,3,1,1,PW-RT,1,50,moral,1,1|2|3,single-choice
+5,41,m,high school,freelancer,2,3,1,2,OB-PW,1,52,moral,2,1|2|3,single-choice
+5,41,m,high school,freelancer,2,3,1,3,RT-OB,2,50,moral,3,1|2|3,single-choice
+6,37,m,Bachelor's Degree,Chargeback Specialist,2,2,0,1,PW-RT,2,85,moral,1,1|2|3,single-choice
+6,37,m,Bachelor's Degree,Chargeback Specialist,2,2,0,2,OB-PW,1,100,moral,2,1|2|3,single-choice
+6,37,m,Bachelor's Degree,Chargeback Specialist,2,2,0,3,RT-OB,2,17,moral,3,1|2|3,single-choice
+7,45,m,Masters,Stay-at-home,2,2,2,1,PW-RT,1,73,moral,1,1|2|3,single-choice
+7,45,m,Masters,Stay-at-home,2,2,2,2,OB-PW,1,74,moral,2,1|2|3,single-choice
+7,45,m,Masters,Stay-at-home,2,2,2,3,RT-OB,3,1,moral,3,1|2|3,single-choice
+8,32,w,BA,Self Employed,1,3,2,1,PW-RT,2,100,moral,1,1|2|3,single-choice
+8,32,w,BA,Self Employed,1,3,2,2,OB-PW,3,100,moral,2,1|2|3,single-choice
+8,32,w,BA,Self Employed,1,3,2,3,RT-OB,2,50,moral,3,1|2|3,single-choice
+9,29,m,High School,Network Engineer,3,2,1,1,PW-RT,1,82,moral,1,1|2|3,single-choice
+9,29,m,High School,Network Engineer,3,2,1,2,OB-PW,1,40,moral,2,1|2|3,single-choice
+9,29,m,High School,Network Engineer,3,2,1,3,RT-OB,2,68,moral,3,1|2|3,single-choice
+10,63,m,bachelor,consultant,3,4,0,1,PW-RT,1,77,moral,1,1|2|3,single-choice
+10,63,m,bachelor,consultant,3,4,0,2,OB-PW,3,96,moral,2,1|2|3,single-choice
+10,63,m,bachelor,consultant,3,4,0,3,RT-OB,2,29,moral,3,1|2|3,single-choice
+11,45,m,Trade school,Actor,1,3,2,1,PW-RT,2,28,moral,1,1|2|3,single-choice
+11,45,m,Trade school,Actor,1,3,2,2,OB-PW,3,20,moral,2,1|2|3,single-choice
+11,45,m,Trade school,Actor,1,3,2,3,RT-OB,2,0,moral,3,1|2|3,single-choice
+12,48,m,high school,consultant,2,3,1,1,PW-RT,1,71,moral,1,1|2|3,single-choice
+12,48,m,high school,consultant,2,3,1,2,OB-PW,1,70,moral,2,1|2|3,single-choice
+12,48,m,high school,consultant,2,3,1,3,RT-OB,2,65,moral,3,1|2|3,single-choice
+13,54,w,Associate,Retail,3,2,0,1,PW-RT,2,84,moral,1,1|2|3,single-choice
+13,54,w,Associate,Retail,3,2,0,2,OB-PW,1,76,moral,2,1|2|3,single-choice
+13,54,w,Associate,Retail,3,2,0,3,RT-OB,2,82,moral,3,1|2|3,single-choice
+14,28,w,high school diploma,caretaker for disabled mother,2,1,2,1,PW-RT,2,35,moral,1,1|2|3,single-choice
+14,28,w,high school diploma,caretaker for disabled mother,2,1,2,2,OB-PW,1,37,moral,2,1|2|3,single-choice
+14,28,w,high school diploma,caretaker for disabled mother,2,1,2,3,RT-OB,2,50,moral,3,1|2|3,single-choice
+15,60,w,GED,homemaker,2,5,1,1,PW-RT,1,0,moral,1,1|2|3,single-choice
+15,60,w,GED,homemaker,2,5,1,2,OB-PW,3,50,moral,2,1|2|3,single-choice
+15,60,w,GED,homemaker,2,5,1,3,RT-OB,2,0,moral,3,1|2|3,single-choice
+16,48,w,b.a.,nursing,2,2,2,1,PW-RT,1,62,moral,1,1|2|3,single-choice
+16,48,w,b.a.,nursing,2,2,2,2,OB-PW,1,30,moral,2,1|2|3,single-choice
+16,48,w,b.a.,nursing,2,2,2,3,RT-OB,2,19,moral,3,1|2|3,single-choice
+17,40,w,BA,BOOKEEPER,1,3,2,1,PW-RT,1,89,moral,1,1|2|3,single-choice
+17,40,w,BA,BOOKEEPER,1,3,2,2,OB-PW,1,80,moral,2,1|2|3,single-choice
+17,40,w,BA,BOOKEEPER,1,3,2,3,RT-OB,2,63,moral,3,1|2|3,single-choice
+18,52,w,BS,Analys,1,1,2,1,PW-RT,1,8,moral,1,1|2|3,single-choice
+18,52,w,BS,Analys,1,1,2,2,OB-PW,1,1,moral,2,1|2|3,single-choice
+18,52,w,BS,Analys,1,1,2,3,RT-OB,3,21,moral,3,1|2|3,single-choice
+19,61,w,SOME HIGH SCHOOL,cleaning,2,3,0,1,PW-RT,1,94,moral,1,1|2|3,single-choice
+19,61,w,SOME HIGH SCHOOL,cleaning,2,3,0,2,OB-PW,1,93,moral,2,1|2|3,single-choice
+19,61,w,SOME HIGH SCHOOL,cleaning,2,3,0,3,RT-OB,3,83,moral,3,1|2|3,single-choice
+20,36,w,Master's,Counselor,2,2,2,1,PW-RT,2,66,moral,1,1|2|3,single-choice
+20,36,w,Master's,Counselor,2,2,2,2,OB-PW,1,20,moral,2,1|2|3,single-choice
+20,36,w,Master's,Counselor,2,2,2,3,RT-OB,3,19,moral,3,1|2|3,single-choice
+21,44,m,Masters,Teacher,2,2,2,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+21,44,m,Masters,Teacher,2,2,2,2,OB-PW,1,23,moral,2,1|2|3,single-choice
+21,44,m,Masters,Teacher,2,2,2,3,RT-OB,2,13,moral,3,1|2|3,single-choice
+22,27,m,Associates,Technician,4,4,2,1,PW-RT,1,73,moral,1,1|2|3,single-choice
+22,27,m,Associates,Technician,4,4,2,2,OB-PW,1,78,moral,2,1|2|3,single-choice
+22,27,m,Associates,Technician,4,4,2,3,RT-OB,2,76,moral,3,1|2|3,single-choice
+23,60,m,High school,farmer,2,2,0,1,PW-RT,1,71,moral,1,1|2|3,single-choice
+23,60,m,High school,farmer,2,2,0,2,OB-PW,1,75,moral,2,1|2|3,single-choice
+23,60,m,High school,farmer,2,2,0,3,RT-OB,2,47,moral,3,1|2|3,single-choice
+24,56,m,graduate 4 year college,education,2,2,1,1,PW-RT,1,94,moral,1,1|2|3,single-choice
+24,56,m,graduate 4 year college,education,2,2,1,2,OB-PW,3,20,moral,2,1|2|3,single-choice
+24,56,m,graduate 4 year college,education,2,2,1,3,RT-OB,3,27,moral,3,1|2|3,single-choice
+25,25,w,BACHELOR DEGREES,student/unemployed/selfemployed,2,4,0,1,PW-RT,2,98,moral,1,1|2|3,single-choice
+25,25,w,BACHELOR DEGREES,student/unemployed/selfemployed,2,4,0,2,OB-PW,3,100,moral,2,1|2|3,single-choice
+25,25,w,BACHELOR DEGREES,student/unemployed/selfemployed,2,4,0,3,RT-OB,2,89,moral,3,1|2|3,single-choice
+26,40,w,Associate's degree,Nurse,2,2,1,1,PW-RT,2,92,moral,1,1|2|3,single-choice
+26,40,w,Associate's degree,Nurse,2,2,1,2,OB-PW,3,88,moral,2,1|2|3,single-choice
+26,40,w,Associate's degree,Nurse,2,2,1,3,RT-OB,2,100,moral,3,1|2|3,single-choice
+27,24,w,4-year college degree,Student,1,2,1,1,PW-RT,1,82,moral,1,1|2|3,single-choice
+27,24,w,4-year college degree,Student,1,2,1,2,OB-PW,1,73,moral,2,1|2|3,single-choice
+27,24,w,4-year college degree,Student,1,2,1,3,RT-OB,3,59,moral,3,1|2|3,single-choice
+28,42,w,high school,homemaker,1,2,1,1,PW-RT,1,75,moral,1,1|2|3,single-choice
+28,42,w,high school,homemaker,1,2,1,2,OB-PW,3,73,moral,2,1|2|3,single-choice
+28,42,w,high school,homemaker,1,2,1,3,RT-OB,2,80,moral,3,1|2|3,single-choice
+29,61,m,Bachelors,Health education,2,3,2,1,PW-RT,2,23,moral,1,1|2|3,single-choice
+29,61,m,Bachelors,Health education,2,3,2,2,OB-PW,1,63,moral,2,1|2|3,single-choice
+29,61,m,Bachelors,Health education,2,3,2,3,RT-OB,2,70,moral,3,1|2|3,single-choice
+30,28,w,B.A,Teacher,1,3,2,1,PW-RT,2,10,moral,1,1|2|3,single-choice
+30,28,w,B.A,Teacher,1,3,2,2,OB-PW,3,3,moral,2,1|2|3,single-choice
+30,28,w,B.A,Teacher,1,3,2,3,RT-OB,2,4,moral,3,1|2|3,single-choice
+31,50,w,High School Diploma,Administrative,1,2,0,1,PW-RT,2,100,moral,1,1|2|3,single-choice
+31,50,w,High School Diploma,Administrative,1,2,0,2,OB-PW,3,100,moral,2,1|2|3,single-choice
+31,50,w,High School Diploma,Administrative,1,2,0,3,RT-OB,2,100,moral,3,1|2|3,single-choice
+32,40,m,Bachelors,Fitness,2,2,0,1,PW-RT,2,77,moral,1,1|2|3,single-choice
+32,40,m,Bachelors,Fitness,2,2,0,2,OB-PW,3,65,moral,2,1|2|3,single-choice
+32,40,m,Bachelors,Fitness,2,2,0,3,RT-OB,3,55,moral,3,1|2|3,single-choice
+33,51,w,Masters,Marriage and Family Therapist,3,4,2,1,PW-RT,2,53,moral,1,1|2|3,single-choice
+33,51,w,Masters,Marriage and Family Therapist,3,4,2,2,OB-PW,3,42,moral,2,1|2|3,single-choice
+33,51,w,Masters,Marriage and Family Therapist,3,4,2,3,RT-OB,2,51,moral,3,1|2|3,single-choice
+34,22,m,Some College,College Student,2,1,2,1,PW-RT,2,68,moral,1,1|2|3,single-choice
+34,22,m,Some College,College Student,2,1,2,2,OB-PW,3,62,moral,2,1|2|3,single-choice
+34,22,m,Some College,College Student,2,1,2,3,RT-OB,2,72,moral,3,1|2|3,single-choice
+35,32,w,high shool,homemaker,2,1,0,1,PW-RT,2,80,moral,1,1|2|3,single-choice
+35,32,w,high shool,homemaker,2,1,0,2,OB-PW,1,12,moral,2,1|2|3,single-choice
+35,32,w,high shool,homemaker,2,1,0,3,RT-OB,2,18,moral,3,1|2|3,single-choice
+36,64,m,BA,Retired Military Officer,2,2,2,1,PW-RT,2,77,moral,1,1|2|3,single-choice
+36,64,m,BA,Retired Military Officer,2,2,2,2,OB-PW,3,37,moral,2,1|2|3,single-choice
+36,64,m,BA,Retired Military Officer,2,2,2,3,RT-OB,2,64,moral,3,1|2|3,single-choice
+37,33,m,Masters,College Coach,2,1,0,1,PW-RT,1,95,moral,1,1|2|3,single-choice
+37,33,m,Masters,College Coach,2,1,0,2,OB-PW,3,76,moral,2,1|2|3,single-choice
+37,33,m,Masters,College Coach,2,1,0,3,RT-OB,2,18,moral,3,1|2|3,single-choice
+38,32,m,double Master's,social worker,1,3,2,1,PW-RT,2,50,moral,1,1|2|3,single-choice
+38,32,m,double Master's,social worker,1,3,2,2,OB-PW,1,19,moral,2,1|2|3,single-choice
+38,32,m,double Master's,social worker,1,3,2,3,RT-OB,2,10,moral,3,1|2|3,single-choice
+39,38,m,diploma,warehouse employee,3,3,2,1,PW-RT,1,53,moral,1,1|2|3,single-choice
+39,38,m,diploma,warehouse employee,3,3,2,2,OB-PW,1,21,moral,2,1|2|3,single-choice
+39,38,m,diploma,warehouse employee,3,3,2,3,RT-OB,3,38,moral,3,1|2|3,single-choice
+40,36,m,BSBA,Sales Engineer,2,3,0,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+40,36,m,BSBA,Sales Engineer,2,3,0,2,OB-PW,3,0,moral,2,1|2|3,single-choice
+40,36,m,BSBA,Sales Engineer,2,3,0,3,RT-OB,2,0,moral,3,1|2|3,single-choice
+41,57,w,Master's,Account executive,2,2,2,1,PW-RT,1,62,moral,1,1|2|3,single-choice
+41,57,w,Master's,Account executive,2,2,2,2,OB-PW,3,63,moral,2,1|2|3,single-choice
+41,57,w,Master's,Account executive,2,2,2,3,RT-OB,3,34,moral,3,1|2|3,single-choice
+42,25,w,Bachelors,Paralegal,1,1,2,1,PW-RT,2,77,moral,1,1|2|3,single-choice
+42,25,w,Bachelors,Paralegal,1,1,2,2,OB-PW,1,93,moral,2,1|2|3,single-choice
+42,25,w,Bachelors,Paralegal,1,1,2,3,RT-OB,2,93,moral,3,1|2|3,single-choice
+43,51,m,Ordination,Clergy,3,3,0,1,PW-RT,2,8,moral,1,1|2|3,single-choice
+43,51,m,Ordination,Clergy,3,3,0,2,OB-PW,3,7,moral,2,1|2|3,single-choice
+43,51,m,Ordination,Clergy,3,3,0,3,RT-OB,3,6,moral,3,1|2|3,single-choice
+44,55,w,Some college,Waitress/Hostess,1,2,0,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+44,55,w,Some college,Waitress/Hostess,1,2,0,2,OB-PW,1,100,moral,2,1|2|3,single-choice
+44,55,w,Some college,Waitress/Hostess,1,2,0,3,RT-OB,2,100,moral,3,1|2|3,single-choice
+45,55,w,12,excutive Assistant,1,3,0,1,PW-RT,1,11,moral,1,1|2|3,single-choice
+45,55,w,12,excutive Assistant,1,3,0,2,OB-PW,1,5,moral,2,1|2|3,single-choice
+45,55,w,12,excutive Assistant,1,3,0,3,RT-OB,2,29,moral,3,1|2|3,single-choice
+46,55,m,BS,Human Resources,1,1,0,1,PW-RT,2,0,moral,1,1|2|3,single-choice
+46,55,m,BS,Human Resources,1,1,0,2,OB-PW,3,0,moral,2,1|2|3,single-choice
+46,55,m,BS,Human Resources,1,1,0,3,RT-OB,3,0,moral,3,1|2|3,single-choice
+47,22,w,Bachelors,unemployed,3,4,1,1,PW-RT,1,69,moral,1,1|2|3,single-choice
+47,22,w,Bachelors,unemployed,3,4,1,2,OB-PW,1,41,moral,2,1|2|3,single-choice
+47,22,w,Bachelors,unemployed,3,4,1,3,RT-OB,3,68,moral,3,1|2|3,single-choice
+48,40,m,MASTER,RN,2,2,1,1,PW-RT,2,25,moral,1,1|2|3,single-choice
+48,40,m,MASTER,RN,2,2,1,2,OB-PW,1,25,moral,2,1|2|3,single-choice
+48,40,m,MASTER,RN,2,2,1,3,RT-OB,2,25,moral,3,1|2|3,single-choice
+49,32,w,M.S.,Speech Pathologist,2,2,1,1,PW-RT,1,97,moral,1,1|2|3,single-choice
+49,32,w,M.S.,Speech Pathologist,2,2,1,2,OB-PW,1,98,moral,2,1|2|3,single-choice
+49,32,w,M.S.,Speech Pathologist,2,2,1,3,RT-OB,2,98,moral,3,1|2|3,single-choice
+50,23,w,GED,Customer Service,2,3,2,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+50,23,w,GED,Customer Service,2,3,2,2,OB-PW,1,29,moral,2,1|2|3,single-choice
+50,23,w,GED,Customer Service,2,3,2,3,RT-OB,3,80,moral,3,1|2|3,single-choice
+51,24,m,Bachelor's,Student,1,1,2,1,PW-RT,2,9,moral,1,1|2|3,single-choice
+51,24,m,Bachelor's,Student,1,1,2,2,OB-PW,3,0,moral,2,1|2|3,single-choice
+51,24,m,Bachelor's,Student,1,1,2,3,RT-OB,2,11,moral,3,1|2|3,single-choice
+52,36,w,High School,General,3,3,0,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+52,36,w,High School,General,3,3,0,2,OB-PW,1,89,moral,2,1|2|3,single-choice
+52,36,w,High School,General,3,3,0,3,RT-OB,2,86,moral,3,1|2|3,single-choice
+53,23,w,bachelors,assistant manger,1,4,1,1,PW-RT,2,26,moral,1,1|2|3,single-choice
+53,23,w,bachelors,assistant manger,1,4,1,2,OB-PW,3,19,moral,2,1|2|3,single-choice
+53,23,w,bachelors,assistant manger,1,4,1,3,RT-OB,2,26,moral,3,1|2|3,single-choice
+54,55,w,High School,clerical,3,3,0,1,PW-RT,1,59,moral,1,1|2|3,single-choice
+54,55,w,High School,clerical,3,3,0,2,OB-PW,1,51,moral,2,1|2|3,single-choice
+54,55,w,High School,clerical,3,3,0,3,RT-OB,2,48,moral,3,1|2|3,single-choice
+55,35,m,middle school,freelance artist,1,4,2,1,PW-RT,2,82,moral,1,1|2|3,single-choice
+55,35,m,middle school,freelance artist,1,4,2,2,OB-PW,1,4,moral,2,1|2|3,single-choice
+55,35,m,middle school,freelance artist,1,4,2,3,RT-OB,3,97,moral,3,1|2|3,single-choice
+56,30,m,M.S.,undecided,1,1,2,1,PW-RT,1,34,moral,1,1|2|3,single-choice
+56,30,m,M.S.,undecided,1,1,2,2,OB-PW,1,38,moral,2,1|2|3,single-choice
+56,30,m,M.S.,undecided,1,1,2,3,RT-OB,3,22,moral,3,1|2|3,single-choice
+57,33,w,High School,CNA,1,2,2,1,PW-RT,1,100,moral,1,1|2|3,single-choice
+57,33,w,High School,CNA,1,2,2,2,OB-PW,1,100,moral,2,1|2|3,single-choice
+57,33,w,High School,CNA,1,2,2,3,RT-OB,2,85,moral,3,1|2|3,single-choice
+58,26,w,BA,counselor,2,3,1,1,PW-RT,2,97,moral,1,1|2|3,single-choice
+58,26,w,BA,counselor,2,3,1,2,OB-PW,3,97,moral,2,1|2|3,single-choice
+58,26,w,BA,counselor,2,3,1,3,RT-OB,3,93,moral,3,1|2|3,single-choice
+59,21,w,Some college,Student,3,2,0,1,PW-RT,2,50,moral,1,1|2|3,single-choice
+59,21,w,Some college,Student,3,2,0,2,OB-PW,1,100,moral,2,1|2|3,single-choice
+59,21,w,Some college,Student,3,2,0,3,RT-OB,2,0,moral,3,1|2|3,single-choice
+60,53,w,college,office,2,3,2,1,PW-RT,2,100,moral,1,1|2|3,single-choice
+60,53,w,college,office,2,3,2,2,OB-PW,1,100,moral,2,1|2|3,single-choice
+60,53,w,college,office,2,3,2,3,RT-OB,2,67,moral,3,1|2|3,single-choice

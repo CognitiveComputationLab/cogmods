@@ -1,0 +1,20 @@
+{
+    "type": "prediction",
+    "data.test": "data/JudgementTest.csv",
+    "data.pre_train": "data/judgement.csv",
+    "corresponding_data": false,
+    "domains": ["moral"],
+    "response_types": ["single-choice"],
+    "models": [
+        "models/Baseline/Random-Model/random_modelJudgement.py",
+        "models/Baseline/Most-Frequent-Answer/model_judgement.py",
+        "models/ethics/utilitarian/modelJ.py",
+        "models/ethics/meansPrinciple/modelJ.py",
+        "models/ethics/noKill/model.py",
+        "models/ml/logreg/modelJudgement.py",
+        "models/ml/ridge/modelJudgement.py",
+        "models/ml/mlp/modelJudgement.py",
+        "models/contender/archetypesJudgement.py",
+        "models/ml/rf/modelJudgement.py"    
+    ]
+}
