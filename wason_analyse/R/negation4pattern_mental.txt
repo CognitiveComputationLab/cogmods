@@ -1,0 +1,13 @@
+content	p	pq	pnotP	pqnotQ
+A3	99	105	8	3
+An3	76	10	4	7
+nA3	79	37	10	14
+nAn3	54	53	9	7
+IA3	92	99	7	2
+IAn3	110	15	6	1
+InA3	74	49	12	10
+InAn3	39	55	8	5
+EA3	88	90	15	0
+EAn3	84	42	10	3
+EnA3	62	71	12	1
+EnAn3	53	70	13	5
