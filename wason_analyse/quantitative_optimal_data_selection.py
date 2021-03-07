@@ -227,7 +227,7 @@ def optimizeQODS(data_file_source, data_file_output):
         results.append(tmp.x)
     df1 = pd.DataFrame(results)
     df1 = df1.round(5)
-    df1.to_csv(data_file_output, index=None)
+    df1.to_csv(data_file_output, index=None, header=None)
     return df1
 
 
@@ -265,7 +265,7 @@ def calcPred(data_file_source, data_file_output):
         tmp.append(stf(scaled_inf_not_q))
         pred.append(tmp)
     df2 = pd.DataFrame(pred)
-    df2.to_csv(data_file_output, header=None)
+    df2.to_csv(data_file_output, header=None, index=None)
     return pred
 
 
@@ -281,13 +281,53 @@ def showValues(p, q, r, eps):
     print(stf(scaled_inf_q))
     print(stf(scaled_inf_not_q))
 
+"""
+Calc RMSE
+"""
+def calcError(data_file_source1, data_file_source2, data_file_output):
+    df1 = pd.read_csv(data_file_source1, header=None, sep=";")
+    df1 = df1.apply(lambda x: x.str.replace(',', '.'))
+    df1 = df1.apply(pd.to_numeric)
+    df2 = pd.read_csv(data_file_source2, header=None ,sep=",")
+    p = []
+    notP = []
+    q = []
+    notQ = []
+    rmse = []
+    for index, row in df1.iterrows():
+        p.append(row.iloc[0])
+        notP.append(row.iloc[1])
+        q.append(row.iloc[2])
+        notQ.append(row.iloc[3])
+    for index, row in df2.iterrows():
+        tmp = []
+        tmp.append(np.sqrt((p[index] - row.iloc[0])**2))
+        tmp.append(np.sqrt((notP[index] - row.iloc[1]) ** 2))
+        tmp.append(np.sqrt((q[index] - row.iloc[2]) ** 2))
+        tmp.append(np.sqrt((notQ[index] - row.iloc[3]) ** 2))
+        rmse.append(tmp)
+    df3 = pd.DataFrame(rmse)
+    df3.to_csv(data_file_output, header=None, index=None)
+    return rmse
 
 
+# ragni aggregated
+optimizeQODS('../qods_data/qods_ragni_aggregated_obs.csv', '../qods_data/qods_ragni_aggregated_opt_params.csv')
+calcPred('../qods_data/qods_ragni_aggregated_opt_params.csv', '../qods_data/qods_ragni_aggregated_pred.csv')
+calcError('../qods_data/qods_ragni_aggregated_obs.csv', '../qods_data/qods_ragni_aggregated_pred.csv', '../qods_data/qods_ragni_aggregated_rmse.csv')
+
+#ragni individual
+optimizeQODS('../qods_data/qods_ragni_individual_obs.csv', '../qods_data/qods_ragni_individual_opt_params.csv')
+calcPred('../qods_data/qods_ragni_individual_opt_params.csv', '../qods_data/qods_ragni_individual_pred.csv')
+calcError('../qods_data/qods_ragni_individual_obs.csv', '../qods_data/qods_ragni_individual_pred.csv', '../qods_data/qods_ragni_individual_rmse.csv')
 
 
-# test123 = minimize(optimize_inf_model, x0=initial_values, args=data, method='SLSQP' ,bounds=prob_bounds, constraints=({'type': 'ineq', 'fun': lambda x:  x[1]-x[0] - 0.001}))
-# a, b, c = fmin_l_bfgs_b(optimize_inf_model, x0=initial_values, args=data, bounds=prob_bounds, approx_grad=True)
+# negation data
+optimizeQODS('../qods_data/qods_neg_obs.csv', '../qods_data/qods_neg_opt_params.csv')
+calcPred('../qods_data/qods_neg_opt_params.csv', '../qods_data/qods_neg_pred.csv')
+calcError('../qods_data/qods_neg_obs.csv', '../qods_data/qods_neg_pred.csv', '../qods_data/qods_neg_rmse.csv')
 
-
-optimizeQODS('/Users/matze/Nextcloud/Bachelorthesis/Bachelorarbeit_daten/qods_data/qods_neg_obs.csv', '/Users/matze/Nextcloud/Bachelorthesis/Bachelorarbeit_daten/qods_data/qods_neg_opt_params.csv')
-calcPred('/Users/matze/Nextcloud/Bachelorthesis/Bachelorarbeit_daten/qods_data/qods_neg_opt_params.csv', '/Users/matze/Nextcloud/Bachelorthesis/Bachelorarbeit_daten/qods_data/qods_neg_pred.csv')
+# repeated
+optimizeQODS('../qods_data/qods_rep_obs.csv', '../qods_data/qods_rep_opt_params.csv')
+calcPred('../qods_data/qods_rep_opt_params.csv', '../qods_data/qods_rep_pred.csv')
+calcError('../qods_data/qods_rep_obs.csv', '../qods_data/qods_rep_pred.csv', '../qods_data/qods_rep_rmse.csv')
