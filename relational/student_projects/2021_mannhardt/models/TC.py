@@ -1,11 +1,14 @@
+'''
+Transitive Closure - used by TCModel.py
+and all Simple Models to predict Sequences one and two
+'''
+
 class TransitiveClosure():
     def __init__(self, premisses=list(), model=""):
         """creates transitive closure of premisses
             Parameters:
-            argument1 (list): list of all premisses e.g. ["Left;A;B", "Right;C;B"]
-
-            Returns:
-            int:Returning value
+            premisses (list): list of all premisses e.g. ["Left;A;B", "Right;C;B"]
+            model : if instantiated from existing model, model is mental model e.g. "ABC" or "BCA"
         """
         self.premisses = premisses
         self.model = model
@@ -33,7 +36,6 @@ class TransitiveClosure():
                 if premiss[2] not in self.graph:
                     self.graph[premiss[2]] = []
                 self.graph[premiss[2]].append(premiss[1])
-        # print(self.graph)
     
     def create_closure(self):
         for item1 in self.allItems:

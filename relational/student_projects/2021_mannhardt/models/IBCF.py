@@ -3,31 +3,6 @@ import numpy as np
 import ccobra
 from taskencoder import *
 
-def task_to_string(syntaxTree):
-    """
-    Changes e.g. ["a", "And", ["b", "Or", ["Not", "c"]]] to "a And b Or -c"
-    Args:
-        syntaxTree
-    Returns:
-        string - syntaxTree written as string
-    """
-    if isinstance(syntaxTree[0][0], bool):
-        return syntaxTree[0][0]
-
-    if isinstance(syntaxTree, str) or isinstance(syntaxTree, bool):
-        return syntaxTree
-
-    all = ""
-    for elem in syntaxTree:
-        all += task_to_string(elem)
-    return all
-
-def keywithmaxval(d):
-     """ a) create a list of the dict's keys and values; 
-         b) return the key with the max value"""  
-     v=list(d.values())
-     k=list(d.keys())
-     return k[v.index(max(v))]
 
 class IBCFModel(ccobra.CCobraModel):
     def __init__(self, name='IBCF'):
@@ -38,7 +13,8 @@ class IBCFModel(ccobra.CCobraModel):
 
         # keys are task, value is list of lists
         self.task_preference = dict()
-        
+
+        # Min samples of task before switch from MFA to IBCF happens
         # 4 works best
         self.MIN_SAMPLES = 4
 
@@ -53,7 +29,7 @@ class IBCFModel(ccobra.CCobraModel):
         # Return the population MFA if available
         population_prediction = self.get_mfa_prediction(item, self.mfa_population)
         cat = kwargs['event'].split("_")[1]
-        item_prediction = self.get_item_prediction(item, cat)
+        item_prediction = self.get_IBCF_prediction(item, cat)
         if item_prediction is not None and item.sequence_number == 3:
             return item_prediction
         elif population_prediction is not None:
@@ -62,7 +38,7 @@ class IBCFModel(ccobra.CCobraModel):
         # Return a random response if no MFA data is available
         return item.choices[np.random.randint(0, len(item.choices))]
 
-    def get_item_prediction(self, item, cat):
+    def get_IBCF_prediction(self, item, cat):
         task_encoding = task_to_string(item.task) + task_to_string(item.choices)
         if task_encoding in self.task_preference:
             choices = self.task_preference[task_encoding]
@@ -104,9 +80,8 @@ class IBCFModel(ccobra.CCobraModel):
 
         # If no MFA response is available, return None
         return None
-    
+
     def adapt(self, item, target, **kwargs):
-        event = kwargs['aux']['event']
         if item.sequence_number != 3:
             return
         task_encoding = task_to_string(item.task) + task_to_string(item.choices)
@@ -137,8 +112,6 @@ class IBCFModel(ccobra.CCobraModel):
                 # Increment the response count for the present task
                 self.mfa_population[encoded_task][encoded_response] = \
                     self.mfa_population[encoded_task].get(encoded_response, 0) + 1
-                    
+
     def end_participant(self, identifier, model_log, **kwargs):
         return
-        if identifier == 11:
-            print(self.task_preference)

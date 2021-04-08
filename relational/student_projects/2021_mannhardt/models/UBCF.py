@@ -8,42 +8,6 @@ import math
 MIN_NEIGHBORS = 2
 MIN_USERS = 0
 
-def keywithmaxval(d):
-     """ a) create a list of the dict's keys and values; 
-         b) return the key with the max value"""  
-     v=list(d.values())
-     k=list(d.keys())
-     return k[v.index(max(v))]
-
-def dotproduct(v1, v2):
-    return sum((a*b) for a, b in zip(v1, v2))
-
-def length(v):
-    return math.sqrt(dotproduct(v, v))
-
-def angle(v1, v2):
-    normalized_v1 = v1/np.linalg.norm(v1)
-    normalized_v2 = v2/np.linalg.norm(v2)
-    return round(math.acos(dotproduct(normalized_v1, normalized_v2) / (length(normalized_v1) * length(normalized_v2))), 5)
-
-def task_to_string(syntaxTree):
-    """
-    Changes e.g. ["a", "And", ["b", "Or", ["Not", "c"]]] to "a And b Or -c"
-    Args:
-        syntaxTree
-    Returns:
-        string - syntaxTree written as string
-    """
-    if isinstance(syntaxTree[0][0], bool):
-        return syntaxTree[0][0]
-
-    if isinstance(syntaxTree, str) or isinstance(syntaxTree, bool):
-        return syntaxTree
-
-    all = ""
-    for elem in syntaxTree:
-        all += task_to_string(elem)
-    return all
 
 class UBCFModel(ccobra.CCobraModel):
     def __init__(self, name="UBCF"):
@@ -202,7 +166,6 @@ class UBCFModel(ccobra.CCobraModel):
 
                 # vars of item object : dict_keys(['identifier', 'response_type', 'task_str', 'task', 'choices_str', 'choices', 'domain', 'sequence_number'])
                 userId = task_data['item'].identifier
-                # event = task_data['aux']['event']
                 event = list_to_string(item.task) + list_to_string(item.choices)
                 self.allEvents.add(event)
                 if userId not in self.userVectors:
@@ -216,8 +179,8 @@ class UBCFModel(ccobra.CCobraModel):
                     self.userVectors[userId][event][response[0][0]] += 1
                 else:
                     self.userVectors[userId][event][response] += 1
-
         self.allEvents = sorted(list(self.allEvents), key=lambda x: x)
+
         # fill subject dict
         for task in self.allEvents:
             self.subjVectors[task] = dict()
@@ -238,17 +201,4 @@ class UBCFModel(ccobra.CCobraModel):
             self.eventDict[self.allEvents[i]] = i
   
     def end_participant(self, identifier, model_log, **kwargs):
-        '''
-        matrixDict = dict()
-        for s in sorted(self.similarUsers, key=lambda elem: elem[0]):
-            if s[0]-1 == identifier:
-                matrixDict[identifier] = 0
-            matrixDict[s[0]] = s[1]
-        if identifier == 20:
-            matrixDict[20] = 0
-        matrix_row = [value for key, value in matrixDict.items()]
-        v = self.subjVec/np.linalg.norm(self.subjVec)
-        print(np.linalg.norm(v))
-        print(str(list(v))+",")
-        '''
-        pass
+        return
