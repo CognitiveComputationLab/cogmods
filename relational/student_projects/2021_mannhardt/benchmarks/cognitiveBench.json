@@ -1,0 +1,19 @@
+{
+    "type": "coverage",
+    "data.test": "../Dataset.csv",
+    "data.pre_train": "../Dataset.csv",
+    "corresponding_data": true,
+    "domains": ["syllogistic", "spatial-relational"],
+    "response_types": ["single-choice", "verify"],
+    "models": [
+        "../models/MFA.py",
+        "../models/simpleModels/LO-relocation.py",
+        "../models/simpleModels/lastAddedModel.py",
+        "../models/simpleModels/plausibleModel.py",
+        "../models/simpleModels/leftChoiceModel.py",
+        "../models/simpleModels/rightChoiceModel.py",
+        "../models/simpleModels/FirstAddedModel.py",
+        "../models/verbal.py",
+        "../models/PRISM/prismModel.py"
+    ]
+}
