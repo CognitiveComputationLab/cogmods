@@ -3,7 +3,7 @@
     "data.test": "../Dataset.csv",
     "data.pre_train": "../Dataset.csv",
     "corresponding_data": true,
-    "domains": ["syllogistic", "spatial-relational"],
+    "domains": ["spatial-relational"],
     "response_types": ["single-choice", "verify"],
     "models": [
         "../models/TCModel.py",
