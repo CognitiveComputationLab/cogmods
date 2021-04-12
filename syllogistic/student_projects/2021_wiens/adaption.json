@@ -1,0 +1,31 @@
+{
+    "type": "adaption",
+    "data.test": "data/data.csv",
+	"data.pre_train": "data/data.csv",
+    "corresponding_data": true,
+    "domains": ["syllogistic"],
+    "response_types": ["verify"],
+    "models": [
+        "baseline/Uniform/uniform-model.py",
+		"baseline/MFA/MFA.py",
+		"baseline/Atmosphere/atmosphere.py",
+		"baseline/Conversion/conversion.py",
+		"baseline/PHM/phm.py",
+		"baseline/Matching/matching.py",
+        "baseline/MMT/mmt.py",
+		"baseline/PSYCOP/psycop.py",
+		"baseline/VerbalModels/verbalmodels.py",
+		"models/ccobra_mental_model.py",
+		"models/ccobra_verbal_model.py",
+		"models/verbal_model_ldt.py",
+        "models/ccobra_mreasoner.py",
+        "models/selective_processing.py",
+		"models/mental_model_ldt.py",
+        "models/mReasoner_ldt.py",
+		"models/conflict_resolution.py",
+		"models/composite_model.py"
+    ],
+    "domain_encoders": {
+        "syllogistic": "%ccobra%/syllogistic/encoder_syl.py"
+    }
+}
