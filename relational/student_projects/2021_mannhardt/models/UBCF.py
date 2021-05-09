@@ -8,7 +8,8 @@ import math
 MIN_NEIGHBORS = 5
 MIN_ANSWERS = 5
 
-allEvents = ["ABCLeftCABCACAB", "ABCLeftCACABBCA", "ABCRightACBCACAB", "ABCRightACCABBCA", "BACLeftCBACBCBA", "BACLeftCBCBAACB", "BACRightBCACBCBA", "BACRightBCCBAACB"]
+allEvents = ["ABCLeftCABCACAB", "ABCLeftCACABBCA", "ABCRightACBCACAB", "ABCRightACCABBCA",
+             "BACLeftCBACBCBA", "BACLeftCBCBAACB", "BACRightBCACBCBA", "BACRightBCCBAACB"]
 WEIGHTS_ADD = [1,1,0.4,0.2,0.1]
 
 
@@ -21,20 +22,16 @@ class UBCFModel(ccobra.CCobraModel):
         self.userVectors = dict()
         self.currentAnswers = dict()
 
-        # looks like:
-        # {1: [0.090, 2.0, 9.0, 2.0, 12.0, 0.272, 0.1, 3.335, 12.0, 0.93], 2: [2.0, 0, etc.
-        # values are quotients of answer count
+        # values are differences of answer count
         self.userVec = dict()
 
         # saves most similar subjects as list e.g. [(17, 415), (4, 412), (12, 411), (9, 407), etc.]
         self.similarUsers = list()
-    
-        # each events gets assigned a number e.g. eventDict['BACRightBCCBAACB'] = 1
-        self.eventDict = dict()
 
-        # Initialize member variables
+        # MFA
         self.mfa_population = dict()
 
+        # start with including all 19 neighbors
         self.NEIGHBORS = 20
         self.WEIGHTS = [1, 1, 1, 1, 1]
 
@@ -66,13 +63,14 @@ class UBCFModel(ccobra.CCobraModel):
         # return None if subject has no preference
         if self.currentAnswers[event][choice1] == self.currentAnswers[event][choice2]:
             return None, None
-        currentQuot = self.currentAnswers[event][choice1] - self.currentAnswers[event][choice2]
+        currentDiff = self.currentAnswers[event][choice1] - self.currentAnswers[event][choice2]
         ind = allEvents.index(event)
         for key, value in self.userVec.items():
-            self.similarUsers.append((key, abs(currentQuot-value[ind])))
+            self.similarUsers.append((key, abs(currentDiff-value[ind])))
         self.similarUsers = sorted(self.similarUsers, key=lambda elem: elem[1])
 
         neighbors = [key[0] for key in self.similarUsers][:self.NEIGHBORS]
+        # gradually decrease neighborhood size
         if self.NEIGHBORS > MIN_NEIGHBORS:
             self.NEIGHBORS -= 1
         answers = dict()
@@ -84,6 +82,8 @@ class UBCFModel(ccobra.CCobraModel):
                 for answer in list(self.currentAnswers[event].keys()):
                     if answer not in answers:
                         answers[answer] = 0
+                    # add WEIGHTS_ADD to WEIGHTS to weight similar users responses more and more
+                    # heavily over time
                     if self.NEIGHBORS == MIN_NEIGHBORS:
                         answers[answer] += self.WEIGHTS[ind]*self.userVectors[user][event][answer]
                         self.WEIGHTS = [sum(x) for x in zip(self.WEIGHTS, WEIGHTS_ADD)]
@@ -143,6 +143,7 @@ class UBCFModel(ccobra.CCobraModel):
         for choice in item.choices:
             if choice[0][0] not in self.currentAnswers[event]:
                 self.currentAnswers[event][choice[0][0]] = 1
+        # increase answer-count for the current subject
         self.currentAnswers[event][target[0][0]] += 1
 
     def pre_train(self, dataset):
@@ -172,7 +173,6 @@ class UBCFModel(ccobra.CCobraModel):
                 if task_data['item'].sequence_number != 3:
                     continue
 
-                # vars of item object : dict_keys(['identifier', 'response_type', 'task_str', 'task', 'choices_str', 'choices', 'domain', 'sequence_number'])
                 userId = task_data['item'].identifier
                 event = list_to_string(item.task) + list_to_string(item.choices)
                 if event not in allEvents:
@@ -203,15 +203,10 @@ class UBCFModel(ccobra.CCobraModel):
                 try:
                     key1 = list(self.userVectors[user][task].keys())[0]
                     key2 = list(self.userVectors[user][task].keys())[1]
-                    quot = self.userVectors[user][task][key1] - self.userVectors[user][task][key2]
-                    # quot = round(quot, 5)
-                    self.userVec[user].append(quot)
+                    diff = self.userVectors[user][task][key1] - self.userVectors[user][task][key2]
+                    self.userVec[user].append(diff)
                 except:
                     self.userVec[user].append(0)
 
-        # fill eventDict
-        for i in range(len(allEvents)):
-            self.eventDict[allEvents[i]] = i
-  
     def end_participant(self, identifier, model_log, **kwargs):
         return

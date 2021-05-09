@@ -1,3 +1,5 @@
+# Content-based filtering for belief revision on the spatial-relational domain
+
 import numpy as np
 
 import ccobra
@@ -8,7 +10,6 @@ class CBFModel(ccobra.CCobraModel):
     def __init__(self, name='CBF'):
         super(CBFModel, self).__init__(name, ["spatial-relational"], ["single-choice", "verify"])
 
-        # Initialize member variables
         self.mfa_population = dict()
 
         # keys are task, value is list of lists
@@ -22,13 +23,6 @@ class CBFModel(ccobra.CCobraModel):
         self.MIN_SAMPLES = 4
 
     def predict(self, item, **kwargs):
-        i = 0
-        with open("itemsIndexes.txt", "w") as file:
-            file.write("{")
-            for key in self.mfa_population:
-                file.write("\""+key + "\" : " + str(i) + ",\n")
-                i += 1
-            file.write("}")
         # Return the population MFA if available
         population_prediction = self.get_mfa_prediction(item, self.mfa_population)
         cat = kwargs['event'].split("_")[1]
@@ -38,14 +32,15 @@ class CBFModel(ccobra.CCobraModel):
         elif population_prediction is not None:
             return population_prediction
 
-        # Return a random response if no MFA data is available
+        # Return a random response if neither MFA nor CBF data is available
         return item.choices[np.random.randint(0, len(item.choices))]
 
     def get_CBF_prediction(self, item, cat, event):
         task_encoding = task_to_string(item.task) + task_to_string(item.choices)
         if task_encoding in self.task_preference:
             plausibilityDiff = self.task_preferenceP[task_encoding]["P"]-self.task_preferenceP[task_encoding]["IP"]
-            relationDiff = abs(list(self.task_preference[task_encoding].values())[0]-list(self.task_preference[task_encoding].values())[1])
+            relationDiff = abs(list(self.task_preference[task_encoding]
+                                    .values())[0]-list(self.task_preference[task_encoding].values())[1])
             if relationDiff >= plausibilityDiff or plausibilityDiff <= 1:
                 choices = self.task_preference[task_encoding]
                 response = keywithmaxval(choices)
@@ -101,7 +96,8 @@ class CBFModel(ccobra.CCobraModel):
         if response == "weiter":
             return
         if task_encoding not in self.task_preference:
-            self.task_preference[task_encoding] = {item.choices[0][0][0]: 0, item.choices[1][0][0]: 0}
+            self.task_preference[task_encoding] = {item.choices[0][0][0]: 0
+                                                   , item.choices[1][0][0]: 0}
             self.task_preference[task_encoding][response] += 1
             self.task_preferenceP[task_encoding] = {"P": 0, "IP": 0}
             return

@@ -3,6 +3,7 @@ import numpy as np
 import ccobra
 from taskencoder import *
 
+
 class EnsembleModel(ccobra.CCobraModel):
     def __init__(self, name='Ensemble'):
         super(EnsembleModel, self).__init__(name, ["spatial-relational"], ["single-choice", "verify"])

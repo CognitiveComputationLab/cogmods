@@ -10,6 +10,6 @@
         "../models/ensembleModel.py",
         "../models/CBF.py",
         "../models/UBCF.py",
-        "../models/mlp"
+	"../models/mlp"
     ]
 }
