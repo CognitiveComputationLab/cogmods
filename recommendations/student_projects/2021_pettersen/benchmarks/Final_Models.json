@@ -1,0 +1,15 @@
+{
+    "type": "prediction",
+    "data.pre_train": "../data/na.csv",
+    "data.test": "../data/final_cc_data_testing.csv",
+    "corresponding_data": false,
+    "response_types": ["single-choice"],
+    "models": [
+        "../models/final_mean.py",
+        "../models/final_content.py",
+        "../models/final_CF_item.py",
+        "../models/final_CF_user.py",
+        "../models/final_MF_SVD.py"
+    ],
+    "comparator": "absdiff"
+}
