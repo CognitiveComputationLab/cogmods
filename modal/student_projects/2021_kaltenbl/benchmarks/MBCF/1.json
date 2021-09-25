@@ -1,0 +1,1582 @@
+{
+     "type": "adaption",
+     "data.pre_train": "../../data/experiment1/ex1_data.csv",
+     "data.test": "../../data/experiment1/ex1_data.csv",
+     "corresponding_data": true,
+     "domains": [
+          "modal"
+     ],
+     "response_types": [
+          "verify"
+     ],
+     "models": [
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 0,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 1,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 2,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 3,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 4,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 5,
+                    "exp": 0.4
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.1
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.11
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.12
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.13
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.14
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.15
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.16
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.17
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.18
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.19
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.2
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.21
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.22
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.23
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.24
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.25
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.26
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.27
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.28
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.29
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.3
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.31
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.32
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.33
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.34
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.35
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.36
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.37
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.38
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.39
+               }
+          },
+          {
+               "filename": "../../models/mModalSentential_mbcf.py",
+               "args": {
+                    "k": 6,
+                    "exp": 0.4
+               }
+          }
+     ]
+}

@@ -1,0 +1,982 @@
+id,sequence,task,choices,response,response_type,domain,task_original,choices_original
+SJPYZH,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+SJPYZH,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+SJPYZH,0,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+SJPYZH,1,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+SJPYZH,2,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+SJPYZH,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+SJPYZH,4,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+SJPYZH,5,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+SJPYZH,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+SJPYZH,7,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+SJPYZH,8,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+SJPYZH,9,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SJPYZH,10,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SJPYZH,11,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+SJPYZH,12,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SJPYZH,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+SJPYZH,14,possible;xor;A;B,possible;or;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SJPYZH,15,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+NHSPFT,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+NHSPFT,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+NHSPFT,0,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+NHSPFT,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+NHSPFT,2,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+NHSPFT,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+NHSPFT,4,possible;xor;A;B,possible;or;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+NHSPFT,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+NHSPFT,6,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+NHSPFT,7,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+NHSPFT,8,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+NHSPFT,9,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+NHSPFT,10,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+NHSPFT,11,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+NHSPFT,12,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+NHSPFT,13,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+NHSPFT,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+NHSPFT,15,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+YSTKKA,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+YSTKKA,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+RTNNBA,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+RTNNBA,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+MFSDJI,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+MFSDJI,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+MFOMTL,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+JVYHPY,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+MFOMTL,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+MFSDJI,0,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+MFSDJI,1,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JVYHPY,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+MFSDJI,2,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFSDJI,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+MFSDJI,4,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+MFSDJI,5,possible;xor;A;B,xor;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+MFSDJI,6,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFSDJI,7,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFOMTL,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+MFSDJI,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+MFSDJI,9,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+MFSDJI,10,possible;xor;A;B,possible;or;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFSDJI,11,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFSDJI,12,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+MFIMPI,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+MFSDJI,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+MFSDJI,14,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+MFOMTL,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFSDJI,15,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+JVYHPY,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+MFOMTL,2,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+JVYHPY,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFOMTL,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+MFIMPI,0,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+JVYHPY,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+MFOMTL,4,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+MFOMTL,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+JVYHPY,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+MFOMTL,6,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+MFIMPI,2,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+JVYHPY,4,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+MFOMTL,7,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,3,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFIMPI,4,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFOMTL,8,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JVYHPY,5,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,5,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+MFOMTL,9,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+MFIMPI,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+JVYHPY,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+MFOMTL,10,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFIMPI,7,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+JVYHPY,7,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFOMTL,11,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+JVYHPY,8,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+MFOMTL,12,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+MFIMPI,9,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+MFOMTL,13,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+JVYHPY,9,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+MFIMPI,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+MFIMPI,11,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+MFOMTL,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+MFIMPI,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+MFIMPI,13,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,14,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+MFOMTL,15,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+MFIMPI,15,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JVYHPY,10,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+JVYHPY,11,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+JVYHPY,12,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+JVYHPY,13,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JVYHPY,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+JVYHPY,15,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QERROB,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+QERROB,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+KYSTJQ,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+QERROB,0,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+QERROB,1,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+QERROB,2,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+QERROB,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+KYSTJQ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+QERROB,4,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+QERROB,5,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+QERROB,6,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+QERROB,7,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QERROB,8,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QERROB,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+QERROB,10,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+QERROB,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+QERROB,12,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+QERROB,13,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZZIKDR,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+QERROB,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+QERROB,15,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+KYSTJQ,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+KYSTJQ,1,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,0,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KYSTJQ,2,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,1,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZZIKDR,2,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+KYSTJQ,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ZZIKDR,3,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+KYSTJQ,4,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZZIKDR,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ZFUWUL,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+KYSTJQ,5,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ZFUWUL,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZZIKDR,5,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KYSTJQ,6,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+KYSTJQ,7,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZZIKDR,7,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+KYSTJQ,8,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,8,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KYSTJQ,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ZZIKDR,9,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZFUWUL,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZZIKDR,10,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+KYSTJQ,10,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZFUWUL,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+KYSTJQ,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ZFUWUL,2,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZZIKDR,11,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+KYSTJQ,12,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZZIKDR,12,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KYSTJQ,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ZFUWUL,3,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+KYSTJQ,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ZZIKDR,13,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZFUWUL,4,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+KYSTJQ,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZZIKDR,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ZFUWUL,5,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZZIKDR,15,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ZFUWUL,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ZFUWUL,7,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZFUWUL,8,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZFUWUL,9,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+TAHEYX,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZFUWUL,10,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+TAHEYX,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZFUWUL,11,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+LSMXKB,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZFUWUL,12,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ENMEAW,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZFUWUL,13,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LSMXKB,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZFUWUL,14,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZFUWUL,15,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+LSMXKB,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ENMEAW,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LSMXKB,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ENMEAW,1,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+LSMXKB,2,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ENMEAW,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+LSMXKB,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ENMEAW,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+LSMXKB,4,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ENMEAW,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+LSMXKB,5,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ENMEAW,5,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+LSMXKB,6,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ENMEAW,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+LSMXKB,7,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ENMEAW,7,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+LSMXKB,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,8,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LSMXKB,9,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+LSMXKB,10,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ENMEAW,10,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ENMEAW,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+LSMXKB,11,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,12,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LSMXKB,12,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,13,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LSMXKB,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+LSMXKB,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ENMEAW,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ENMEAW,15,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LSMXKB,15,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+JYTLFW,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+JYTLFW,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+JYTLFW,0,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+BKIUJZ,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+JYTLFW,1,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+NOMSQG,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+BKIUJZ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+NOMSQG,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+NOMSQG,0,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+NOMSQG,1,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+NOMSQG,2,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+NOMSQG,3,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+NOMSQG,4,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+NOMSQG,5,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+NOMSQG,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+NOMSQG,7,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+NOMSQG,8,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+NOMSQG,9,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+NOMSQG,10,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+NOMSQG,11,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+NOMSQG,12,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+NOMSQG,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+NOMSQG,14,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+BKIUJZ,0,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+NOMSQG,15,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+BKIUJZ,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+BKIUJZ,2,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+BKIUJZ,3,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+BKIUJZ,4,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+BKIUJZ,5,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+BKIUJZ,6,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+BKIUJZ,7,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+BKIUJZ,8,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+BKIUJZ,9,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+BKIUJZ,10,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+BKIUJZ,11,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+BKIUJZ,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+BKIUJZ,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+BKIUJZ,14,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+BKIUJZ,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+CBDXML,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+CBDXML,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+EFTVTS,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+EFTVTS,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+KSTZHU,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+KSTZHU,1,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ELAUTF,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+EFTVTS,0,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+CBDXML,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ELAUTF,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+KSTZHU,0,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+EFTVTS,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+EFTVTS,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+KSTZHU,1,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,1,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+EFTVTS,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+KSTZHU,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ELAUTF,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KSTZHU,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ELAUTF,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+EFTVTS,4,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,2,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+KSTZHU,4,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ELAUTF,2,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+EFTVTS,5,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+KSTZHU,5,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ELAUTF,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+EFTVTS,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+CBDXML,3,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ELAUTF,4,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KSTZHU,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+EFTVTS,7,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ELAUTF,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+EFTVTS,8,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ELAUTF,6,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ELAUTF,7,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,4,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ELAUTF,8,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+EFTVTS,9,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+KSTZHU,7,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+EFTVTS,10,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ELAUTF,9,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+CBDXML,5,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+EFTVTS,11,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ELAUTF,10,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+KSTZHU,8,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ELAUTF,11,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+EFTVTS,12,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,6,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+KSTZHU,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+EFTVTS,13,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ELAUTF,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+EFTVTS,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ELAUTF,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+KSTZHU,10,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+CBDXML,7,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ELAUTF,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+EFTVTS,15,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ELAUTF,15,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KSTZHU,11,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KSTZHU,12,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+CBDXML,8,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KSTZHU,13,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KSTZHU,14,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+CBDXML,9,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+KSTZHU,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+CBDXML,10,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+CBDXML,12,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+CBDXML,13,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ATPMSM,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+CBDXML,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FFRUPX,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+CBDXML,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ATPMSM,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FFRUPX,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FFRUPX,0,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+FFRUPX,1,or;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ATPMSM,0,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+FFRUPX,2,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FFRUPX,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ATPMSM,1,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FFRUPX,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FFRUPX,5,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ATPMSM,2,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FFRUPX,6,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FFRUPX,7,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FFRUPX,8,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FFRUPX,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ATPMSM,3,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FFRUPX,10,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FFRUPX,11,possible;or;A;B,or;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+FFRUPX,12,possible;or;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ATPMSM,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FFRUPX,13,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FFRUPX,14,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FFRUPX,15,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ATPMSM,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LLLTUW,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+LLLTUW,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ATPMSM,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+LLLTUW,0,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+LLLTUW,1,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LLLTUW,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+LLLTUW,3,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+LLLTUW,4,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+LLLTUW,5,possible;xor;A;B,possible;or;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LLLTUW,6,or;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LLLTUW,7,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LLLTUW,8,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+LLLTUW,9,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ATPMSM,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+LLLTUW,10,possible;xor;A;B,xor;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+LLLTUW,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+LLLTUW,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+LLLTUW,13,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+LLLTUW,14,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LLLTUW,15,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ATPMSM,8,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ATPMSM,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ATPMSM,10,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ATPMSM,11,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ATPMSM,12,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ATPMSM,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ATPMSM,14,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ATPMSM,15,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZSUMAA,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZSUMAA,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+VOHXVC,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+VOHXVC,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZSUMAA,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZSUMAA,1,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZSUMAA,2,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZSUMAA,3,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+VOHXVC,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZSUMAA,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+VOHXVC,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZSUMAA,5,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+VOHXVC,2,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZSUMAA,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+VOHXVC,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ZSUMAA,7,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZSUMAA,8,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+VOHXVC,4,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZSUMAA,9,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZSUMAA,10,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+VOHXVC,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZSUMAA,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+VOHXVC,6,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ZSUMAA,12,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+VOHXVC,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ZSUMAA,13,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+VOHXVC,8,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZSUMAA,14,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+VOHXVC,9,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+VOHXVC,10,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+VOHXVC,11,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ZSUMAA,15,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+VOHXVC,12,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+VOHXVC,13,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+VOHXVC,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+VOHXVC,15,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FCNJFI,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FCNJFI,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FCNJFI,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+RQYTTN,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+RQYTTN,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FCNJFI,1,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+RQYTTN,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FCNJFI,2,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+RQYTTN,1,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FCNJFI,3,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+RQYTTN,2,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FCNJFI,4,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FCNJFI,5,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+RQYTTN,3,or;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FCNJFI,6,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+FCNJFI,7,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+RQYTTN,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FCNJFI,8,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+RQYTTN,5,possible;or;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+RQYTTN,6,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+FCNJFI,9,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+RQYTTN,7,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+FCNJFI,10,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+RQYTTN,8,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FCNJFI,11,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+RQYTTN,9,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FCNJFI,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+RQYTTN,10,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+FCNJFI,13,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FCNJFI,14,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+RQYTTN,11,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FCNJFI,15,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+RQYTTN,12,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+RQYTTN,13,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+RQYTTN,14,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+RQYTTN,15,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ETGOUU,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ETGOUU,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ETGOUU,0,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ETGOUU,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ETGOUU,2,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ETGOUU,3,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+PVYNOD,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+PVYNOD,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ETGOUU,4,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ETGOUU,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PVYNOD,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ETGOUU,6,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PVYNOD,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+PVYNOD,2,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+PVYNOD,3,possible;or;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ETGOUU,7,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+PVYNOD,4,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+PVYNOD,5,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+PVYNOD,6,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ETGOUU,8,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+PVYNOD,7,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ETGOUU,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+PVYNOD,8,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+PVYNOD,9,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ETGOUU,10,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+PVYNOD,10,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PVYNOD,11,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PVYNOD,12,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ETGOUU,11,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+PVYNOD,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+PVYNOD,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ETGOUU,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+PVYNOD,15,or;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ETGOUU,13,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ETGOUU,14,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ETGOUU,15,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DVQQHD,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+DVQQHD,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+DVQQHD,0,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+DVQQHD,1,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+DVQQHD,2,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+DVQQHD,3,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+RGJDBF,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+RGJDBF,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+DVQQHD,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+DVQQHD,5,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OAERQE,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+DVQQHD,6,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+OAERQE,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+DVQQHD,7,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DAKMWK,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+RGJDBF,0,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+DVQQHD,8,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+DAKMWK,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+DVQQHD,9,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+RGJDBF,1,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+DVQQHD,10,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+RGJDBF,2,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+OAERQE,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DVQQHD,11,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OAERQE,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+DVQQHD,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+RGJDBF,3,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+RGJDBF,4,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DVQQHD,13,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+RGJDBF,5,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+DVQQHD,14,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OAERQE,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+DVQQHD,15,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+OAERQE,3,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+RGJDBF,6,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OAERQE,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+RGJDBF,7,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+RGJDBF,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+DAKMWK,0,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+OAERQE,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+RGJDBF,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+DAKMWK,1,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DAKMWK,2,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+RGJDBF,10,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+DAKMWK,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+RGJDBF,11,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DAKMWK,4,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+OAERQE,6,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+RGJDBF,12,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+DAKMWK,5,possible;xor;A;B,possible;or;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+RGJDBF,13,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OAERQE,7,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+DAKMWK,6,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+RGJDBF,14,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+DAKMWK,7,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+RGJDBF,15,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+OAERQE,8,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+DAKMWK,8,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+DAKMWK,9,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OAERQE,9,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+DAKMWK,10,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OAERQE,10,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+DAKMWK,11,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OAERQE,11,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+DAKMWK,12,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+DAKMWK,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+DAKMWK,14,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+DAKMWK,15,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+OAERQE,12,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+OAERQE,13,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OAERQE,14,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+OAERQE,15,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+WWLQRO,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+WWLQRO,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+WWLQRO,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WWLQRO,1,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WWLQRO,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+WWLQRO,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+WWLQRO,4,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+WWLQRO,5,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+WWLQRO,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+WWLQRO,7,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+WWLQRO,8,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+WWLQRO,9,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+WWLQRO,10,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+WWLQRO,11,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WWLQRO,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+WWLQRO,13,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+WWLQRO,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+WWLQRO,15,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+OGSESG,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+OGSESG,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+SLRLFH,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+SLRLFH,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+OGSESG,0,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+OGSESG,1,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+SLRLFH,0,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+OGSESG,2,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+SLRLFH,1,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OGSESG,3,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OGSESG,4,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+SLRLFH,2,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+OGSESG,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OGSESG,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+SLRLFH,3,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OGSESG,7,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OGSESG,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SLRLFH,4,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OGSESG,9,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+SLRLFH,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OGSESG,10,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OGSESG,11,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+OGSESG,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+SLRLFH,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+OGSESG,13,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+SLRLFH,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+OGSESG,14,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+OGSESG,15,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+SLRLFH,8,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+SLRLFH,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+SLRLFH,10,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+SLRLFH,11,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+SLRLFH,12,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+SLRLFH,13,possible;or;A;B,or;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+SLRLFH,14,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SLRLFH,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FJQIQH,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FJQIQH,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FJQIQH,0,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FJQIQH,1,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FJQIQH,2,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FJQIQH,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FJQIQH,4,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+FJQIQH,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FJQIQH,6,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZRKHHA,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZRKHHA,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZRKHHA,0,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZRKHHA,1,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZRKHHA,2,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZRKHHA,3,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ZRKHHA,4,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZRKHHA,5,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZRKHHA,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ZRKHHA,7,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ZRKHHA,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ZRKHHA,9,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+ZRKHHA,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ZRKHHA,11,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ZRKHHA,12,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZRKHHA,13,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SRWEZV,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZRKHHA,14,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SRWEZV,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZRKHHA,15,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SRWEZV,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+SRWEZV,1,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SRWEZV,2,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+SRWEZV,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+SRWEZV,4,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+SRWEZV,5,possible;xor;A;B,xor;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+SRWEZV,6,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+SRWEZV,7,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+SRWEZV,8,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+SRWEZV,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+SRWEZV,10,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+SRWEZV,11,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+SRWEZV,12,xor;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SRWEZV,13,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SRWEZV,14,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SRWEZV,15,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QYZWGA,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+QYZWGA,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+QYZWGA,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+QYZWGA,1,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+QYZWGA,2,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+QYZWGA,3,possible;or;A;B,or;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+QYZWGA,4,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QYZWGA,5,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+QYZWGA,6,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+QYZWGA,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+QYZWGA,8,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+QYZWGA,9,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+QYZWGA,10,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+QYZWGA,11,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+QYZWGA,12,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+QYZWGA,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+QYZWGA,14,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+QYZWGA,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+PYWOYC,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+PYWOYC,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+PYWOYC,0,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+PYWOYC,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+PYWOYC,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+PYWOYC,3,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PYWOYC,4,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+PYWOYC,5,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+PYWOYC,6,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+PYWOYC,7,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+PYWOYC,8,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+PYWOYC,9,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+PYWOYC,10,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+PYWOYC,11,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PYWOYC,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+PYWOYC,13,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+PYWOYC,14,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+PYWOYC,15,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+IZSZPO,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+IZSZPO,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+IZSZPO,0,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+IZSZPO,1,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+IZSZPO,2,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+IZSZPO,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+IZSZPO,4,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+IZSZPO,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+IZSZPO,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+IZSZPO,7,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+IZSZPO,8,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+IZSZPO,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+IZSZPO,10,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+IZSZPO,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+IZSZPO,12,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+IZSZPO,13,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+IZSZPO,14,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+IZSZPO,15,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FNTWRJ,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FNTWRJ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FNTWRJ,0,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+FNTWRJ,1,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FNTWRJ,2,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FNTWRJ,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FNTWRJ,4,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+FNTWRJ,5,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FNTWRJ,6,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FNTWRJ,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FNTWRJ,8,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+UIQWAC,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FNTWRJ,9,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+UIQWAC,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FNTWRJ,10,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FNTWRJ,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+FNTWRJ,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+FNTWRJ,13,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+UIQWAC,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FNTWRJ,14,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FNTWRJ,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+LKEWJR,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+LKEWJR,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+LKEWJR,0,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LKEWJR,1,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LKEWJR,2,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+LKEWJR,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+LKEWJR,4,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+LKEWJR,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+LKEWJR,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+LKEWJR,7,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+LKEWJR,8,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+LKEWJR,9,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+LKEWJR,10,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+SWRTBN,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+LKEWJR,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+SWRTBN,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+LKEWJR,12,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+LKEWJR,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+LKEWJR,14,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+LKEWJR,15,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SWRTBN,0,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SWRTBN,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+SWRTBN,2,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+SWRTBN,3,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SWRTBN,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+SWRTBN,5,possible;xor;A;B,xor;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+SWRTBN,6,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+SWRTBN,7,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+SWRTBN,8,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+SWRTBN,9,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+SWRTBN,10,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+SWRTBN,11,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SWRTBN,12,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+SWRTBN,13,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+SWRTBN,14,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+SWRTBN,15,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+JJNQLO,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+JJNQLO,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+JJNQLO,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+JJNQLO,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+JJNQLO,2,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+JJNQLO,3,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+JJNQLO,4,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+JJNQLO,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+JJNQLO,6,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+JJNQLO,7,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+JJNQLO,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+JJNQLO,9,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+JJNQLO,10,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JJNQLO,11,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+JJNQLO,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+JJNQLO,13,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+JJNQLO,14,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+JJNQLO,15,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+HHLSFX,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+HHLSFX,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+HHLSFX,0,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+HHLSFX,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+HHLSFX,2,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+HHLSFX,3,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+HHLSFX,4,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+HHLSFX,5,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+HHLSFX,6,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+HHLSFX,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+HHLSFX,8,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+HHLSFX,9,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+HHLSFX,10,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+HHLSFX,11,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+HHLSFX,12,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+HHLSFX,13,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+HHLSFX,14,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+HHLSFX,15,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZDDEVC,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+ZDDEVC,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+ZDDEVC,0,possible;or;A;B,or;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+ZDDEVC,1,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+ZDDEVC,2,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+ZDDEVC,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+ZDDEVC,4,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZDDEVC,5,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+ZDDEVC,6,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZDDEVC,7,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZDDEVC,8,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZDDEVC,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+ZDDEVC,10,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+ZDDEVC,11,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+ZDDEVC,12,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+ZDDEVC,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+ZDDEVC,14,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+ZDDEVC,15,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+UYDLIK,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+UYDLIK,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+UYDLIK,0,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+UYDLIK,1,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+UYDLIK,2,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+UYDLIK,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+UYDLIK,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+UYDLIK,5,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+UYDLIK,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+UYDLIK,7,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+UYDLIK,8,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+UYDLIK,9,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+UYDLIK,10,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+UYDLIK,11,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+UYDLIK,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+UYDLIK,13,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+UYDLIK,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+UYDLIK,15,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OKUYYU,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+OKUYYU,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+OKUYYU,0,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OKUYYU,1,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+OKUYYU,2,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+OKUYYU,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+OKUYYU,4,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OKUYYU,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+OKUYYU,6,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OKUYYU,7,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+OKUYYU,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OKUYYU,9,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+OKUYYU,10,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+OKUYYU,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+OKUYYU,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+OKUYYU,13,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+OKUYYU,14,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OKUYYU,15,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KFFDSO,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+KFFDSO,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+KFFDSO,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KFFDSO,1,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+KFFDSO,2,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+KFFDSO,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+KFFDSO,4,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+KFFDSO,5,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+KFFDSO,6,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+KFFDSO,7,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+KFFDSO,8,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+KFFDSO,9,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+KFFDSO,10,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+KFFDSO,11,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KFFDSO,12,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+KFFDSO,13,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KFFDSO,14,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+KFFDSO,15,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+XIULLK,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+XIULLK,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+XIULLK,0,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+XIULLK,1,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+XIULLK,2,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+XIULLK,3,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+XIULLK,4,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+XIULLK,5,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+XIULLK,6,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+XIULLK,7,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+XIULLK,8,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+XIULLK,9,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+XIULLK,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+XIULLK,11,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+XIULLK,12,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+XIULLK,13,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+XIULLK,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+XIULLK,15,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+KPYUXR,0,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+KPYUXR,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+KPYUXR,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+KPYUXR,1,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+KPYUXR,2,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+WQPOMT,0,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+WQPOMT,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+WQPOMT,0,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+WQPOMT,1,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WQPOMT,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+WQPOMT,3,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+WQPOMT,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+WQPOMT,5,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+WQPOMT,6,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+WQPOMT,7,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+WQPOMT,8,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+WQPOMT,9,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WQPOMT,10,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+WQPOMT,11,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+WQPOMT,12,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+WQPOMT,13,possible;and;A;B,and;possible;A;possible;B,False,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+WQPOMT,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+WQPOMT,15,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OXKHOL,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+OXKHOL,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+OXKHOL,0,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+OXKHOL,1,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OXKHOL,2,possible;xor;A;B,xor;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+OXKHOL,3,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+OXKHOL,4,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+OXKHOL,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+OXKHOL,6,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+OXKHOL,7,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OXKHOL,8,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OXKHOL,9,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+OXKHOL,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+OXKHOL,11,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+OXKHOL,12,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+OXKHOL,13,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+OXKHOL,14,xor;possible;A;possible;B,possible;xor;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+OXKHOL,15,possible;and;A;B,possible;or;A;B,False,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FSPRXY,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FSPRXY,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FSPRXY,0,possible;xor;A;B,possible;and;A;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FSPRXY,1,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FSPRXY,2,xor;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FSPRXY,3,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+FSPRXY,4,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+FSPRXY,5,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FSPRXY,6,xor;possible;A;possible;B,or;possible;A;possible;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+FSPRXY,7,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FSPRXY,8,possible;xor;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+FSPRXY,9,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FSPRXY,10,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FSPRXY,11,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FSPRXY,12,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"
+FSPRXY,13,and;possible;A;possible;B,possible;xor;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FSPRXY,14,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FSPRXY,15,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FAOOGP,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} and {B}
+FAOOGP,1,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} and {B},It is possible that {A} AND it is possible that {B}
+FAOOGP,0,possible;xor;A;B,possible;and;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FAOOGP,1,possible;xor;A;B,and;possible;A;possible;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH",It is possible that: {A} AND it is possible that {B}
+FAOOGP,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}
+FAOOGP,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},It is possible that: {A} AND {B}
+FAOOGP,4,xor;possible;A;possible;B,possible;or;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FAOOGP,5,possible;and;A;B,and;possible;A;possible;B,True,verify,modal,It is possible that: {A} AND {B},It is possible that: {A} AND it is possible that {B}
+FAOOGP,6,or;possible;A;possible;B,possible;or;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FAOOGP,7,xor;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH",It is possible that: {A} AND {B}
+FAOOGP,8,possible;and;A;B,possible;or;A;B,True,verify,modal,It is possible that: {A} AND {B},"It is possible that: {A} OR {B}, OR BOTH"
+FAOOGP,9,possible;xor;A;B,possible;or;A;B,False,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, OR BOTH"
+FAOOGP,10,xor;possible;A;possible;B,or;possible;A;possible;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, OR BOTH"
+FAOOGP,11,and;possible;A;possible;B,possible;xor;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B},"It is possible that: {A} OR {B}, BUT NOT BOTH"
+FAOOGP,12,possible;xor;A;B,xor;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, BUT NOT BOTH","It is possible that {A} OR it is possible that {B}, BUT NOT BOTH"
+FAOOGP,13,xor;possible;A;possible;B,possible;xor;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, BUT NOT BOTH","It is possible that: {A} OR {B}, BUT NOT BOTH"
+FAOOGP,14,possible;or;A;B,and;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH",It is possible that {A} AND it is possible that {B}
+FAOOGP,15,possible;or;A;B,or;possible;A;possible;B,True,verify,modal,"It is possible that: {A} OR {B}, OR BOTH","It is possible that {A} OR  it is possible that {B}, OR BOTH"

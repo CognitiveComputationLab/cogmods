@@ -1,0 +1,17 @@
+{
+    "type": "adaption",
+    "data.pre_train": "../../data/experiment5/ex5_data.csv",
+    "data.test": "../../data/experiment5/ex5_data.csv",
+    "corresponding_data": true,
+    "domains": ["modal"],
+    "response_types": ["verify"],
+    "models": [
+          "../../models/random_model.py",
+          "../../models/mfa_model.py",
+          "../../models/mModalSentential_model.py",
+          "../../models/mModalSentential_pretrained_model.py",
+        {"filename": "../../models/modal_logic.py", "args": {"t": "K"}},
+        {"filename": "../../models/modal_ubcf.py", "args": {"k": 19, "exp": 0.4}},
+        {"filename": "../../models/mModalSentential_mbcf.py", "args": {"k": 3, "exp": 0}}
+    ]
+}

@@ -1,0 +1,865 @@
+id,sequence,task,choices,response,response_type,domain,task_original,choices_original
+BGKFRK,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BGKFRK,2,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BGKFRK,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BGKFRK,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BGKFRK,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITBVRE,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+XCUEUR,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SQHMAN,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ITBVRE,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+NVBZYF,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+XCUEUR,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ITBVRE,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ELSFXS,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XCUEUR,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ELSFXS,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XCUEUR,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+SQHMAN,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITBVRE,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ENYFOZ,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XCUEUR,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SQHMAN,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BQCPBP,1,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+SEGQEW,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SQHMAN,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+CTMWZM,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITBVRE,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XCUEUR,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ITBVRE,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SEGQEW,4,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LPLPCG,0,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+JPNGQY,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+YDFFNP,1,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+HPTKUE,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TAAKSL,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITBVRE,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XCUEUR,11,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BQCPBP,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+SQHMAN,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+YDFFNP,2,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XCUEUR,13,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TAAKSL,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BQCPBP,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SQHMAN,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITBVRE,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+XCUEUR,14,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+YDFFNP,3,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XJHHIS,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+SQHMAN,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+CTMWZM,6,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ENYFOZ,1,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ITBVRE,12,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+HPTKUE,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TQWQIM,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ENYFOZ,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TAAKSL,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TQWQIM,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ITBVRE,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ELSFXS,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ITBVRE,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TAAKSL,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+XJHHIS,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LPLPCG,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+CTMWZM,11,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PMESOF,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TQWQIM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TAAKSL,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XJHHIS,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+HPTKUE,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+CTMWZM,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+YDFFNP,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+HPTKUE,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+UKUKHQ,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+UKUKHQ,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+UKUKHQ,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+UKUKHQ,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LYDHGN,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+XJHHIS,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BQCPBP,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+UKUKHQ,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+UKUKHQ,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+UKUKHQ,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+UKUKHQ,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+SEGQEW,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PMESOF,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+UKUKHQ,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TQWQIM,8,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+UKUKHQ,14,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+UKUKHQ,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+CTMWZM,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TQWQIM,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LYDHGN,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ENYFOZ,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+PMESOF,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HPTKUE,11,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PCMEDH,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PMESOF,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+PMESOF,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+PMESOF,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PCMEDH,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+HPTKUE,12,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TAAKSL,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HCTJTZ,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TQWQIM,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ITPDTB,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LYDHGN,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TAAKSL,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TQWQIM,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HPTKUE,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LYDHGN,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+PCMEDH,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ITPDTB,5,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+PCMEDH,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LYDHGN,8,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITPDTB,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SEGQEW,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+PCMEDH,7,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ITPDTB,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SEGQEW,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PCMEDH,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+MSMNYL,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BQCPBP,10,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ENYFOZ,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LYDHGN,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+PCMEDH,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+SEGQEW,15,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITPDTB,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PCMEDH,11,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BQCPBP,11,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+HCTJTZ,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PCMEDH,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ENYFOZ,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+XJHHIS,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ABYNZM,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ABYNZM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ABYNZM,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RJOUYM,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+PCMEDH,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ABYNZM,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RJOUYM,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+XJHHIS,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ENYFOZ,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BQCPBP,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ABYNZM,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ABYNZM,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RJOUYM,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ITPDTB,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RJOUYM,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ABYNZM,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HCTJTZ,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ENYFOZ,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZVUDPM,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ABYNZM,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BQCPBP,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+RJOUYM,7,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+MSMNYL,6,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RJOUYM,8,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+RJOUYM,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RJOUYM,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,11,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZVUDPM,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+MSMNYL,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+RJOUYM,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LYDHGN,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,12,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HCTJTZ,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+MSMNYL,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LYDHGN,15,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZVUDPM,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ENYFOZ,15,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HCTJTZ,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZVUDPM,6,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZVUDPM,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZVUDPM,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ZVUDPM,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ZVUDPM,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HCTJTZ,13,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZVUDPM,15,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+HCTJTZ,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NYYAIK,1,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NYYAIK,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+NYYAIK,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NYYAIK,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NYYAIK,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+GREYJU,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+GREYJU,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+GREYJU,3,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NYYAIK,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+GREYJU,4,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+GREYJU,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+NYYAIK,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+GREYJU,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NYYAIK,9,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+GREYJU,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+GREYJU,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NYYAIK,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BSMYXJ,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BSMYXJ,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BSMYXJ,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NYYAIK,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+NYYAIK,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NYYAIK,15,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BSMYXJ,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BSMYXJ,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BSMYXJ,15,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JRUEDT,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+JRUEDT,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+JRUEDT,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+JRUEDT,6,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JRUEDT,7,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+JRUEDT,12,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JRUEDT,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+JRUEDT,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+JRUEDT,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RLUWXI,0,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+PQOYOD,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+PQOYOD,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+RLUWXI,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+PQOYOD,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RTGHJG,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RTGHJG,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RTGHJG,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PQOYOD,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RTGHJG,6,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+RTGHJG,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PQOYOD,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+RTGHJG,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RTGHJG,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RTGHJG,12,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+RTGHJG,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RTGHJG,15,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+PQOYOD,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LAHCDY,0,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+LAHCDY,2,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LAHCDY,3,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LAHCDY,5,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LAHCDY,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LAHCDY,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LAHCDY,12,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LAHCDY,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RLUWXI,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LAHCDY,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+WRMLEY,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+WRMLEY,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+WRMLEY,5,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+WRMLEY,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+WRMLEY,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+WRMLEY,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+WRMLEY,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SOBMUT,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SOBMUT,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+SOBMUT,6,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SOBMUT,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SOBMUT,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SOBMUT,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TOIMMB,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SOBMUT,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+SOBMUT,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TOIMMB,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TOIMMB,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TOIMMB,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TOIMMB,10,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZDVTEM,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZDVTEM,6,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+TIRGAE,0,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TIRGAE,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TIRGAE,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TIRGAE,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TIRGAE,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+TIRGAE,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZUFRMJ,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZUFRMJ,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LBNJSN,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LBNJSN,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LBNJSN,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LBNJSN,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LBNJSN,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LBNJSN,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LBNJSN,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+VAHOSK,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+VAHOSK,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+VAHOSK,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+VAHOSK,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+VAHOSK,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+VAHOSK,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+VAHOSK,9,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+VAHOSK,11,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+VAHOSK,12,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+VAHOSK,13,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+VAHOSK,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VAHOSK,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HXZHAN,0,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+HXZHAN,1,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+HXZHAN,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HXZHAN,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HXZHAN,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+CHQXIM,1,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CHQXIM,15,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+EGVVEF,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+EGVVEF,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+EGVVEF,2,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+EGVVEF,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+OSUNNC,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+OSUNNC,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+OSUNNC,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+OSUNNC,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+OSUNNC,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+OSUNNC,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LPZFVQ,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BISFCN,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TCBLWG,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LPZFVQ,6,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TCBLWG,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NQMMOL,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BISFCN,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TCBLWG,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TCBLWG,4,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TCBLWG,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LPZFVQ,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BISFCN,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TCBLWG,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+NQMMOL,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TCBLWG,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NQMMOL,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BISFCN,13,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+TCBLWG,10,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JCEMGL,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TCBLWG,11,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JCEMGL,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NQMMOL,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+JCEMGL,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+NQMMOL,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TCBLWG,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+JCEMGL,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+JCEMGL,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+JCEMGL,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NQMMOL,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NQMMOL,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+DWWOUW,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+DWWOUW,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+DWWOUW,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+DWWOUW,7,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+DWWOUW,8,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+DWWOUW,9,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+DWWOUW,10,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+DWWOUW,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+DWWOUW,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+DWWOUW,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+DWWOUW,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+DWWOUW,15,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VUEOGW,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+VUEOGW,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+VUEOGW,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+VUEOGW,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+VUEOGW,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+VUEOGW,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+VUEOGW,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+VUEOGW,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LXRJWE,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LXRJWE,6,and;possible;A;possible;B,possible;and;A;B,False,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LXRJWE,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LXRJWE,9,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LXRJWE,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LXRJWE,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,False,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LXRJWE,12,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+LXRJWE,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,False,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LXRJWE,14,or;possible;A;possible;B,possible;and;A;B,False,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BGKFRK,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+BGKFRK,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BGKFRK,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BGKFRK,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+BGKFRK,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NVBZYF,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITBVRE,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+NVBZYF,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NVBZYF,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+NVBZYF,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NVBZYF,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+SEGQEW,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NVBZYF,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XCUEUR,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SEGQEW,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ELSFXS,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NVBZYF,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NVBZYF,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SQHMAN,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+NVBZYF,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+XCUEUR,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NVBZYF,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SEGQEW,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+JPNGQY,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+CTMWZM,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SQHMAN,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ITBVRE,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SQHMAN,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+XCUEUR,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BQCPBP,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+CTMWZM,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ELSFXS,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ITBVRE,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+JPNGQY,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XCUEUR,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ELSFXS,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+YDFFNP,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SQHMAN,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ELSFXS,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+SQHMAN,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XCUEUR,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+CTMWZM,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+SQHMAN,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+BQCPBP,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+SQHMAN,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ELSFXS,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CTMWZM,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XCUEUR,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+SQHMAN,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+SEGQEW,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LPLPCG,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+HPTKUE,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ELSFXS,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+CTMWZM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TQWQIM,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SQHMAN,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+TAAKSL,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XCUEUR,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ELSFXS,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SEGQEW,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ITBVRE,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ENYFOZ,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LPLPCG,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+YDFFNP,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BQCPBP,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TAAKSL,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HPTKUE,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TQWQIM,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LPLPCG,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+CTMWZM,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LPLPCG,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+YDFFNP,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+XJHHIS,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TAAKSL,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SEGQEW,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CTMWZM,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ELSFXS,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITBVRE,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SIFXRO,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ELSFXS,10,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+CTMWZM,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HPTKUE,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+YDFFNP,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ELSFXS,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ENYFOZ,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LYDHGN,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ELSFXS,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+YDFFNP,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ELSFXS,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+CTMWZM,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ELSFXS,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+HPTKUE,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TQWQIM,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LYDHGN,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+YDFFNP,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SEGQEW,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BQCPBP,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HPTKUE,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LPLPCG,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+PMESOF,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+YDFFNP,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LPLPCG,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TAAKSL,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TQWQIM,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+XJHHIS,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LPLPCG,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+PMESOF,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+UKUKHQ,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+UKUKHQ,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TAAKSL,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+PMESOF,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+YDFFNP,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+UKUKHQ,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+PMESOF,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TAAKSL,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+UKUKHQ,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CTMWZM,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TQWQIM,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LPLPCG,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+PMESOF,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HPTKUE,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+YDFFNP,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+UKUKHQ,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TAAKSL,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LPLPCG,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+YDFFNP,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PMESOF,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HPTKUE,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+PMESOF,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TAAKSL,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+YDFFNP,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+PMESOF,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PCMEDH,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XJHHIS,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LPLPCG,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PMESOF,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+HCTJTZ,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CTMWZM,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TAAKSL,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITPDTB,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PMESOF,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+YDFFNP,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TQWQIM,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XJHHIS,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+TQWQIM,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LYDHGN,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LPLPCG,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITPDTB,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ENYFOZ,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XJHHIS,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PCMEDH,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LPLPCG,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HCTJTZ,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+XJHHIS,9,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LPLPCG,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ITPDTB,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+BQCPBP,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TQWQIM,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+XJHHIS,10,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HPTKUE,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SEGQEW,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ITPDTB,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+XJHHIS,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+TQWQIM,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BQCPBP,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LYDHGN,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LPLPCG,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITPDTB,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+HCTJTZ,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SEGQEW,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HPTKUE,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+PCMEDH,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HCTJTZ,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ENYFOZ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+XJHHIS,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ABYNZM,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITPDTB,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+XJHHIS,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ABYNZM,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PCMEDH,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SEGQEW,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ITPDTB,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+HCTJTZ,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+MSMNYL,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ABYNZM,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ENYFOZ,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LYDHGN,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+MSMNYL,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ABYNZM,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ITPDTB,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PCMEDH,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+MSMNYL,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BQCPBP,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LYDHGN,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ITPDTB,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+PCMEDH,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+MSMNYL,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ITPDTB,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HCTJTZ,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RJOUYM,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ENYFOZ,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LYDHGN,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+MSMNYL,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+RJOUYM,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RJOUYM,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ABYNZM,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+RJOUYM,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BQCPBP,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RJOUYM,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RJOUYM,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ABYNZM,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+RJOUYM,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ABYNZM,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ABYNZM,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZVUDPM,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ENYFOZ,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZVUDPM,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LYDHGN,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ENYFOZ,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+MSMNYL,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZVUDPM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+MSMNYL,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+HCTJTZ,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+MSMNYL,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZVUDPM,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HCTJTZ,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+MSMNYL,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ZVUDPM,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZVUDPM,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+MSMNYL,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZVUDPM,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+MSMNYL,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HCTJTZ,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+MSMNYL,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NYYAIK,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+GREYJU,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+GREYJU,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+GREYJU,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+GREYJU,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+NYYAIK,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+GREYJU,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NYYAIK,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+GREYJU,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+GREYJU,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+GREYJU,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+BSMYXJ,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NYYAIK,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+BSMYXJ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BSMYXJ,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+BSMYXJ,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BSMYXJ,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BSMYXJ,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BSMYXJ,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+BSMYXJ,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+BSMYXJ,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+BSMYXJ,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+JRUEDT,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+JRUEDT,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+JRUEDT,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+JRUEDT,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+JRUEDT,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+JRUEDT,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+JRUEDT,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+RLUWXI,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RLUWXI,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+RLUWXI,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+PQOYOD,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RLUWXI,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+RLUWXI,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PQOYOD,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RLUWXI,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+PQOYOD,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+RTGHJG,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+RLUWXI,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+RTGHJG,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RTGHJG,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+RLUWXI,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+RTGHJG,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+RTGHJG,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+RTGHJG,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+RLUWXI,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+PQOYOD,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+PQOYOD,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+RLUWXI,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PQOYOD,10,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PQOYOD,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+RLUWXI,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RLUWXI,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LAHCDY,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+LAHCDY,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LAHCDY,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LAHCDY,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+PQOYOD,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LAHCDY,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LAHCDY,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LAHCDY,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+PQOYOD,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+RLUWXI,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+PQOYOD,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+WRMLEY,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+WRMLEY,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+WRMLEY,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+WRMLEY,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+WRMLEY,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+WRMLEY,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+WRMLEY,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+WRMLEY,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+WRMLEY,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SOBMUT,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+SOBMUT,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+SOBMUT,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+SOBMUT,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+SOBMUT,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+SOBMUT,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+SOBMUT,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+SOBMUT,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TOIMMB,0,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TOIMMB,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+TOIMMB,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TOIMMB,6,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TOIMMB,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+TOIMMB,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TOIMMB,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+TOIMMB,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TOIMMB,13,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TOIMMB,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TOIMMB,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZDVTEM,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZDVTEM,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZDVTEM,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ZDVTEM,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZDVTEM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZDVTEM,7,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+ZDVTEM,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZDVTEM,9,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ZDVTEM,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZDVTEM,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZDVTEM,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZDVTEM,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZDVTEM,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZDVTEM,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TIRGAE,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TIRGAE,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TIRGAE,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+TIRGAE,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+TIRGAE,8,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TIRGAE,10,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TIRGAE,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+TIRGAE,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TIRGAE,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TIRGAE,15,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZUFRMJ,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZUFRMJ,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZUFRMJ,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZUFRMJ,5,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+ZUFRMJ,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZUFRMJ,7,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZUFRMJ,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+ZUFRMJ,9,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+ZUFRMJ,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+ZUFRMJ,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+ZUFRMJ,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+ZUFRMJ,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+ZUFRMJ,14,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LBNJSN,0,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+ZUFRMJ,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LBNJSN,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LBNJSN,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LBNJSN,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LBNJSN,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LBNJSN,11,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LBNJSN,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LBNJSN,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+LBNJSN,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VAHOSK,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VAHOSK,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+VAHOSK,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+VAHOSK,10,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HXZHAN,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+HXZHAN,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+HXZHAN,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+HXZHAN,6,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+HXZHAN,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+HXZHAN,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+HXZHAN,11,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+HXZHAN,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HXZHAN,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+HXZHAN,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+HXZHAN,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CHQXIM,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+CHQXIM,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+CHQXIM,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+CHQXIM,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+CHQXIM,5,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+CHQXIM,6,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+CHQXIM,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+CHQXIM,8,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+CHQXIM,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+CHQXIM,10,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+CHQXIM,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+CHQXIM,12,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+CHQXIM,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+CHQXIM,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+EGVVEF,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+OSUNNC,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+OSUNNC,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+OSUNNC,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+OSUNNC,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+OSUNNC,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+OSUNNC,8,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+OSUNNC,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+OSUNNC,13,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+OSUNNC,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+OSUNNC,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BISFCN,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LPZFVQ,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BISFCN,2,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LPZFVQ,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BISFCN,3,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LPZFVQ,3,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LPZFVQ,4,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+BISFCN,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+NQMMOL,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LPZFVQ,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+BISFCN,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+NQMMOL,1,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TCBLWG,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+BISFCN,6,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LPZFVQ,7,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BISFCN,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LPZFVQ,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+JCEMGL,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BISFCN,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+JCEMGL,1,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+BISFCN,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TCBLWG,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LPZFVQ,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+JCEMGL,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LPZFVQ,11,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+BISFCN,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+JCEMGL,3,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+LPZFVQ,12,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LPZFVQ,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+TCBLWG,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+JCEMGL,4,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that:  {IA}   AND {IB}  ,It is impossible that  {IA}   AND it is impossible that {IB}  
+LPZFVQ,14,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BISFCN,14,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NQMMOL,5,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LPZFVQ,15,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+BISFCN,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+TCBLWG,12,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+JCEMGL,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+NQMMOL,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+TCBLWG,13,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {IB}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+JCEMGL,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NQMMOL,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+JCEMGL,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+NQMMOL,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+JCEMGL,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+TCBLWG,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+JCEMGL,15,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+NQMMOL,11,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
+NQMMOL,13,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+NQMMOL,14,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+DWWOUW,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+DWWOUW,1,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+DWWOUW,2,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+DWWOUW,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+VUEOGW,0,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VUEOGW,2,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+VUEOGW,4,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+VUEOGW,5,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}, OR BOTH",It is possible that: {A} AND {B}  
+VUEOGW,7,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+VUEOGW,9,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+VUEOGW,10,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that  {IA}   OR it is possible that {IB}, OR BOTH",It is possible that:  {IA}   AND {IB}  
+VUEOGW,12,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LXRJWE,0,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that  {IA}   AND it is possible that {IB}  ,It is possible that:  {IA}   AND {IB}  
+LXRJWE,1,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LXRJWE,2,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that {A} OR it is impossible that {B}, OR BOTH","It is impossible that: {A} OR {B}, OR BOTH "
+LXRJWE,3,and;possible;A;possible;B,possible;and;A;B,True,verify,modal,It is possible that {A} AND it is possible that {B}  ,It is possible that: {A} AND {B}  
+LXRJWE,4,or;possible;A;possible;B,possible;and;A;B,True,verify,modal,"It is possible that {A} OR it is possible that {B}  , OR BOTH",It is possible that: {A} AND {B}  
+LXRJWE,8,not;possible;and;A;B,and;not;possible;A;not;possible;B,True,verify,modal,It is impossible that: {A} AND {B}  ,It is impossible that {A} AND it is impossible that {B}  
+LXRJWE,15,or;not;possible;A;not;possible;B,not;possible;or;A;B,True,verify,modal,"It is impossible that  {IA}   OR it is impossible that {B}, OR BOTH","It is impossible that:  {IA}   OR {IB}, OR BOTH "
