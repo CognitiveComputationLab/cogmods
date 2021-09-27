@@ -1,0 +1,14 @@
+{
+    "type": "adaption",
+    "data.pre_train": "../../data/experiment1/ex1_data.csv",
+    "data.test": "../../data/experiment1/ex1_data.csv",
+    "corresponding_data": true,
+    "domains": ["modal"],
+    "response_types": ["verify"],
+    "models": [
+      {"filename": "../../models/modal_logic.py", "args": {"t": "K"}},
+      {"filename": "../../models/modal_logic.py", "args": {"t": "S4"}},
+      {"filename": "../../models/modal_logic.py", "args": {"t": "B"}},
+      {"filename": "../../models/modal_logic.py", "args": {"t": "T"}}
+    ]
+}

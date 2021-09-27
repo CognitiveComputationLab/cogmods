@@ -1,0 +1,11 @@
+{
+    "type": "adaption",
+    "data.pre_train": "../../data/experiment1/ex1_data.csv",
+    "data.test": "../../data/experiment1/ex1_data.csv",
+    "corresponding_data": true,
+    "domains": ["modal"],
+    "response_types": ["verify"],
+    "models": [
+          {"filename": "../../models/mModalSentential_optimized.py", "args": {"ex": true, "debug": true}}
+    ]
+}
