@@ -1,0 +1,112 @@
+
+
+manual
+ BEST RIGHT
+Best found configuration: {'bold-exp': 29, 'bold-negative': 2.1845425419903313, 'bold-positive': 1.2135185084772722, 'bold-scale': 0.5022747150105654, 'neg-bold-exp': 22, 'neg-bold-scale': 2.4907802397254066}
+MANUAL BEST LEFT Best found configuration: {'bold-exp': 11, 'bold-negative': 4.444616402830163, 'bold-positive': 4.110119843273601, 'bold-scale': 0.9801597546790022, 'neg-bold-exp': 2, 'neg-bold-scale': 2.4494079594970732}
+
+
+
+
+retrieval
+actr_retrieval_R_NA.csv
+Best found configuration: {'bold-exp': 30, 'bold-negative': 4.223702394808593, 'bold-positive': 0.7554809197081838, 'bold-scale': 0.3992873573307011, 'neg-bold-exp': 5, 'neg-bold-scale': 0.5285593069995659}
+left??
+Best found configuration: {'bold-exp': 12, 'bold-negative': 0.6215436699435551, 'bold-positive': 2.5999323718529306, 'bold-scale': 0.2751767158216172, 'neg-bold-exp': 30, 'neg-bold-scale': 2.2666887779990983}
+
+
+"PFC Right"
+est found configuration: {'bold-exp': 9, 'bold-negative': 2.5896857865599987, 'bold-positive': 4.413974825843664, 'bold-scale': 0.32485086575292005, 'neg-bold-exp': 11, 'neg-bold-scale': 4.04239449849804}
+"PFC Left"
+Best found configuration: {'bold-exp': 25, 'bold-negative': 2.310797836676072, 'bold-positive': 2.481505365420576, 'bold-scale': 0.07776504664396167, 'neg-bold-exp': 8, 'neg-bold-scale': 2.358442576904614}
+
+
+
+goal
+APFC RIGHT
+Best found configuration: {'bold-exp': 1, 'bold-negative': 3.4059029964437384, 'bold-positive': 2.6884523474737785, 'bold-scale': 0.16147759232486195, 'neg-bold-exp': 20, 'neg-bold-scale': 1.0355977119891246}
+
+ACC RIGHT Best found configuration: {'bold-exp': 1, 'bold-negative': 0.33303330446616264, 'bold-positive': 3.7315661708340326, 'bold-scale': 2.8832856884057345, 'neg-bold-exp': 28, 'neg-bold-scale': 4.062105234664659}
+
+
+right
+Best found configuration: {'bold-exp': 8, 'bold-negative': 3.9149894574985655, 'bold-positive': 1.4699769785204517, 'bold-scale': 1.4772339920207118, 'neg-bold-exp': 3, 'neg-bold-scale': 0.19854835795067138}
+left
+Best found configuration: {'bold-exp': 2, 'bold-negative': 0.17988003362413685, 'bold-positive': 3.539627861185337, 'bold-scale': 0.062462089553698696, 'neg-bold-exp': 27, 'neg-bold-scale': 4.9064413731714}
+
+
+
+
+
+
+
+
+production
+right
+Best found configuration: {'bold-exp': 27, 'bold-negative': 1.6430871486602594, 'bold-positive': 1.5029841946498779, 'bold-scale': 4.815947286840434, 'neg-bold-exp': 23, 'neg-bold-scale': 0.07434232627362758}
+left
+Best found configuration: {'bold-exp': 12, 'bold-negative': 4.020882379138755, 'bold-positive': 1.710406084705443, 'bold-scale': 0.9536836016898326, 'neg-bold-exp': 17, 'neg-bold-scale': 0.12219111711568365}
+
+
+left actr Best found configuration: {'bold-exp': 10, 'bold-negative': 3.567461023660883, 'bold-positive': 1.6510262908271973, 'bold-scale': 0.15324716815744988, 'neg-bold-exp': 8, 'neg-bold-scale': 0.22805619075994266}
+right Best found configuration: {'bold-exp': 16, 'bold-negative': 0.9863227897418487, 'bold-positive': 4.491576896634943, 'bold-scale': 3.3107233834798526, 'neg-bold-exp': 29, 'neg-bold-scale': 1.2500748014560887}
+new right one actr {'bold-exp': 10, 'bold-negative': 1.68954927239801, 'bold-positive': 1.0592592845479536, 'bold-scale': 3.4979820855942183, 'neg-bold-exp': 1, 'neg-bold-scale': 1.0172171178952547}
+
+
+visual
+right
+{'bold-exp': 1, 'bold-negative': 1.1155927198983928, 'bold-positive': 1.9559568033499701, 'bold-scale': 0.03302719737934445, 'neg-bold-exp': 2, 'neg-bold-scale': 3.897595504957281}
+
+left
+Best found configuration: {'bold-exp': 15, 'bold-negative': 3.1683564086304283, 'bold-positive': 2.403137441580339, 'bold-scale': 0.07866267955542086, 'neg-bold-exp': 28, 'neg-bold-scale': 1.5088304676316746}
+
+
+
+
+imaginal
+ppc_right_mean
+Best found configuration: {'bold-exp': 28, 'bold-negative': 2.8703632856661443, 'bold-positive': 4.042027815270023, 'bold-scale': 0.1617655694739234, 'neg-bold-exp': 26, 'neg-bold-scale': 0.7099919018833939}
+
+left actr
+Best found configuration: {'bold-exp': 8, 'bold-negative': 1.3859307357039063, 'bold-positive': 0.601654667460267, 'bold-scale': 0.3090099701434639, 'neg-bold-exp': 1, 'neg-bold-scale': 2.799963698655729}
+
+right
+Best found configuration: {'bold-exp': 23, 'bold-negative': 2.1762635127491765, 'bold-positive': 0.7127260111884014, 'bold-scale': 0.09294266140619123, 'neg-bold-exp': 8, 'neg-bold-scale': 0.5001449152484012}
+
+
+
+
+
+all
+Best found configuration: {'bold-exp': 23, 'bold-negative': 2.1762635127491765, 'bold-positive': 0.7127260111884014, 'bold-scale': 0.09294266140619123, 'neg-bold-exp': 8, 'neg-bold-scale': 0.5001449152484012}
+
+
+
+
+
+
+
+
+
+PMM
+
+goal
+ACC right
+Best found configuration: {'bold-exp': 29, 'bold-negative': 4.017505048418949, 'bold-positive': 3.3020342611653937, 'bold-scale': 0.1497635047904622, 'neg-bold-exp': 9, 'neg-bold-scale': 3.784642477364777}
+
+
+
+
+
+
+nur imaginal alle gleiczeitig
+Best found configuration: {'bold-exp': 27, 'bold-negative': 4.20211959487849, 'bold-positive': 1.6234680325046917, 'bold-scale': 3.5135727657014377, 'neg-bold-exp': 17, 'neg-bold-scale': 0.189073879890011}
+
+
+nur retrieval alle gelichzeitig
+Best found configuration: {'bold-exp': 12, 'bold-negative': 0.029976622068605234, 'bold-positive': 1.4232063074565664, 'bold-scale': 0.23152056439204816, 'neg-bold-exp': 19, 'neg-bold-scale': 1.330816315653638}
+
+
+
+
+

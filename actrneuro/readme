@@ -1,0 +1,27 @@
+these are 3 models for three different papers
+
+
+
+1. fangmaier et al 2006 visual stimuli
+2. fangmaier et al 2009 auditive stimuli
+These model can handle 2 premises and one conclusions as its mentioned in the fangmeier papers
+In these folders you find a optimzer to produce the best results.
+
+
+
+
+3. multiple papers for iccm
+This model an handle n premises
+
+
+
+the fangmaier models are subsets of the iccm model
+All models work only in ACT-R 7
+
+
+
+please replace every lisp line which starts with (load .....) to corresponding path.
+
+
+run the models with sh run.sh
+this command will prepare the folder run the model and evaluate it with the help of PYHTHON.

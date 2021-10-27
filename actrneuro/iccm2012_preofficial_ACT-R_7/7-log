@@ -1,0 +1,19 @@
+To load "bordeaux-threads":
+  Load 1 ASDF system:
+    bordeaux-threads
+; Loading "bordeaux-threads"
+
+To load "usocket":
+  Load 1 ASDF system:
+    usocket
+; Loading "usocket"
+
+To load "cl-json":
+  Load 1 ASDF system:
+    cl-json
+; Loading "cl-json"
+
+Trying to open server at "127.0.1.1":2650
+Server started on port 2650
+
+The ACT-R remote command dispatcher has been started
