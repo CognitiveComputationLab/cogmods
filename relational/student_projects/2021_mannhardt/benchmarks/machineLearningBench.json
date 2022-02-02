@@ -1,0 +1,15 @@
+{
+    "type": "adaption",
+    "data.test": "../Dataset.csv",
+    "data.pre_train": "../Dataset.csv",
+    "corresponding_data": true,
+    "domains": ["spatial-relational"],
+    "response_types": ["single-choice", "verify"],
+    "models": [
+        "../models/MFA.py",
+        "../models/ensembleModel.py",
+        "../models/CBF.py",
+        "../models/UBCF.py",
+	"../models/mlp"
+    ]
+}

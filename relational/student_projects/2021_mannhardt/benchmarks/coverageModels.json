@@ -1,0 +1,14 @@
+{
+    "type": "coverage",
+    "data.test": "../Dataset.csv",
+    "data.pre_train": "../Dataset.csv",
+    "corresponding_data": true,
+    "domains": ["spatial-relational"],
+    "response_types": ["single-choice", "verify"],
+    "models": [
+        "../models/UBCF.py",
+        "../models/CBF.py",
+        "../models/EnsembleModel.py",
+        "../models/verbal.py"
+    ]
+}
